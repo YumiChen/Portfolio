@@ -1,0 +1,155 @@
+$scoreColor: yellow
+
+%noSelect
+  -webkit-touch-callout: none
+  -webkit-user-select: none  
+  -khtml-user-select: none 
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  
+%center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  
+#center
+  @extend %center
+  // color: red
+  width: 0
+  height: 0
+  
+*
+  // border: solid 1px
+  position: relative
+  color: rgba(255,255,255,0.7)
+  @extend %noSelect
+html,body
+  margin: 0
+  height: 100vh
+  width: 100vw
+  overflow: hidden
+  background-color: #8ed7f9
+
+%tester
+  cursor: pointer
+  transition: all 0.3s
+  z-index: 5
+.test
+  @extend %center
+  width: 7em
+  height: 7em
+  font-size: 7em
+  & .upDown
+    @extend %center
+    line-height: 0em
+    & i
+      margin: 0.3em
+      @extend %tester
+  & .rightLeft
+    @extend %center
+    line-height: 0em
+    & i
+      margin: 0.3em
+      @extend %tester
+  
+@keyframes changeColor
+  0%
+    color: rgba(255,0,255,0.7)
+  100%
+    color: rgba(0,0,255,0.7)
+  
+/*---setting for notes---*/
+@mixin move($name,$direction,$start,$end)
+  @keyframes #{$name}
+    0%
+      opacity: 1
+      #{$direction}: #{$start}
+    70%
+      opacity: 1
+    100%
+      opacity: 0
+      #{$direction}: #{$end}
+
++move(top,top,calc(28vh - 48vw),28vh)
++move(down,top,calc(52vh + 48vw),52vh)
++move(left,right,100vw,52vw)
++move(right,left,100vw,52vw)
+
+@mixin arrow($direction,$aniname)
+  position: absolute
+  animation: #{$aniname} 1.5s 1
+  animation-fill-mode: forwards
+  #{$direction}: 50%
+  font-size: 7em
+  z-index: 5
+
+.top
+  +arrow(left,top)
+  transform: translateX(-50%)
+.down
+  +arrow(left,down)
+  transform: translateX(-50%)
+.right
+  +arrow(top,right)
+  transform: translateY(-50%)
+.left
+  +arrow(top,left)
+  transform: translateY(-50%)
+  
+/*------------------------------*/
+// setting for keypress event  
+.testPressed
+  color: rgba(0,255,0,0.7)
+  animation: changeColor 0.3s 1
+  animation-fill-mode: forwards
+  transform: scale(1.1)
+.arrowPressed
+  color: rgba(255,0,255,0.7)
+.commentPressed.commentPressed.commentPressed.commentPressed
+  opacity: 1
+  transform: scale(1.1)
+  // animation: fade 0.7s 1
+  // animation-fill-mode: forwards
+/*-----------------------------*/
+.score
+  position: absolute
+  // position: relative
+  right: 0
+  margin-left: 0 auto
+  font-size: 2em
+  margin: 0.7em
+  // line-height: 1.2em
+  // height: 100vh
+  & #score
+    position: absolute
+    // width: 100vw
+    top: 0
+    right: 0
+    text-align: right
+    color: $scoreColor
+    // margin-top: 0
+  & .comment
+    opacity: 0
+    transition: 0.3s
+    margin: 0.15em
+    margin-top: 0.8em
+    font-family: Permanent Marker
+    text-align: right
+    color: yellow
+    font-size: 1.7em
+    line-height: 1em
+  & #combos
+    font-family: Permanent Marker
+    font-size: 1em
+    margin: 0.1em
+    right: 0
+    text-align: right
+// @keyframes fade
+//   0%
+//     opacity: 0
+//   50%
+//     opacity: 1
+//   100%
+//     opacity: 0

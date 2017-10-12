@@ -2,14 +2,13 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>A Pen by  Yumi Chen</title>
+  <title>Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#175fed">
   
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css'>
-<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Varela+Round'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Overpass|Permanent+Marker'>
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='css/moekpm.css'>
+<link rel='stylesheet prefetch' href='css/owxnzr.css'>
 
       <link rel="stylesheet" href="css/style.css">
 
@@ -18,15 +17,40 @@
 
 <body>
   
-<div id="container"></div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/react-slick/0.14.7/react-slick.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/redux/3.6.0/redux.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.3/react-redux.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<div class="uploadUI">
+  <h1>Yeahhhhhhhh</h1>
+  <p>= Upload an audio to start! =
+    <p>#mp3, ogg, wav files supported#</p>
+  </p>
+  <input type="file" id="input"/>
+  <audio id="sound" controls="controls"></audio>
+</div>
+<div class="prepare"><span class="three">3</span><span class="two">2</span><span class="one">1</span><span class="go">Go!!!!</span></div>
+<div class="gameUI">
+  <div class="audioInfo"><i class="fa fa-volume-up" aria-hidden="true" onClick="adjustVolume()"></i><i class="fa fa-play" aria-hidden="true" onClick="pauseGame()"></i>
+    <div class="title"> <span id="audioName">K-391 - Summertime [Sunshine].mp3</span></div>
+  </div>
+  <div class="test">
+    <div class="upDown"><i class="fa fa-arrow-up tester" aria-hidden="true" id="topTest" onclick="triggerKeydown(38)"></i><br/><i class="fa fa-arrow-down tester" id="downTest" aria-hidden="true" onclick="triggerKeydown(40)"></i></div>
+    <div class="rightLeft"><i class="fa fa-arrow-left tester" id="leftTest" aria-hidden="true" onclick="triggerKeydown(37)"></i><i class="fa fa-arrow-right tester" id="rightTest" aria-hidden="true" onclick="triggerKeydown(39)"></i></div>
+  </div>
+  <div class="score"><span id="score">0</span>
+    <p class="comment"> </p>
+    <p id="combos"></p>
+  </div>
+</div>
+<div id="center"></div>
+<div class="resultUI">
+  <div class="level">A</div>
+  <div class="result">You've got <span class="finalScore">111000 </span>scores!<br/>And <span class="combos">33 </span>combos!</div>
+  <div class="replay">Play again?</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
+<script src='js/moekpm.js'></script>
+<script src='js/owxnzr.js'></script>
+<script src='js/rgrwgb.js'></script>
 
-    <script  src="js/index.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 </html>
