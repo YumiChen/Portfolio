@@ -1,0 +1,273 @@
+function scroll(object){$('html,body').animate(
+  {scrollTop: object.top}, 500);
+};
+
+// TODO use ajax instead
+const demoUrls = [
+  "https://yumichen.github.io/Rhythm-Game/","" ,            "https://yumichen.github.io/React-calculator/",
+  "https://yumichen.github.io/Website/",
+  "https://yumichen.github.io/Shopping-Cart-UI/",
+  "https://yumichen.github.io/Gallery-UI/",
+  "https://yumichen.github.io/TicTacToe/","",
+  "https://yumichen.github.io/Sign-up-UI/",
+  "https://yumichen.github.io/Fireworks/",
+  "https://yumichen.github.io/Glowing-Colors/"
+  ],githubUrls=[
+    "https://github.com/YumiChen/Rhythm-Game",
+   "", "https://github.com/YumiChen/React-calculator",
+    "https://github.com/YumiChen/Website", "https://github.com/YumiChen/Shopping-Cart-UI",
+    "https://github.com/YumiChen/Gallery-UI","https://github.com/YumiChen/TicTacToe",
+   "", "https://github.com/YumiChen/Sign-up-UI",
+    "https://github.com/YumiChen/Fireworks",
+    "https://github.com/YumiChen/Glowing-Colors"
+  ],about={EN:"My name's Yumi Chen. I'm a front-end developer and illustrator based in Taiwan.",CH:"我是Yumi，喜歡前端工程及繪圖。透過自學開始學習網頁前端，而後陸續接觸了手機程式及後端。對日新月異的前端科技感到驚艷，吸收新知識和解決問題時覺得特別有成就感。對透過程式展現的視覺效果特別有興趣。希望能在前端工程繼續精進之時，同時能讓自己有更多成長。"},
+      content_EN = [
+        {title:"Rhythm Game",description:"Rhythm game with real-time music visualization, and customizable music selection.Modern browsers and strong beat music are highly suggested for this game.",tags:["vanilla Javascript","web audio API","THREE.js"]},{title:"CMS System",description:"CMS for POS system",tags:["React.js","Redux.js","Spring","MyBatis"]},
+        {title:"React Calculator",description:"Calculator built with React.js. Offering random color chips whenever numbers are inputted. Inspired by the frequent need of color palette inspiration.",tags:["React.js"]},
+        {title:"Art portfolio website",description:"Theme designed for illustration portfolios.",tags:["React.js","React-slick","SASS"]},
+        {title:"Shopping Cart UI",description:"UI design for shopping cart and credit card checkout",tags:["Vue.js","slick.js","jQuery"]},
+        {title:"Gallery UI",description:"",tags:["SASS"]},
+        {title:"Tictactoe",description:"TicTacToe game which includes two playing modes(single& dual)",tags:["vanilla Javascript","SASS"]},    {title:"BookShelf",description:"Web application for recording read books and explore new favorites. Built with Google Books API.",tags:["React.js","Redux.js"]},
+        {title:"Sign up UI",description:"",tags:["SASS"]},     {title:"Fireworks",description:"",tags:["vanilla Javascript","SASS"]},
+        {title:"Glowing Colors",description:"",tags:["canvas"]}
+      ],  content_CH = [
+        {title:"實時節奏遊戲",description:"結合實時音樂視覺化的節奏遊戲，強烈建議使用現代瀏覽器搭配節奏感強的音樂遊玩。",tags:["vanilla Javascript","web audio API","THREE.js"]},{title:"資料庫管理系統",description:"物流系統資料庫的內容管理網站。此物流系統為多人合作的專案，提供商品盤點、庫存查詢及報表圖表生成功能。自身負責資料庫設計、前端Android部分功能，後端API及說明文件撰寫，後端程式使用Java Spring",tags:["React.js","Redux.js","Spring","MyBatis"]},
+        {title:"色票計算機",description:"在輸入數字時同時隨機顯示色票的計算機，靈感來自於日常搭配顏色時毫無頭緒的苦惱。",tags:["React.js"]},
+        {title:"插畫作品集網站",description:"插畫作品集版型設計，將重點著重在展現插畫構圖及其自身的張力，力求簡潔俐落。",tags:["React.js","React-slick","SASS"]},
+        {title:"購物車界面設計",description:"購物車及信用卡結帳介面設計",tags:["Vue.js","slick.js","jQuery"]},
+        {title:"畫廊展示介面",description:"模擬相片效果的圖片展示介面",tags:["SASS"]},
+        {title:"圈叉遊戲",description:"以原生Javascript撰寫的圈叉遊戲，包含單人及雙人模式。",tags:["vanilla Javascript","SASS"]},{title:"BookShelf 書架",description:"記錄自己閱讀過的書籍並透過搜尋發現新書籍的網站，串接Google Books API撰寫而成。",tags:["React.js","Redux.js"]},
+        {title:"登入介面設計",description:"",tags:["SASS"]},
+        {title:"絢爛煙火",description:"隨著滑鼠點擊產生隨機顏色煙火的互動效果",tags:["vanilla Javascript","SASS"]},
+        {title:"繽紛色彩",description:"",tags:["canvas"]}
+      ],links={mail:"mailto:monorhapsody@gmail.com",codepen:"https://codepen.io/Yumichen/",github:"https://github.com/YumiChen"};
+
+// action creator 
+const changeLang = (event)=>{
+  if(event.target.innerHTML=="中") return { type: "CHANGE_LANG", payload: "CH" };
+  else
+    return { type: "CHANGE_LANG", payload: "EN" };
+}  
+
+//reducer
+const reducer = (state,action)=>{
+  // ?
+  return action.payload?action.payload:"EN";
+}
+
+// root reducer
+const rootReducer = Redux.combineReducers({
+  lang: reducer
+});
+
+// UI comps
+let count = 0,interval;
+
+let Trans =(props)=>{
+    return (<p className="trans"><span onClick={props.changeLang}>EN</span> | <span onClick={props.changeLang}>中</span></p>);
+}
+
+const mapDispatchToProps_lang = (dispatch)=>{
+  return Redux.bindActionCreators({changeLang:changeLang},dispatch);
+}
+
+Trans = ReactRedux.connect(null,mapDispatchToProps_lang)(Trans);
+
+class Top extends React.Component{
+  constructor(props){
+    super(props);
+    
+    this.state={title:""};
+    this.type = this.type.bind(this);
+    interval = setInterval(this.type,500);
+  }
+  type(){
+    const title="Hello!";
+    let str = this.state.title+title[count];
+    this.setState({title:str});
+    count++;
+    if(count==title.length) clearInterval(interval);
+  }
+  next(event){  document.querySelector('#aboutText').scrollIntoView({ 
+   behavior: 'smooth' 
+   });
+    const offset = $('.about').offset();
+    scroll(offset);
+  }
+  render(){
+    this.next = this.next.bind(this);
+    return (
+      <div className="top">
+        <p className="title">{this.state.title}
+          <span className="typing"></span>
+        </p>
+        <p className="next" onClick={this.next}>︾</p>
+      </div>);
+  }
+}
+
+class About_ extends React.Component{
+  constructor(props){
+    super(props);
+  }
+ next(event){
+  document.querySelector('.works').scrollIntoView({ 
+  behavior: 'smooth' 
+  });
+   const offset = $('.contact').offset();
+   scroll(offset);
+  }
+  render(){
+    this.next = this.next.bind(this);
+    let des = (this.props.lang=="EN")?about.EN:about.CH;
+    return (
+      <div className="about">
+        <div id="aboutText">
+        <p>Hello!</p>
+        <p>{des}
+        </p>
+        <p>
+          <a href={links.mail}><i className="fa fa-envelope-o" aria-hidden="true"></i></a>
+          <a href={links.codepen}><i className="fa fa-codepen" aria-hidden="true"></i></a>
+          <a href={links.codepen}><i className="fa fa-github" aria-hidden="true"></i></a>
+        </p>
+        </div>
+      <p className="next" onClick={this.next}>︾</p>
+       <div className="aboutBG"></div>
+      </div>);
+  }
+}
+
+const mapStateToProps_about=(state)=>{
+  return {lang: state.lang};
+}
+
+const About = ReactRedux.connect(mapStateToProps_about)(About_);
+
+const Work = (props)=>{
+  let tags=
+  props.content.tags.map((tag)=>{
+      return (<span className="tag">{tag}</span>);
+  });
+ 
+  return (<div className="work">
+        <div className="img"/>
+      <p className="demoUrls">{props.demoUrls===""?null:<a href={props.demoUrls} target="_blank">Demo</a> } 
+ {props.demoUrls===""?null:" |" }        {props.githubUrls===""?null:<a href={props.githubUrls} target="_blank">Github Source</a>}</p>
+        <p>{props.content.title}</p>
+        <p>{props.content.description}</p>
+        <p>{tags}</p>
+    </div>);
+};
+
+class Works_ extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  componentWillmount(){
+ window.removeEventListener("resize",
+    debounce(()=>{this.forceUpdate();},1000)
+    );
+  }
+  componentDidMount(){
+ window.addEventListener("resize",
+    debounce(()=>{this.forceUpdate();},1000)
+    );
+  }
+  render(){
+    let content = (this.props.lang=="EN")? content_EN:content_CH;
+    
+    let works=[];
+    for(var i =0;i<content.length;i++){
+      works.push(<div><Work content={content[i]} demoUrls={demoUrls[i]} githubUrls={githubUrls[i]} data-index={i} key={i}/></div>);
+    }
+    let settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
+    return (
+      <div className="works">
+        <p>WORKS</p>
+        <Slider {...settings}>
+        {works}
+          </Slider>
+      </div>);
+  }
+}
+
+const mapStateToProps_works=(state)=>{
+  return {lang: state.lang};
+}
+const Works = ReactRedux.connect(mapStateToProps_works)(Works_);
+
+class Contact extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return (
+      <div id = "contact" className="contact">
+        <p>︾</p>
+        <p>
+          <a href={links.mail}><i className="fa fa-envelope-o" aria-hidden="true"></i></a>
+          <a href={links.codepen}><i className="fa fa-codepen" aria-hidden="true"></i></a>
+          <a href={links.github}><i className="fa fa-github" aria-hidden="true"></i></a>
+        </p>
+      </div>);
+  }
+}
+
+const Footer=()=>{
+   return (<p className="footer">Copyright © 2017 Yumi Chen</p>);
+}
+
+// TODO set storage and provider
+const Provider = ReactRedux.Provider,
+      store = Redux.createStore(rootReducer);
+
+class App extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return (
+      <Provider store={store}>
+      <div>
+        <Trans/>
+        <Top/>
+        <About/>
+        <Works/>
+        <Contact/>
+        <Footer/>
+        </div>
+        </Provider>
+      );
+  }
+}
+
+ReactDOM.render(<App/>,document.body);
+
+function debounce(func, wait, immediate) {
+var timeout;
+return function() {
+var context = this, args = arguments;
+var later = function() {timeout = null;if (!immediate) func.apply(context, args);};
+var callNow = immediate && !timeout;
+clearTimeout(timeout);
+timeout = setTimeout(later, wait);
+if (callNow) func.apply(context, args);
+  };
+};
+
+// var waypoint = new Waypoint({
+//   element: document.getElementById('aboutText'),
+//   handler: function(direction) {
+//  document.getElementById('aboutText').classList.remove("out");
+//     alert("waypoint");
+//   },
+//   offset: '75%'
+// })
