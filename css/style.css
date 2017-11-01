@@ -259,16 +259,13 @@ body::-webkit-scrollbar-thumb {
 }
 @keyframes ani3 {
   0% {
-    background-image: url(https://s6.postimg.org/6wji171xd/021.jpg);
+    background-image: url(https://s6.postimg.org/8770ahk4h/027.jpg);
   }
-  33.33333% {
-    background-image: url(https://s6.postimg.org/hxen67u69/022.jpg);
-  }
-  66.66667% {
-    background-image: url(https://s6.postimg.org/84ija3tpt/022.jpg);
+  50% {
+    background-image: url(https://s6.postimg.org/4atoegou9/022.jpg);
   }
   100% {
-    background-image: url(https://s6.postimg.org/6wji171xd/021.jpg);
+    background-image: url(https://s6.postimg.org/8770ahk4h/027.jpg);
   }
 }
 @keyframes ani4 {
@@ -290,6 +287,20 @@ body::-webkit-scrollbar-thumb {
 }
 @keyframes ani5 {
   0% {
+    background-image: url(https://s6.postimg.org/6wji171xd/021.jpg);
+  }
+  33.33333% {
+    background-image: url(https://s6.postimg.org/hxen67u69/022.jpg);
+  }
+  66.66667% {
+    background-image: url(https://s6.postimg.org/84ija3tpt/022.jpg);
+  }
+  100% {
+    background-image: url(https://s6.postimg.org/6wji171xd/021.jpg);
+  }
+}
+@keyframes ani6 {
+  0% {
     background-image: url(https://s6.postimg.org/8cqf5lfgh/014.jpg);
   }
   25% {
@@ -305,7 +316,7 @@ body::-webkit-scrollbar-thumb {
     background-image: url(https://s6.postimg.org/8cqf5lfgh/014.jpg);
   }
 }
-@keyframes ani6 {
+@keyframes ani7 {
   0% {
     background-image: url(https://s6.postimg.org/4bdxdocjl/019.jpg);
   }
@@ -316,7 +327,7 @@ body::-webkit-scrollbar-thumb {
     background-image: url(https://s6.postimg.org/4bdxdocjl/019.jpg);
   }
 }
-@keyframes ani7 {
+@keyframes ani8 {
   0% {
     background-image: url(https://s6.postimg.org/xexjw6b9d/012.jpg);
   }
@@ -328,17 +339,6 @@ body::-webkit-scrollbar-thumb {
   }
   100% {
     background-image: url(https://s6.postimg.org/xexjw6b9d/012.jpg);
-  }
-}
-@keyframes ani8 {
-  0% {
-    background-image: url(https://s6.postimg.org/8770ahk4h/027.jpg);
-  }
-  50% {
-    background-image: url(https://s6.postimg.org/4atoegou9/022.jpg);
-  }
-  100% {
-    background-image: url(https://s6.postimg.org/8770ahk4h/027.jpg);
   }
 }
 @keyframes ani9 {
@@ -431,6 +431,10 @@ body::-webkit-scrollbar-thumb {
 
 .footer {
   padding: 3.5em;
+  margin: 0;
+}
+.footer p {
+  margin: 0.1em 0;
 }
 
 .out {
@@ -464,15 +468,12 @@ body::-webkit-scrollbar-thumb {
     transform: translate(-50%, -110%);
   }
 
-  .about {
-    min-height: 120vh;
-  }
   .about .next {
-    transform: translate(-50%, -110%);
+    bottom: -1em;
+    transform: translate(-50%, -140%);
   }
   .about #aboutText {
     width: 90%;
-    padding: 4em 0;
   }
   .about #aboutText p {
     text-align: center;

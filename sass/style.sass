@@ -1,5 +1,5 @@
 // imgs
-$imgs: "https://s6.postimg.org/46a64058h/025.jpg" "https://s6.postimg.org/w54buv6v5/024.jpg" "https://s6.postimg.org/6v9k7s03l/023.jpg", "https://s6.postimg.org/lq50e4aup/cms01.jpg" "https://s6.postimg.org/t649zxlpd/cms02.jpg" "https://s6.postimg.org/52dibmnsx/cms03.jpg" "https://s6.postimg.org/vng176xw1/cms04.jpg" "https://s6.postimg.org/phstoyhb5/cms03.jpg","https://s6.postimg.org/6wji171xd/021.jpg" "https://s6.postimg.org/hxen67u69/022.jpg" "https://s6.postimg.org/84ija3tpt/022.jpg","https://s6.postimg.org/aax33l7y9/004.jpg" "https://s6.postimg.org/z2wpatp4x/006.jpg" "https://s6.postimg.org/3pkd3ts3l/007.jpg" "https://s6.postimg.org/j5i9sht8h/022.jpg","https://s6.postimg.org/8cqf5lfgh/014.jpg" "https://s6.postimg.org/op0gvbts1/015.jpg" "https://s6.postimg.org/5mh38eirl/016.jpg" "https://s6.postimg.org/ieky9cz0x/022.jpg","https://s6.postimg.org/4bdxdocjl/019.jpg" "https://s6.postimg.org/7jieqpytd/020.jpg" ,"https://s6.postimg.org/xexjw6b9d/012.jpg" "https://s6.postimg.org/x3g3jeutd/013.jpg" "https://s6.postimg.org/4z2ix6xs1/022.jpg","https://s6.postimg.org/8770ahk4h/027.jpg" "https://s6.postimg.org/4atoegou9/022.jpg", "https://s6.postimg.org/gzz15v3wh/005.jpg","https://s6.postimg.org/smnqkqgld/017.jpg" "https://s6.postimg.org/hr0y34l1d/018.jpg","https://s6.postimg.org/f75b90xhd/010.jpg" "https://s6.postimg.org/spc7lb9mp/008.jpg" "https://s6.postimg.org/qafqn5401/009.jpg"
+$imgs: "https://s6.postimg.org/46a64058h/025.jpg" "https://s6.postimg.org/w54buv6v5/024.jpg" "https://s6.postimg.org/6v9k7s03l/023.jpg", "https://s6.postimg.org/lq50e4aup/cms01.jpg" "https://s6.postimg.org/t649zxlpd/cms02.jpg" "https://s6.postimg.org/52dibmnsx/cms03.jpg" "https://s6.postimg.org/vng176xw1/cms04.jpg" "https://s6.postimg.org/phstoyhb5/cms03.jpg","https://s6.postimg.org/8770ahk4h/027.jpg" "https://s6.postimg.org/4atoegou9/022.jpg", "https://s6.postimg.org/aax33l7y9/004.jpg" "https://s6.postimg.org/z2wpatp4x/006.jpg" "https://s6.postimg.org/3pkd3ts3l/007.jpg" "https://s6.postimg.org/j5i9sht8h/022.jpg","https://s6.postimg.org/6wji171xd/021.jpg" "https://s6.postimg.org/hxen67u69/022.jpg" "https://s6.postimg.org/84ija3tpt/022.jpg","https://s6.postimg.org/8cqf5lfgh/014.jpg" "https://s6.postimg.org/op0gvbts1/015.jpg" "https://s6.postimg.org/5mh38eirl/016.jpg" "https://s6.postimg.org/ieky9cz0x/022.jpg","https://s6.postimg.org/4bdxdocjl/019.jpg" "https://s6.postimg.org/7jieqpytd/020.jpg" ,"https://s6.postimg.org/xexjw6b9d/012.jpg" "https://s6.postimg.org/x3g3jeutd/013.jpg" "https://s6.postimg.org/4z2ix6xs1/022.jpg","https://s6.postimg.org/gzz15v3wh/005.jpg","https://s6.postimg.org/smnqkqgld/017.jpg" "https://s6.postimg.org/hr0y34l1d/018.jpg","https://s6.postimg.org/f75b90xhd/010.jpg" "https://s6.postimg.org/spc7lb9mp/008.jpg" "https://s6.postimg.org/qafqn5401/009.jpg"
 
 $blue: rgba(23, 95, 237,0.8)
 
@@ -108,6 +108,7 @@ $breakpoints: ("phone":400px,"phone-wide":480px,"phablet":560px,"tablet-small": 
 .about
   min-height: 100vh
   width: 100%
+
   #aboutText
     width: 60%
     transition: 1s
@@ -241,6 +242,9 @@ $breakpoints: ("phone":400px,"phone-wide":480px,"phablet":560px,"tablet-small": 
 
 .footer
   padding: 3.5em
+  margin: 0
+  p
+    margin: .1em 0
       
 .out
   opacity: 0
@@ -256,6 +260,7 @@ $breakpoints: ("phone":400px,"phone-wide":480px,"phablet":560px,"tablet-small": 
     transform: translateX(-7vw) scale(1.7,1.7)
   .slick-next
     transform: translateX(7vw) scale(1.7,1.7)
+    
 +mq('phone-wide',max)
   %underline
     &::after
@@ -264,12 +269,13 @@ $breakpoints: ("phone":400px,"phone-wide":480px,"phablet":560px,"tablet-small": 
     & .next
       transform: translate(-50%,-110%)
   .about
-    min-height: 120vh
+    // min-height: 120vh
     & .next
-      transform: translate(-50%,-110%)
+      bottom: -1em
+      transform: translate(-50%,-140%)
     #aboutText
       width: 90%
-      padding: 4em 0
+      // padding: 4em 0
       & p
         text-align: center
         margin: 0 auto
