@@ -18,9 +18,13 @@ class Top extends Component{
       count++;
       if(count==title.length) clearInterval(interval);
     }
-    next(event){  //document.querySelector('#aboutText').scrollIntoView({ 
-     //behavior: 'smooth' 
-     //});
+    next(event){  
+    const el =  document.querySelector('#aboutText');
+    if(el.scrollIntoView){
+      el.scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
       const offset = $('.about').offset();
       scroll(offset);
     }

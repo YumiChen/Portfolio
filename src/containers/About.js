@@ -8,9 +8,12 @@ class About_ extends Component{
       super(props);
     }
    next(event){
-    document.querySelector('.works').scrollIntoView({ 
-    behavior: 'smooth' 
-    });
+     const el =document.querySelector('.works');
+     if(el.scrollIntoView){
+       el.scrollIntoView({ 
+         behavior: 'smooth' 
+         });
+     }
      const offset = $('.contact').offset();
      scroll(offset);
     }
