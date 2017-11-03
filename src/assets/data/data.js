@@ -6,7 +6,7 @@ CH:"我是Yumi，喜歡前端工程及繪圖。透過學校課程與自學開始
     demoUrls: [
   "https://yumichen.github.io/Rhythm-Game/",
   "http://35.189.183.246/POS/login.do" ,  "https://yumichen.github.io/BookShelf/public/index.html#/",
-  "https://yumichen.github.io/Website/",
+  "https://yumichen.github.io/Website/public/index.html",
   "https://yumichen.github.io/React-calculator/",
   "https://yumichen.github.io/Shopping-Cart-UI/",
   "https://yumichen.github.io/Gallery-UI/",
