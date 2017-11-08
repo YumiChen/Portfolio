@@ -6,6 +6,7 @@ import scroll from "../functions/scroll";
 class About_ extends Component{
     constructor(props){
       super(props);
+      this.next = this.next.bind(this);
     }
    next(event){
      const el =document.querySelector('.works');
@@ -18,7 +19,6 @@ class About_ extends Component{
      scroll(offset);
     }
     render(){
-      this.next = this.next.bind(this);
       let des = (this.props.lang=="EN")?about.EN:about.CH;
       return (
         <div className="about">

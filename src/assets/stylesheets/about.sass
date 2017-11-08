@@ -1,0 +1,52 @@
+.about
+  min-height: 100vh
+  width: 100%
+
+  #aboutText
+    width: 60%
+    transition: 1s
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-60%)
+    // background-color: rgba(9, 79, 198,.5)
+    // border-radius: 1em
+    & p:nth-child(1)
+      font-size: 2em
+      padding: .5em 0
+      z-index: 1
+      @extend %underline
+    & p
+      font-size: 1.2em
+      text-align: center
+      & i
+        margin: 1em
+        font-size: 1.5em
+        margin-left: 0
+        &:hover
+          color: orange
+  & .aboutBG
+    z-index: -1
+    @extend %blurredBGhandle
+    position: fixed
+    background-image: url("https://s6.postimg.org/n0pf4hk01/P_20170808_184251.jpg")
+    filter: blur(2px) brightness(0.9) saturate(1.2)
+
++mq('desktop',min)
+  .about
+    min-width: 100vh
++mq('phone-wide',max)
+  .about
+    // min-height: 120vh
+    & .next
+      bottom: -1em
+      transform: translate(-50%,-140%)
+    #aboutText
+      width: 90%
+      // padding: 4em 0
+      & p
+        text-align: center
+        margin: 0 auto
+        width: 100%
+        & i
+          margin: 0.7em

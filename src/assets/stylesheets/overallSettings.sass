@@ -1,0 +1,87 @@
+*
+  position: relative
+  // border: solid 1px
+  // color: orange
+  text-align: center
+  font-family: Varela Round,微軟正黑體
+  position: relative
+  text-decoration: none
+  border-style: border-box
+  color: white
+
+p
+  margin: 0
+
+html,body
+  margin: 0
+  padding: 0
+  height: 100vh
+  overflow-x: hidden
+
+html
+  overflow: hidden
+  
+body
+  &::-webkit-scrollbar-track
+    border: 1px solid $blue
+    background-color: rgba(255,255,255,0.2)
+  &::-webkit-scrollbar
+    width: 6px
+    background-color: rgba(255,255,255,0.2)
+  &::-webkit-scrollbar-thumb
+    background-color: $blue
+  
+.next
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  bottom: 1em
+  font-size: 2em
+  cursor: pointer
+
+
+%center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  
+%blurredBGhandle
+  @extend %center
+  width: 110%
+  height: 110%
+  background-size: cover
+  background-position: 50% 50%
+  
+%underline
+  &::after
+    content: ""
+    position: absolute
+    left: 50%
+    top: 50%
+    transform-origin: 0 0
+    transform: translate(-50%) rotate(1deg)
+    border-bottom: solid rgba(0,0,255,.8) .7em
+    width: 17vw
+    z-index: -1
+
+.slick-prev
+  position: absolute   
+  z-index: 5
+  transform: translateX(7vw) scale(1.7,1.7)
+  &::before
+    content: "《"
+.slick-next
+  position: absolute
+  z-index: 5
+  transform: translateX(-7vw) scale(1.7,1.7)
+  &::before
+    content: "》"
+      
+.out
+  opacity: 0
+
++mq('phone-wide',max)
+  %underline
+    &::after
+      width: 50vw

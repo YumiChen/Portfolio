@@ -9,6 +9,7 @@ class Top extends Component{
       
       this.state={title:""};
       this.type = this.type.bind(this);
+      this.next = this.next.bind(this);
       interval = setInterval(this.type,500);
     }
     type(){
@@ -29,7 +30,6 @@ class Top extends Component{
       scroll(offset);
     }
     render(){
-      this.next = this.next.bind(this);
       return (
         <div className="top">
           <p className="title">{this.state.title}
