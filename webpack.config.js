@@ -13,14 +13,31 @@ module.exports = [{
     filename: 'bundle.js'
   },
   module: {
-    // exclude: /node_modules/,
-    loaders: [
-      { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.sass$/, loader: 'style-loader!css-loader!sass-loader', exclude: /node_modules/ },
+    rules: [
+      { test: /\.js?$/, 
+        use: ["babel-loader"], 
+        exclude: /node_modules/,
+        },
+      { test: /\.sass$/, 
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ], 
+        exclude: /node_modules/ 
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000 /* 小於 10kB 的圖片轉成 base64 */
+            }
+          }
+        ]
+      }
     ]
-    // query: {
-    //   presets: ["react", "es2015", "stage-1"]
-    // }
   },
   resolve: {
     extensions: ['.js','.sass', ".jsx"]

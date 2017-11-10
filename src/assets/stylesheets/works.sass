@@ -4,10 +4,13 @@
   & p:nth-child(1)
     font-size: 2em
     padding: .5em 0
+    z-index: 1
     @extend %underline
   & .work
     padding: 1em 10em
     padding-top: .3em
+    & p
+      white-space: pre-line
     & .demoUrls
       padding: 0.7em 0 .5em 0
       & a
@@ -44,7 +47,27 @@
   border: solid 2px
   border-radius: 10px
   
-
+.swipeHint1
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  cursor: pointer
+  z-index: 6
+  width: 50vw
+  height: 50vw
+  border-radius: 10em
+  padding: 2em
+  background-color: rgba(0,0,0,.6)
+  & i:nth-child(1)
+    font-size: 6em
+    line-height: 1.2em
+  & i:nth-child(2)
+    font-size: 3em
+    line-height: 1.2em
+  & p
+    font-size: 3em
+    line-height: 1.5em
 // mixin for creating a single animation
 @mixin changeBg($arr,$index)
   $i: 100 / length($arr)
@@ -82,6 +105,7 @@
   .img
     height: 33vh
   .works
+    height: unset
     & p:nth-child(1)
       font-size: 1.7em
     & .slick-slider

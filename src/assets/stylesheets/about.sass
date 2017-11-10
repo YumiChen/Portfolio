@@ -1,7 +1,26 @@
 .about
   min-height: 100vh
   width: 100%
-
+  overflow-x: hidden
+  overflow-y: auto
+  perspective: 2px
+  // & .parallax
+  //   width: 100%
+  //   height: 100vh
+  //   overflow: hidden
+  //   &::after
+  //     content: ""
+  //     position: absolute
+  //     top: 0
+  //     right: 0
+  //     bottom: 0
+  //     left: 0
+  //     width: 100%
+  //     height: 100%
+  //     background-image: url(https://s6.postimg.org/g69vpkv0h/juan01.jpg)
+  //     background-size: cover
+  //     transform: translateZ(-10px) scale(1.55)
+  //     z-index: -1
   #aboutText
     width: 60%
     transition: 1s
@@ -19,18 +38,14 @@
     & p
       font-size: 1.2em
       text-align: center
+      white-space: pre-line
       & i
         margin: 1em
         font-size: 1.5em
         margin-left: 0
         &:hover
           color: orange
-  & .aboutBG
-    z-index: -1
-    @extend %blurredBGhandle
-    position: fixed
-    background-image: url("https://s6.postimg.org/n0pf4hk01/P_20170808_184251.jpg")
-    filter: blur(2px) brightness(0.9) saturate(1.2)
+
 
 +mq('desktop',min)
   .about

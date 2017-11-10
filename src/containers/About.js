@@ -33,11 +33,13 @@ class About_ extends Component{
           </p>
           </div>
         <p className="next" onClick={this.next}>︾</p>
-         <div className="aboutBG"></div>
+
         </div>);
     }
   }
   
+        // <div className="parallax"></div>
+
   const mapStateToProps_about=(state)=>{
     return {lang: state.lang};
   }

@@ -65,6 +65,7 @@ body
     width: 17vw
     z-index: -1
 
+
 .slick-prev
   position: absolute   
   z-index: 5
@@ -80,6 +81,13 @@ body
       
 .out
   opacity: 0
+
+.BG
+  z-index: -1
+  @extend %blurredBGhandle    
+  position: fixed
+  background-image: url($bg1)
+  filter: blur(2px) brightness(0.9) saturate(1.2)
 
 +mq('phone-wide',max)
   %underline

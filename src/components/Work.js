@@ -15,5 +15,5 @@ const Work = (props)=>{
            <p>{tags}</p>
        </div>);
    };
-
+//    && this.state.isMobile
    module.exports = Work;

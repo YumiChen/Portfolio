@@ -6,6 +6,7 @@ import Trans from "../containers/Trans";
 import Top from "./Top";
 import About from "../containers/About"
 import Works from "../containers/Works";
+import OtherWorks from "../components/OtherWorks";
 import Contact from "./Contact";
 import Footer from "./Footer";
 
@@ -25,6 +26,7 @@ return (
   <Works/>
   <Contact/>
        <Footer/>
+      <div className="BG"></div>
        </div>
   </Provider>
 );

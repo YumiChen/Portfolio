@@ -1,0 +1,63 @@
+.otherWorksContainer
+  & p
+    font-size: 1.2em
+    margin-bottom: .5em
+    @extend %underline
+.otherWorks
+  border: solid 2px rgba(255,255,255,.5)
+  border-radius: 10px
+  width: 70vw
+  margin: 0 auto
+  padding: 1.1em 3em
+  & .slick-slider .slick-track
+    & .otherWork
+      background-size: cover
+      background-position: 50% 50%
+      border: solid 2px
+      border-radius: 10px
+      height: 10vh
+      width: 60%
+      margin: 0 auto
+      cursor: pointer
+  & .slick-prev
+    position: absolute
+    z-index: 5
+    transform: translateY(-50%) scale(1.7,1.7)
+    &::before
+      content: "《"
+  & .slick-next
+    position: absolute
+    z-index: 5
+    transform: translateY(-50%) scale(1.7,1.7)
+    &::before
+      content: "》"
+
+// mixin for creating a single animation
+@mixin changeOtherWorksBg($arr,$index)
+  $a: 100 / length($arr)
+  @keyframes otherWorksAni#{$index}
+    @for $b from 0 through length($arr)-1
+      $progress: $a * $b
+      #{$progress}%
+        background-image: url(#{nth($arr,$b + 1)})
+    // for end
+    100%
+      background-image: url(#{nth($arr,1)})
+  
+// create animations
+@for $c from 1 through length($otherWorks)
+  +changeOtherWorksBg(nth($otherWorks,$c),$c)
+    
+//assign animations
+@for $d from 1 through length($otherWorks)
+  .slick-slide:nth-child(#{$d})
+    & .otherWork
+      animation: otherWorksAni#{$d} 8s infinite forwards
+
++mq('phone-wide',max)
+.otherWorks
+  width: 80vw
+  margin: 0 auto
+  padding: 1em
+.otherWork
+  width: 90%
