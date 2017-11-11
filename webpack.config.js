@@ -22,19 +22,21 @@ module.exports = [{
         use: [
           'style-loader',
           'css-loader',
+          // 'resolve-url-loader',
           'sass-loader'
         ], 
         exclude: /node_modules/ 
-      },
-      {
+      }
+      ,{
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000 /* 小於 10kB 的圖片轉成 base64 */
-            }
-          }
+          'file-loader'
+          // {
+          //   loader: 'file-loader',
+          //   options: {
+          //     limit: 10000 /* 小於 10kB 的圖片轉成 base64 */
+          //   }
+          // }
         ]
       }
     ]
