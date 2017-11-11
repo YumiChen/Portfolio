@@ -22,6 +22,7 @@
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.15.2",
     "file-loader": "^1.1.5",
+    "loader": "^2.1.1",
     "node-sass": "^4.6.0",
     "react": "^15.5.4",
     "react-dom": "^15.6.1",
@@ -34,6 +35,7 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "url-loader": "^0.6.2",
+    "url-resolve": "^1.0.0",
     "webpack": "^3.5.4",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.18.2"
