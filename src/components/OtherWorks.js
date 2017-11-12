@@ -36,15 +36,15 @@ class OtherWorks extends Component{
         slidesToScroll: 1
       },
       works = otherWorksDemoUrls.map((work,index)=>{
-        return (<div><div className="otherWork" onClick={()=>{location.href = work;}}></div></div>);
+        return (<div key={index}><div className="otherWork" onClick={()=>{location.href = work;}}></div></div>);
       }),
       details = this.state.index?otherWorksDemoUrls.map((work,index)=>{
-        return (<div><div className="otherWork" onClick={()=>{}}></div></div>);
+        return (<div key={index}><div className="otherWork" onClick={()=>{}}></div></div>);
       }):null;
      return (
         <div className="otherWorksContainer">
-            <p>Other Works</p>
-            <div className="otherWorks">
+            <p className="subTitle">Other Works</p>
+            <div id="otherWorks" className="otherWorks">
             <Slider {...settings1}>
                 {works}
             </Slider>

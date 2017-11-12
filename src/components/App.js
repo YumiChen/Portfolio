@@ -3,8 +3,9 @@ import {Provider} from "react-redux";
 import {createStore} from "redux"
 import rootReducer from "../reducers/rootReducer";
 import Trans from "../containers/Trans";
-import Top from "./Top";
+import Top2 from "./Top2";
 import About from "../containers/About"
+import Skills from "./Skills";
 import Works from "../containers/Works";
 import OtherWorks from "../components/OtherWorks";
 import Contact from "./Contact";
@@ -21,9 +22,11 @@ return (
 <Provider store={store}>
 <div>
        <Trans/>
-       <Top/>
+       <Top2/>
   <About/>
+  <Skills/>
   <Works/>
+  <OtherWorks/>
   <Contact/>
        <Footer/>
       <div className="BG"></div>
@@ -32,5 +35,7 @@ return (
 );
 }
 }
+
+<About/>
 
 module.exports = App;

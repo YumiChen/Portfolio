@@ -1,13 +1,14 @@
 // about, demoUrls, githubUrls, content_EN, content_CH, links
 
 const data = {
+    title_main: "Yumi Chen", title_sub: "Front-End Developer",
     about: {
         EN:"My name's Yumi Chen. I'm a front-end developer and illustrator based in Taiwan. I love learning new things for it makes it possible to know more about the world and see the different side of it. The beauty and possibilities of programming  are also my favorites.",
 CH:"我是Yumi，喜歡前端工程及繪圖。\n透過學校課程與自學開始學習網頁前端，而後陸續接觸了手機程式及後端。\n對日新月異的前端科技感到驚艷，吸收新知識和解決問題時覺得特別有成就感。\n其中對透過程式展現的視覺效果特別有興趣。\n希望能在前端工程繼續精進之時，同時能讓自己有更多成長。"
     },
     demoUrls: [
     "https://yumichen.github.io/Rhythm-Game/",
-    "http://35.189.183.246/POS/login.do" ,  
+    "https://yumichen.github.io/CMS-UI-Generator/public/index.html" ,  
     "https://yumichen.github.io/BookShelf/public/index.html#/",
     "https://yumichen.github.io/Website/public/index.html"
   ],githubUrls:[
@@ -66,7 +67,11 @@ CH:"我是Yumi，喜歡前端工程及繪圖。\n透過學校課程與自學開�
             mail:"mailto:monorhapsody@gmail.com",
             codepen:"https://codepen.io/Yumichen/",
             github:"https://github.com/YumiChen"
-        }
+        },
+        browserSuggestion: "瀏覽器建議: Chrome, Opera, Firefox, Safari, IE11以上, Edge15以上",
+        copyright: "Copyright © 2017 Yumi Chen",
+        skills: "Languages, standards\n\rJavascript, Java, node.js, CSS3, HTML5, SQL\r\nPreprocessors, template engines\r\nSASS, Pug\r\nFrameworks\r\nReact.js 及相關生態系套件\r\nSpring, MyBatis, Express\r\nDatabases\r\nMySQL, Firebase\r\nDevTools\r\nWebpack, Babel, npm, yarn\r\ngit, SVN"
     };
 
+    // 瀏覽器建議: Chrome49以上, Opera47以上, Firefox55以上, Safari10.1以上, IE11以上, Edge15以上
       module.exports = data;

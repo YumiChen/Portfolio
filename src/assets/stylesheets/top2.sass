@@ -1,0 +1,36 @@
+.top2
+  height: 100vh
+  max-height: 100vh
+  & .title
+    @extend %center
+    font-size: 1.35em
+    width: 100%
+    animation: enter 1.5s 1 both
+  & .main
+    font-family: $mainFont
+    font-size: 4em
+  & .sub
+    font-family: $subFont
+    font-size: 2em
+    +underline(65vw)
+    &:hover
+      +stretch(stretch)
+  & .contacts
+    font-size: 1.9em
+
++stretchAnimation(65vw)
+
++mq('desktop',min)
+  .top2 .sub
+    +underline(35vw)
+  +stretchAnimation(35vw)
+
++mq('phone-wide',max)
+  .top2
+    & .title
+      font-size: 1em
+      & .sub
+        +underline(70vw)
+    & .next
+      bottom: 2em
+  +stretchAnimation(70vw)

@@ -1,19 +1,29 @@
 import {Component} from "react";
 import {links} from "../assets/data/data";
+import Contacts from "./Contacts";
+import scroll from "../functions/scroll";
 
 class Contact extends Component{
     constructor(props){
       super(props);
+      this.next = this.next.bind(this);
+    }
+     next(event){  
+      const el =  document.querySelector('#copyright');
+      if(el.scrollIntoView){
+        el.scrollIntoView({ 
+          behavior: 'smooth' 
+        });
+        return;
+      }
+      const offset = el.offset();
+      scroll(offset);
     }
     render(){
       return (
-        <div id = "contact" className="contact">
-          <p>︾</p>
-          <p>
-            <a href={links.mail}><i className="fa fa-envelope-o" aria-hidden="true"></i></a>
-            <a href={links.codepen}><i className="fa fa-codepen" aria-hidden="true"></i></a>
-            <a href={links.github}><i className="fa fa-github" aria-hidden="true"></i></a>
-          </p>
+        <div className="contact">
+          <p className="next" onClick={this.next}>︾</p>
+          <Contacts/>
         </div>);
     }
   }

@@ -1,13 +1,12 @@
 *
   position: relative
-  // border: solid 1px
-  // color: orange
   text-align: center
-  font-family: Varela Round,微軟正黑體
+  font-family: $normalFont
   position: relative
   text-decoration: none
   border-style: border-box
   color: white
+  transition: 1s
 
 p
   margin: 0
@@ -38,7 +37,13 @@ body
   bottom: 1em
   font-size: 2em
   cursor: pointer
+  animation: next 2s infinite linear
+  transition: .5s
+  &:hover
+    color: orange
 
+.context
+  white-space: pre-line
 
 %center
   position: absolute
@@ -53,7 +58,7 @@ body
   background-size: cover
   background-position: 50% 50%
   
-%underline
+@mixin underline($width)
   &::after
     content: ""
     position: absolute
@@ -62,8 +67,43 @@ body
     transform-origin: 0 0
     transform: translate(-50%) rotate(1deg)
     border-bottom: solid rgba(0,0,255,.8) .7em
-    width: 17vw
+    width: $width
     z-index: -1
+
+
+@mixin stretch($name)
+  &::after
+    content: ""
+    @extend %center
+    transform-origin: 0 0
+    transform: translate(-50%) rotate(1deg)
+    animation: $name 1s 1 both
+    border-bottom: solid orange .7em
+    z-index: -1
+@mixin stretchAnimation($width)
+  @keyframes stretch
+    0%
+      width: 0
+    100%
+      width: $width
+
+@mixin subStretchAnimation($width)
+  @keyframes subStretch
+    0%
+      width: 0
+    100%
+      width: $width
+
++subStretchAnimation(28vw)
+
+.subTitle
+  font-family: $subFont
+  font-size: 2em
+  padding: .5em 0
+  z-index: 1
+  +underline(28vw)
+  &:hover
+    +stretch(subStretch)
 
 
 .slick-prev
@@ -87,9 +127,37 @@ body
   @extend %blurredBGhandle    
   position: fixed
   background-image: url($bg1)
-  filter: blur(2px) brightness(0.9) saturate(1.2)
+  filter: blur(2px) brightness(0.85) saturate(1.3)
 
+@keyframes next
+  0%
+    transform: translateX(-50%)
+  50%
+    transform: translateX(-50%) translateY(20%)
+  100%
+    transform: translateX(-50%)
+
+@keyframes enter
+  0%
+    opacity: 0
+    transform: translate(-50%, -40%)
+  100%
+    opacity: 1
+    transform: translate(-50%, -50%)
+
+.enter
+  animation: enter 1.5s 1 both
+
+
+
++mq('desktop',min)
+  .subTitle
+    +underline(17vw)
+  +subStretchAnimation(17vw)
 +mq('phone-wide',max)
-  %underline
-    &::after
-      width: 50vw
+  .subTitle
+    font-size: 1.7em
+    +underline(50vw)
+  .context
+    white-space: normal
+  +subStretchAnimation(50vvw)

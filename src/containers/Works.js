@@ -1,8 +1,8 @@
 import {Component} from "react";
 import {connect} from "react-redux";
 import Work from "../components/Work";
-import OtherWorks from "../components/OtherWorks";
 import debounce from "../functions/debounce";
+import scroll from "../functions/scroll";
 import detectMobile from "../functions/detectMobile";
 
 import Slider from "react-slick";
@@ -13,6 +13,7 @@ class Works_ extends React.Component{
     constructor(props){
       super(props);
       this.state = {showSwipe1: true, isMobile: detectMobile()};
+      this.next = this.next.bind(this);
     }
     componentWillmount(){
    window.removeEventListener("resize",
@@ -23,6 +24,17 @@ class Works_ extends React.Component{
    window.addEventListener("resize",
       debounce(()=>{this.forceUpdate();},1000)
       );
+    }
+     next(event){  
+      const el =  document.querySelector('#otherWorks');
+      if(el.scrollIntoView){
+        el.scrollIntoView({ 
+          behavior: 'smooth' 
+        });
+        return;
+      }
+      const offset = el.offset();
+      scroll(offset);
     }
     render(){
       let content = (this.props.lang=="EN")? content_EN:content_CH;
@@ -41,22 +53,25 @@ class Works_ extends React.Component{
   
       return (
         <div className="works">
-          <p className="title">WORKS</p>
+          <p id="works" className="subTitle">WORKS</p>
           <div>
-            {this.state.showSwipe1 && this.state.isMobile?<div className = "swipeHint1" onMouseDown={()=>{this.setState({showSwipe1:false});}}>
+            {this.state.showSwipe1 && this.state.isMobile?<div className = "swipeHint1" ontouchstart={()=>{this.setState({showSwipe1:false})                 }} onMouseDown={()=>{this.setState({showSwipe1:false})}}>
+            <div>
             <i className="fa fa-hand-pointer-o" aria-hidden="true"></i>
             <i className="fa fa-bars" aria-hidden="true"></i>
             <p>Swipe</p>
+            </div>
           </div>:null}
             <Slider {...settings}>
               {works}
             </Slider>
+            <p className="next" onClick={this.next}>︾</p>
           </div>
-            <OtherWorks/>
+
         </div>);
     }
   }
-  
+ 
   const mapStateToProps_works=(state)=>{
     return {lang: state.lang};
   }

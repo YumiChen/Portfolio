@@ -1,22 +1,17 @@
 .works
   min-height: 100vh
+  & .next
+    bottom: -1.3em
   & .slick-slider, .slick-track
-  & p:nth-child(1)
-    font-size: 2em
-    padding: .5em 0
-    z-index: 1
-    @extend %underline
   & .work
     padding: 1em 10em
     padding-top: .3em
-    & p
-      white-space: pre-line
     & .demoUrls
-      padding: 0.7em 0 .5em 0
+      padding: 0.7em 0 .5em
       & a
         color: orange
         &:hover            
-          color: yellow
+          color: OrangeRed
     & p:nth-child(2)
       color: orange
     & p:nth-child(3)
@@ -24,8 +19,6 @@
       font-size: 1.7em
     & p:nth-child(5)
       width: 100%
-      // margin-left: -5em
-      white-space: nowrap
       text-align: center
       & .tag
         display: inline-block
@@ -33,6 +26,8 @@
         border-radius: 0.5em
         padding: 0.1em .7em
         margin: 0.2em
+        &:hover
+          background-color: OrangeRed     
     & .workBG
       z-index: 1
       @extend %blurredBGhandle
@@ -48,26 +43,25 @@
   border-radius: 10px
   
 .swipeHint1
-  position: absolute
-  left: 50%
-  top: 50%
-  transform: translate(-50%,-50%)
+  @extend %center
+  top: 40%
   cursor: pointer
   z-index: 6
-  width: 50vw
-  height: 50vw
+  width: 40vw
+  height: 40vw
   border-radius: 10em
   padding: 2em
   background-color: rgba(0,0,0,.6)
+  & div
+    // line-height: 40vw
+    @extend %center
   & i:nth-child(1)
-    font-size: 6em
-    line-height: 1.2em
+    font-size: 4em
   & i:nth-child(2)
-    font-size: 3em
-    line-height: 1.2em
+    font-size: 2em
   & p
-    font-size: 3em
-    line-height: 1.5em
+    font-size: 2.3em
+
 // mixin for creating a single animation
 @mixin changeBg($arr,$index)
   $i: 100 / length($arr)
@@ -105,9 +99,9 @@
   .img
     height: 33vh
   .works
-    height: unset
-    & p:nth-child(1)
-      font-size: 1.7em
+    // height: auto
+    & .next
+      bottom: -.5em
     & .slick-slider
       & .slick-prev, .slick-next
         opacity: 0

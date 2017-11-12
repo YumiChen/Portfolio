@@ -1,14 +1,12 @@
 .otherWorksContainer
-  & p
-    font-size: 1.2em
-    margin-bottom: .5em
-    @extend %underline
+  height: 40vh
 .otherWorks
+  @extend %center
   border: solid 2px rgba(255,255,255,.5)
   border-radius: 10px
   width: 70vw
-  margin: 0 auto
   padding: 1.1em 3em
+  margin-top: 2em
   & .slick-slider .slick-track
     & .otherWork
       background-size: cover
@@ -19,16 +17,18 @@
       width: 60%
       margin: 0 auto
       cursor: pointer
+      &:hover
+        border-color: OrangeRed
   & .slick-prev
     position: absolute
     z-index: 5
-    transform: translateY(-50%) scale(1.7,1.7)
+    transform: translate(50%,-50%) scale(1.5,1.5)
     &::before
       content: "《"
   & .slick-next
     position: absolute
     z-index: 5
-    transform: translateY(-50%) scale(1.7,1.7)
+    transform: translate(-50%,-50%) scale(1.5,1.5)
     &::before
       content: "》"
 
@@ -60,4 +60,4 @@
   margin: 0 auto
   padding: 1em
 .otherWork
-  width: 90%
+  width: 100%
