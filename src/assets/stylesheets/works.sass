@@ -1,7 +1,8 @@
 .works
   min-height: 100vh
   & .next
-    bottom: -1.3em
+    bottom: 0em
+    height: .5em
   & .slick-slider, .slick-track
   & .work
     padding: 1em 10em
@@ -53,7 +54,6 @@
   padding: 2em
   background-color: rgba(0,0,0,.6)
   & div
-    // line-height: 40vw
     @extend %center
   & i:nth-child(1)
     font-size: 4em
@@ -62,7 +62,7 @@
   & p
     font-size: 2.3em
 
-// mixin for creating a single animation
+
 @mixin changeBg($arr,$index)
   $i: 100 / length($arr)
   @keyframes ani#{$index}
@@ -70,15 +70,14 @@
       $progress: $j * $i
       #{$progress}%
         background-image: url(#{nth($arr,$j + 1)})
-    // for end
     100%
       background-image: url(#{nth($arr,1)})
   
-// create animations
+
 @for $k from 1 through length($imgs)
   +changeBg(nth($imgs,$k),$k)
     
-//assign animations
+
 @for $l from 1 through length($imgs)
   .slick-slide:nth-child(#{$l + 1})
     & .img
@@ -89,6 +88,8 @@
     .slick-slider, .slick-track
       width: 70vw
       margin: 0 auto
+    & .next
+      bottom: -.5em
   .img
     height: 50vh
   .slick-prev
@@ -99,14 +100,13 @@
   .img
     height: 33vh
   .works
-    // height: auto
+    min-height: 90vh
     & .next
-      bottom: -.5em
+      bottom: -0.2em
     & .slick-slider
       & .slick-prev, .slick-next
         opacity: 0
     & .work
-      padding: 1.5em
-      padding-top: 0.7em
+      padding: 0.7em 1.5em
       & p:nth-child(5)
         white-space: normal

@@ -14,6 +14,7 @@ p
 html,body
   margin: 0
   padding: 0
+  width: 100vw
   height: 100vh
   overflow-x: hidden
 
@@ -77,8 +78,8 @@ body
     @extend %center
     transform-origin: 0 0
     transform: translate(-50%) rotate(1deg)
+    border-bottom: solid orange .7em    
     animation: $name 1s 1 both
-    border-bottom: solid orange .7em
     z-index: -1
 @mixin stretchAnimation($width)
   @keyframes stretch
@@ -155,9 +156,12 @@ body
     +underline(17vw)
   +subStretchAnimation(17vw)
 +mq('phone-wide',max)
+  *
+    font-size: calc(100vw/21)
   .subTitle
     font-size: 1.7em
     +underline(50vw)
+    padding: .1em 0
   .context
     white-space: normal
   +subStretchAnimation(50vvw)

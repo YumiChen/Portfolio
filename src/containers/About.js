@@ -3,16 +3,16 @@ import {about} from "../assets/data/data";
 import {connect} from "react-redux";
 import scroll from "../functions/scroll";
 import Contacts from "../components/Contacts";
-import Waypoint from "react-waypoint";
+// import Waypoint from "react-waypoint";
 
 class About_ extends Component{
     constructor(props){
       super(props);
       this.next = this.next.bind(this);
-      this.state = {enter: false};
+      // this.state = {enter: false};
     }
     componentDidMount(){
-      this.setState({enter: false});
+      // this.setState({enter: false});
     }
    next(event){
      const el =document.querySelector('.skills');
@@ -32,16 +32,8 @@ class About_ extends Component{
 
           <div id="aboutText">
           <p className="subTitle">Hello!</p>
-
-            <div className={this.state.enter?"enter context":"context"}>
-              <Waypoint 
-              scrollableAncestor={window}
-              debug={false}
-              onEnter = {()=>{this.setState({enter:true}); console.log("enter...");}}
-              onLeave = {()=>{this.setState({enter:false}); console.log("leave...");}}
-            >
+            <div className="context">
               <p>{des}</p>
-            </Waypoint>
               <Contacts/>
             </div>
           

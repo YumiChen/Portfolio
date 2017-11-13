@@ -1,5 +1,5 @@
 .about
-  min-height: 100vh
+  height: 100vh
   width: 100%
   overflow-x: hidden
   overflow-y: auto
@@ -19,10 +19,14 @@
     min-width: 100vh
 +mq('phone-wide',max)
   .about
+    height: 90vh
     & .next
       bottom: 2em
     #aboutText
       width: 90%
+      & .context
+        margin-top: .5em
+        font-size: 1.2em
       & p
         margin: 0 auto
         width: 100%

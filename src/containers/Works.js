@@ -55,7 +55,7 @@ class Works_ extends React.Component{
         <div className="works">
           <p id="works" className="subTitle">WORKS</p>
           <div>
-            {this.state.showSwipe1 && this.state.isMobile?<div className = "swipeHint1" ontouchstart={()=>{this.setState({showSwipe1:false})                 }} onMouseDown={()=>{this.setState({showSwipe1:false})}}>
+            {this.state.showSwipe1 && this.state.isMobile?<div className = "swipeHint1" onTouchStart={()=>{this.setState({showSwipe1:false})                 }} onMouseDown={()=>{this.setState({showSwipe1:false})}}>
             <div>
             <i className="fa fa-hand-pointer-o" aria-hidden="true"></i>
             <i className="fa fa-bars" aria-hidden="true"></i>

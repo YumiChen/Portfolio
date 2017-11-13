@@ -70,7 +70,11 @@ CH:"我是Yumi，喜歡前端工程及繪圖。\n透過學校課程與自學開�
         },
         browserSuggestion: "瀏覽器建議: Chrome, Opera, Firefox, Safari, IE11以上, Edge15以上",
         copyright: "Copyright © 2017 Yumi Chen",
-        skills: "Languages, standards\n\rJavascript, Java, node.js, CSS3, HTML5, SQL\r\nPreprocessors, template engines\r\nSASS, Pug\r\nFrameworks\r\nReact.js 及相關生態系套件\r\nSpring, MyBatis, Express\r\nDatabases\r\nMySQL, Firebase\r\nDevTools\r\nWebpack, Babel, npm, yarn\r\ngit, SVN"
+        skills: {
+          frontEnd:"React.js,\r\nRedux.js,\r\nSASS,\r\nUI/UX",
+          backEnd: "Spring,\r\nMyBatis,\r\nExpress,\r\n MYSQL,\r\nFirebase,\r\nSQL",
+          devTool: "Webpack,\r\nBabel,\r\nyarn,\r\nGit,\r\nSVN"
+        }
     };
 
     // 瀏覽器建議: Chrome49以上, Opera47以上, Firefox55以上, Safari10.1以上, IE11以上, Edge15以上
