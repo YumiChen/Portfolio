@@ -68,7 +68,7 @@ CH:"我是Yumi，喜歡前端工程及繪圖。\n透過學校課程與自學開�
             codepen:"https://codepen.io/Yumichen/",
             github:"https://github.com/YumiChen"
         },
-        browserSuggestion: "瀏覽器建議: Chrome, Opera, Firefox, Safari, IE11以上, Edge15以上",
+        browserSuggestion: "瀏覽器建議: Chrome, Opera, Firefox, Safari",
         copyright: "Copyright © 2017 Yumi Chen",
         skills: {
           frontEnd:"React.js,\r\nRedux.js,\r\nSASS,\r\nUI/UX",

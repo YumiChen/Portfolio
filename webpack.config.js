@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+var autoprefixer = require("autoprefixer");
 
 // including sass
 module.exports = [{
@@ -22,8 +23,8 @@ module.exports = [{
         use: [
           'style-loader',
           'css-loader',
-          // 'postcss-loader',
-          'sass-loader'
+          'postcss-loader'
+          ,'sass-loader'
         ], 
         exclude: /node_modules/ 
       }
@@ -58,3 +59,6 @@ module.exports = [{
     // new webpack.NoEmitOnErrorsPlugin()
   ]
 }];
+
+var info = autoprefixer().info();
+console.log(info);
