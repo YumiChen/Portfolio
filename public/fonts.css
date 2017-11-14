@@ -1,0 +1,44 @@
+/* === Anton - regular */
+@font-face {
+	font-family: 'Anton';
+	font-style: normal;
+	font-weight: 400;
+	src: url("./font/Anton-Regular.eot");
+	src: local("Anton Regular"),
+		local("Anton-Regular"),
+		url("./font/Anton-Regular.eot") format("embedded-opentype"),
+		url("./font/Anton-Regular.woff2") format("woff2"),
+		url("./font/Anton-Regular.woff") format("woff"),
+		url("./font/Anton-Regular.ttf") format("truetype"),
+		url("./font/Anton-Regular.svg") format("svg");
+}
+
+/* === Racing Sans One - regular */
+@font-face {
+	font-family: 'Racing Sans One';
+	font-style: normal;
+	font-weight: 400;
+	src: url("./font/RacingSansOne-Regular.eot");
+	src: local("Racing Sans One"),
+		local("RacingSansOne-Regular"),
+		url("./font/RacingSansOne-Regular.eot") format("embedded-opentype"),
+		url("./font/RacingSansOne-Regular.woff2") format("woff2"),
+		url("./font/RacingSansOne-Regular.woff") format("woff"),
+		url("./font/RacingSansOne-Regular.ttf") format("truetype"),
+		url("./font/RacingSansOne-Regular.svg") format("svg");
+}
+
+/* === Varela Round - regular */
+@font-face {
+	font-family: 'Varela Round';
+	font-style: normal;
+	font-weight: 400;
+	src: url("./font/VarelaRound-Regular.eot");
+	src: local("Varela Round Regular"),
+		local("VarelaRound-Regular"),
+		url("./font/VarelaRound-Regular.eot") format("embedded-opentype"),
+		url("./font/VarelaRound-Regular.woff2") format("woff2"),
+		url("./font/VarelaRound-Regular.woff") format("woff"),
+		url("./font/VarelaRound-Regular.ttf") format("truetype"),
+		url("./font/VarelaRound-Regular.svg") format("svg");
+}

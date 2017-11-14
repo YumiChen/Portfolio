@@ -1,5 +1,9 @@
-function scroll(object){$('html,body').animate(
-    {scrollTop: object.top}, 500);
+import $ from "jquery";
+
+function scroll(dom){
+    const offset = $(dom).offset();
+    $('html,body').animate(
+    {scrollTop: offset.top}, 500);
 };
 
 module.exports = scroll;

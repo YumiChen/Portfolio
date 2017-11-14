@@ -22,8 +22,8 @@ class About_ extends Component{
          });
         return;
      }
-     const offset = el.offset();
-     scroll(offset);
+
+     scroll('.skills');
     }
     render(){
       let des = (this.props.lang=="EN")?about.EN:about.CH;

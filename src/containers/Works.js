@@ -26,15 +26,14 @@ class Works_ extends React.Component{
       );
     }
      next(event){  
-      const el =  document.querySelector('#otherWorks');
+      const el =  document.querySelector('.otherWorks');
       if(el.scrollIntoView){
         el.scrollIntoView({ 
           behavior: 'smooth' 
         });
         return;
       }
-      const offset = el.offset();
-      scroll(offset);
+      scroll('.otherWorks');
     }
     render(){
       let content = (this.props.lang=="EN")? content_EN:content_CH;

@@ -20,8 +20,8 @@ class Skill extends Component{
          });
         return;
      }
-     const offset = el.offset();
-     scroll(offset);
+
+     scroll('.works');
     }
     render(){
       return (

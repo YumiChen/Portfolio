@@ -18,8 +18,7 @@ class Top2 extends Component{
       });
       return;
     }
-      const offset = el.offset();
-      scroll(offset);
+      scroll('.about');
     }
     render(){
       return (

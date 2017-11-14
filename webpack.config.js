@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-var autoprefixer = require("autoprefixer");
+const autoprefixer = require("autoprefixer");
 
 // including sass
 module.exports = [{
@@ -19,7 +19,7 @@ module.exports = [{
         use: ["babel-loader"], 
         exclude: /node_modules/,
         },
-      { test: /\.sass$/, 
+      { test: /\.sass/, 
         use: [
           'style-loader',
           'css-loader',
@@ -27,8 +27,18 @@ module.exports = [{
           ,'sass-loader'
         ], 
         exclude: /node_modules/ 
+      },
+      { test: /\.css$/, 
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+        // ,exclude: /node_modules/ 
       }
-      ,
+      ,{
+        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        use: [ 'file-loader?name=fonts/[name].[ext]' ]
+      },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: [

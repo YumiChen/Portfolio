@@ -16,8 +16,8 @@ class Contact extends Component{
         });
         return;
       }
-      const offset = el.offset();
-      scroll(offset);
+
+      scroll('#copyright');
     }
     render(){
       return (
