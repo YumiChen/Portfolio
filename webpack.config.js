@@ -4,10 +4,13 @@ const autoprefixer = require("autoprefixer");
 
 // including sass
 module.exports = [{
-  entry: [
-    'eventsource-polyfill',
-    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
-    './src/index'],
+  entry: {
+    app:     
+      [
+        'eventsource-polyfill',
+        './src/index'
+      ]
+  },
   output: {
     path: path.join(__dirname, '/public'),
     publicPath: '/',
@@ -54,19 +57,18 @@ module.exports = [{
   },
   resolve: {
     extensions: ['.js','.sass', ".jsx"]
+  },
+  devServer: {
+    port: process.env.PORT || 5000,
+    host: "localhost",
+    contentBase: "./public",
+    historyApiFallback: true,
+    hot: true,
+    inline: true
   }
-  ,devServer: {
-  contentBase: './public',
-  hot: true
-}
-  ,plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.ProvidePlugin({
-      React: 'react',
-      ReactDOM:'react-dom'
-    }),
+  ,plugins:[
+    new webpack.NamedModulesPlugin(),
     new webpack.NoErrorsPlugin()
-    // new webpack.NoEmitOnErrorsPlugin()
   ]
 }];
 

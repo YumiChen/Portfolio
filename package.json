@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p"
   },
@@ -20,11 +22,8 @@
     "react": "^15.5.4",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.3",
-    "react-router-dom": "^4.2.0",
     "react-slick": "^0.14.7",
-    "react-transition-group": "^1.2.1",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
@@ -37,18 +36,16 @@
     "css-loader": "^0.28.4",
     "eventsource-polyfill": "^0.9.6",
     "file-loader": "^1.1.5",
+    "font-awesome-webpack": "^0.0.5-beta.2",
+    "less": "^2.7.3",
     "node-sass": "^4.6.0",
-    "postcss-assets": "^5.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-scss": "^1.0.2",
-    "postcss-sprites": "^4.2.1",
     "sass-loader": "^6.0.6",
-    "sprite-loader": "^0.3.7",
     "style-loader": "^0.18.2",
     "url-loader": "^0.6.2",
     "webpack": "^3.5.4",
-    "webpack-dev-middleware": "^1.12.0",
-    "webpack-hot-middleware": "^2.18.2"
+    "webpack-dev-server": "^2.9.4"
   },
   "browserslist": [
     "> 1%",

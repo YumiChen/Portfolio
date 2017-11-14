@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React,{Component} from "react";
 import {about} from "../assets/data/data";
 import {connect} from "react-redux";
 import scroll from "../functions/scroll";

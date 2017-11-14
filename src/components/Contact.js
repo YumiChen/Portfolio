@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React,{Component} from "react";
 import {links} from "../assets/data/data";
 import Contacts from "./Contacts";
 import scroll from "../functions/scroll";

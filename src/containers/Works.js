@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React,{Component} from "react";
 import {connect} from "react-redux";
 import Work from "../components/Work";
 import debounce from "../functions/debounce";

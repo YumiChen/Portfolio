@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React from "react";
 import {browserSuggestion, copyright} from "../assets/data/data";
 
 const Footer=()=>{

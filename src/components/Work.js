@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React from "react";
 import scroll from "../functions/scroll";
 
 const Work = (props)=>{

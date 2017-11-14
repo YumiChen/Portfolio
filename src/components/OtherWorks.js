@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React,{Component} from "react";
 import Slider from "react-slick";
 import debounce from "../functions/debounce";
 
