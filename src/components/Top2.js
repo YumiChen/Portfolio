@@ -10,14 +10,7 @@ class Top2 extends Component{
       this.state={title:""};
       this.next = this.next.bind(this);
     }
-    next(event){  
-    const el =  document.querySelector('.about');
-    if(el.scrollIntoView){
-      el.scrollIntoView({ 
-        behavior: 'smooth' 
-      });
-      return;
-    }
+    next(){  
       scroll('.about');
     }
     render(){

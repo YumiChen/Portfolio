@@ -2,7 +2,10 @@ module.exports = {
     parser: 'postcss-scss',
     plugins: {
     'autoprefixer':{},
-    'cssnano':{}
+    'cssnano':{},
+    'postcss-assets': {
+      loadPath: "images/"
+    }
     // 'postcss-sprites':{}
     }
   }

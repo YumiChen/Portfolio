@@ -9,20 +9,8 @@ class About_ extends Component{
     constructor(props){
       super(props);
       this.next = this.next.bind(this);
-      // this.state = {enter: false};
     }
-    componentDidMount(){
-      // this.setState({enter: false});
-    }
-   next(event){
-     const el =document.querySelector('.skills');
-     if(el.scrollIntoView){
-       el.scrollIntoView({ 
-         behavior: 'smooth' 
-         });
-        return;
-     }
-
+   next(){
      scroll('.skills');
     }
     render(){
@@ -43,8 +31,6 @@ class About_ extends Component{
         </div>);
     }
   }
-
-        // <div className="parallax"></div>
 
   const mapStateToProps_about=(state)=>{
     return {lang: state.lang};

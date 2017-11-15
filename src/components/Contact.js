@@ -9,14 +9,6 @@ class Contact extends Component{
       this.next = this.next.bind(this);
     }
      next(event){  
-      const el =  document.querySelector('#copyright');
-      if(el.scrollIntoView){
-        el.scrollIntoView({ 
-          behavior: 'smooth' 
-        });
-        return;
-      }
-
       scroll('#copyright');
     }
     render(){

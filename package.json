@@ -24,9 +24,11 @@
     "react-redux": "^5.0.3",
     "react-slick": "^0.14.7",
     "redux": "^3.6.0",
+    "sizzle": "^2.3.3",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "amd-define-factory-patcher-loader": "^1.0.0",
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
@@ -38,9 +40,11 @@
     "eventsource-polyfill": "^0.9.6",
     "file-loader": "^1.1.5",
     "font-awesome-webpack": "^0.0.5-beta.2",
+    "html-loader": "^0.5.1",
     "image-webpack-loader": "^3.4.2",
     "less": "^2.7.3",
     "node-sass": "^4.6.0",
+    "postcss-assets": "^5.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-scss": "^1.0.2",
     "postcss-sprites": "^4.2.1",

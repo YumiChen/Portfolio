@@ -1,7 +1,6 @@
 import React,{Component} from "react";
 import {skills} from "../assets/data/data";
 import scroll from "../functions/scroll";
-import tagCloud from "../functions/tagCloud";
 
 class Skill extends Component{
     constructor(props){

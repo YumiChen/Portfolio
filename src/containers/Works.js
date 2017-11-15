@@ -25,14 +25,7 @@ class Works_ extends React.Component{
       debounce(()=>{this.forceUpdate();},1000)
       );
     }
-     next(event){  
-      const el =  document.querySelector('.otherWorks');
-      if(el.scrollIntoView){
-        el.scrollIntoView({ 
-          behavior: 'smooth' 
-        });
-        return;
-      }
+    next(){  
       scroll('.otherWorks');
     }
     render(){

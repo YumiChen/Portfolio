@@ -46,9 +46,17 @@ module.exports = [{
             }
           }
         ]
-        // ,exclude: /node_modules/ 
-      }
-      ,
+      },
+      // {
+      //   test: /\.(html)$/,
+      //   use: {
+      //     loader: 'html-loader',
+      //     options: {
+      //       minimize: true
+      //     }
+      //   }
+      // }
+      // ,
       { test: /\.svg$/, loader: 'url-loader?limit=65000&mimetype=image/svg+xml&name=fonts/[name].[ext]' },
       { test: /\.woff$/, loader: 'url-loader?limit=65000&mimetype=application/font-woff&name=fonts/[name].[ext]' },
       { test: /\.woff2$/, loader: 'url-loader?limit=65000&mimetype=application/font-woff2&name=fonts/[name].[ext]' },
@@ -58,10 +66,7 @@ module.exports = [{
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: [
           {
-            loader: 'url-loader',
-            options: {
-              limit: 10000 /* 小於 10kB 的圖片轉成 base64 */
-            }
+            loader: 'url-loader?name=images/[name].[ext]'
           },
           {
             loader: 'image-webpack-loader',
@@ -73,6 +78,11 @@ module.exports = [{
             }
           }
         ]
+      }
+      ,
+      {
+        test: /jquery[\\\/]src[\\\/]selector\.js$/, 
+        loader: 'amd-define-factory-patcher-loader'
       }
     ]
   },
@@ -102,5 +112,5 @@ module.exports = [{
   ]
 }];
 
-var info = autoprefixer().info();
-console.log(info);
+// var info = autoprefixer().info();
+// console.log(info);
