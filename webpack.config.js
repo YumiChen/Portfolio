@@ -57,11 +57,11 @@ module.exports = [{
       //   }
       // }
       // ,
-      { test: /\.svg$/, loader: 'url-loader?limit=65000&mimetype=image/svg+xml&name=fonts/[name].[ext]' },
-      { test: /\.woff$/, loader: 'url-loader?limit=65000&mimetype=application/font-woff&name=fonts/[name].[ext]' },
-      { test: /\.woff2$/, loader: 'url-loader?limit=65000&mimetype=application/font-woff2&name=fonts/[name].[ext]' },
-      { test: /\.[ot]tf$/, loader: 'url-loader?limit=65000&mimetype=application/octet-stream&name=fonts/[name].[ext]' },
-      { test: /\.eot$/, loader: 'url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=fonts/[name].[ext]' },
+      { test: /\.svg$/, loader: 'url-loader?limit=8000&mimetype=image/svg+xml&name=fonts/[name].[ext]' },
+      { test: /\.woff$/, loader: 'url-loader?limit=8000&mimetype=application/font-woff&name=fonts/[name].[ext]' },
+      { test: /\.woff2$/, loader: 'url-loader?limit=8000&mimetype=application/font-woff2&name=fonts/[name].[ext]' },
+      { test: /\.[ot]tf$/, loader: 'url-loader?limit=8000&mimetype=application/octet-stream&name=fonts/[name].[ext]' },
+      { test: /\.eot$/, loader: 'url-loader?limit=8000&mimetype=application/vnd.ms-fontobject&name=fonts/[name].[ext]' },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: [
@@ -101,14 +101,14 @@ module.exports = [{
     new webpack.NamedModulesPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({ // <-- key to reducing React's size
-    'process.env': {
-      'NODE_ENV': JSON.stringify('production')
-    }
-  }),
-  new webpack.optimize.OccurrenceOrderPlugin(),
-  new webpack.optimize.DedupePlugin(), //dedupe similar code 
-  new webpack.optimize.UglifyJsPlugin(), //minify everything
-  new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.DedupePlugin(), //dedupe similar code 
+    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
   ]
 }];
 

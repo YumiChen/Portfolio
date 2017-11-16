@@ -40,7 +40,8 @@ class Works_ extends React.Component{
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        lazyLoad: true
       };
   
       return (

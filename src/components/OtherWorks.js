@@ -7,7 +7,6 @@ import {otherWorksDemoUrls, otherWorksGithubUrls, otherWorks_EN, otherWorks_CH} 
 class OtherWorks extends Component{
     constructor(props){
         super(props);
-        this.state = {index: null};
     }
     componentWillmount(){
         window.removeEventListener("resize",
@@ -21,37 +20,26 @@ class OtherWorks extends Component{
     }
     render(){
     const num = window.innerHeight > window.innerWidth?2:5,
-    settings1 = {
+    settings = {
         dots: false,
         infinite: false,
         speed: 500,
         slidesToShow: num,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        lazyLoad: true
       }, 
-      settings2 = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      },
       works = otherWorksDemoUrls.map((work,index)=>{
         return (<div key={index}><div className="otherWork" onClick={()=>{location.href = work;}}></div></div>);
-      }),
-      details = this.state.index?otherWorksDemoUrls.map((work,index)=>{
-        return (<div key={index}><div className="otherWork" onClick={()=>{}}></div></div>);
-      }):null;
+      });
+
      return (
         <div className="otherWorksContainer">
             <p className="subTitle">Other Works</p>
             <div id="otherWorks" className="otherWorks">
-            <Slider {...settings1}>
+            <Slider {...settings}>
                 {works}
             </Slider>
             </div>
-            {this.state.index?<Slider {...settings2}>
-                {details}
-            </Slider>:null}
        </div>    
     );
     }
