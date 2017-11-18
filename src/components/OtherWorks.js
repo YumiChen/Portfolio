@@ -25,8 +25,7 @@ class OtherWorks extends Component{
         infinite: false,
         speed: 500,
         slidesToShow: num,
-        slidesToScroll: 1,
-        lazyLoad: true
+        slidesToScroll: 1
       }, 
       works = otherWorksDemoUrls.map((work,index)=>{
         return (<div key={index}><div className="otherWork" onClick={()=>{location.href = work;}}></div></div>);
