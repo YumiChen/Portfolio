@@ -46,23 +46,25 @@
   
 .swipeHint1
   @extend %center
-  top: 40%
-  cursor: pointer
+  width: 100vw
+  height: 100vh
   z-index: 6
-  width: 40vw
-  height: 40vw
-  border-radius: 10em
-  padding: 2em
-  background-color: rgba(0,0,0,.6)
-  & div
+  & .swipeHintContainer
     @extend %center
+    top: 40%
+    cursor: pointer
+    width: 40vw
+    height: 40vw
+    border-radius: 10em
+    padding: 2em
+    background-color: rgba(0,0,0,.6)
   & i:nth-child(1)
-    font-size: 4em
+    font-size: 4.5em
   & i:nth-child(2)
-    font-size: 2em
+    font-size: 2.5em
   & p
     font-size: 2.3em
-
+    margin: .5em
 
 @mixin changeBg($arr,$index)
   $i: 100 / length($arr)
@@ -106,7 +108,9 @@
       bottom: -0.2em
     & .slick-slider
       & .slick-prev, .slick-next
-        opacity: 0
+        // opacity: 0
+        &::before
+          color: orange
     & .work
       padding: 0.7em 1.5em
       & p:nth-child(5)

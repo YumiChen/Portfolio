@@ -7,7 +7,7 @@ const data = {
 CH:"我是Yumi，喜歡前端工程及繪圖。\n透過學校課程與自學開始學習網頁前端，而後陸續接觸了手機程式及後端。\n對日新月異的前端科技感到驚艷，吸收新知識和解決問題時覺得特別有成就感。\n其中對透過程式展現的視覺效果特別有興趣。\n希望能在前端工程繼續精進之時，同時能讓自己有更多成長。"
     },
     demoUrls: [
-    "https://yumichen.github.io/Rhythm-Game/",
+    "https://yumichen.github.io/Rhythm-Game/index.html",
     "https://yumichen.github.io/CMS-UI-Generator/public/index.html" ,  
     "https://yumichen.github.io/BookShelf/public/index.html#/",
     "https://yumichen.github.io/Website/public/index.html"
@@ -28,6 +28,8 @@ CH:"我是Yumi，喜歡前端工程及繪圖。\n透過學校課程與自學開�
         {title:"BookShelf 書架",description:"記錄自己閱讀過的書籍並透過搜尋發現新書籍的網站，包含Infinite Loading及編輯功能，串接Google Books API撰寫而成，使用Firebase做為後端儲存會員資料及會員系統。",tags:["React.js","Redux.js","Firebase","RWD"]},
         {title:"插畫作品集網站",description:"插畫作品集網站及版型設計，將重點著重在展現插畫構圖及其自身的張力，力求簡潔俐落，使用node.js將訊息傳送自信箱及Heroku雲端服務佈署。",tags:["React.js","React-slick","node.js","express","SASS","RWD"]}
       ],
+      swipeHint_CH: "滑動",
+      swipeHint_EN: "Swipe",
       otherWorks_EN: [
                {title:"React Calculator",description:"Calculator built with React.js. Offering random color chips whenever numbers are inputted. Inspired by the frequent need of color palette inspiration.",tags:["React.js","RWD"]},
                {title:"Shopping Cart UI",description:"UI design for shopping cart and credit card checkout. Developed with Vue.js. Intented to bring a different experience when browsing products.",tags:["Vue.js","slick.js","jQuery","RWD"]},
