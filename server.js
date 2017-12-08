@@ -1,6 +1,7 @@
 var express = require('express');
 var BodyParser = require( 'body-parser' );
 var router = require('./routes.js');
+var compression = require("./compression");
 
 // App setup
 var app = express(),
@@ -8,6 +9,9 @@ var app = express(),
 var server = app.listen(port, function(){
     console.log('listening for requests on port ' + port);
 });
+
+// compression
+app.use(compression());
 
 // Static files
 app.use(express.static('public'));

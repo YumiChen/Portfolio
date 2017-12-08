@@ -16,6 +16,7 @@
   },
   "homepage": "",
   "dependencies": {
+    "compression": "^1.7.1",
     "express": "^4.15.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",

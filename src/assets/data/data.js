@@ -7,11 +7,13 @@ const data = {
 CH:"我是Yumi，喜歡前端工程及繪圖。\n透過學校課程與自學開始學習網頁前端，而後陸續接觸了手機程式及後端。\n對日新月異的前端科技感到驚艷，吸收新知識和解決問題時覺得特別有成就感。\n其中對透過程式展現的視覺效果特別有興趣。\n希望能在前端工程繼續精進之時，同時能讓自己有更多成長。"
     },
     demoUrls: [
+    "https://chatchatiscool.herokuapp.com/",
     "https://yumichen.github.io/Rhythm-Game/index.html",
     "https://yumichen.github.io/CMS-UI-Generator/public/index.html" ,  
     "https://yumichen.github.io/BookShelf/public/index.html#/",
     "https://yumichen.github.io/Website/public/index.html"
   ],githubUrls:[
+    "https://github.com/YumiChen/ChatChat",
     "https://github.com/YumiChen/Rhythm-Game",
     "https://github.com/YumiChen/CMS-UI-Generator",
     "https://github.com/YumiChen/BookShelf",
@@ -23,10 +25,11 @@ CH:"我是Yumi，喜歡前端工程及繪圖。\n透過學校課程與自學開�
         {title:"BookShelf",description:"Web application for recording read books and explore new favorites. Built with Google Books API.",tags:["React.js","Redux.js","Firebase","RWD"]},
         {title:"Art portfolio website",description:"Theme designed for illustration portfolios. Including features like sidebars and lightbox.",tags:["React.js","React-slick","node.js","express","SASS","RWD"]}
       ],  content_CH:[
-        {title:"實時節奏遊戲",description:"結合實時音樂視覺化的節奏遊戲，使用了web audio API及three.js等一直想嘗試的技術，背景動畫及譜面由電腦運算產生，有調節音量、計分及暫停等功能，建議使用現代瀏覽器搭配節奏感強的音樂遊玩。",tags:["vanilla Javascript","web audio API","THREE.js"]},
-        {title:"資料庫管理系統",description:"物流系統資料庫的內容管理網站。此物流系統為多人合作的專案，提供商品盤點、庫存查詢及報表圖表生成功能。自身負責資料庫設計、前端Android部分功能，後端API及說明文件撰寫，後端程式使用Java Spring。於完成後將版型與資料分離製成模板，只需定義資料即可產生新的網站(模板放置於Github)",tags:["React.js","Redux.js","Java","Spring","MyBatis","RWD"]},
-        {title:"BookShelf 書架",description:"記錄自己閱讀過的書籍並透過搜尋發現新書籍的網站，包含Infinite Loading及編輯功能，串接Google Books API撰寫而成，使用Firebase做為後端儲存會員資料及會員系統。",tags:["React.js","Redux.js","Firebase","RWD"]},
-        {title:"插畫作品集網站",description:"插畫作品集網站及版型設計，將重點著重在展現插畫構圖及其自身的張力，力求簡潔俐落，使用node.js將訊息傳送自信箱及Heroku雲端服務佈署。",tags:["React.js","React-slick","node.js","express","SASS","RWD"]}
+        {title:"ChatChat線上聊天室",description:"● 網頁線上聊天室(含會員系統,信箱驗證)\r\n● 可透過邀請碼或用ID搜尋其他會員的方式加入聊天室, 使用文字，表符或顏文字交流\r\n● 顏文字資料使用爬蟲取得( cheerio.js, request, fs)\r\n● 安全性: 會員密碼加密, 使用JWT及passport確保每次請求的安全性",tags:["react.js","redux.js","socket.io","Material UI","node.js","mongoDB","SASS","autoprefixer","Heroku"]},
+        {title:"實時節奏遊戲",description:"● 結合實時音樂視覺化的節奏遊戲\r\n● 背景3d動畫及譜面由電腦即時運算產生，有調節音量、計分及暫停等功能\r\n● 讓使用者可以用自己喜歡的音樂遊玩音樂遊戲",tags:["vanilla Javascript","web audio API","THREE.js"]},
+        {title:"資料庫管理系統",description:"● 物流系統資料庫的後台網站\r\n● 為多人合作的專案，提供商品盤點、庫存查詢及報表圖表生成功能\r\n● 自身負責資料庫設計、前端Android部分功能，後端API及說明文件撰寫\r\n● 完成後將版型與資料分離製成為新的模板，只需定義資料即可產生新的網站(模板放置於Github)",tags:["React.js","Redux.js","Java","Spring","MyBatis","RWD"]},
+        {title:"BookShelf 書架",description:"● 記錄使用者閱讀過的書籍並搜尋新書籍的網站\r\n● 包含Infinite Loading及編輯功能，串接Google Books API撰寫而成，使用Firebase做為後端儲存會員資料及會員系統。",tags:["React.js","Redux.js","Firebase","RWD"]},
+        {title:"插畫作品集網站",description:"● 插畫作品集網站,將重點著重在展現插畫構圖及其自身的張力,力求簡潔俐落\r\n● 使用node.js撰寫email server傳送信件,及Heroku雲端服務佈署。",tags:["React.js","React-slick","node.js","express","SASS","RWD"]}
       ],
       swipeHint_CH: "滑動",
       swipeHint_EN: "Swipe",
@@ -74,7 +77,7 @@ CH:"我是Yumi，喜歡前端工程及繪圖。\n透過學校課程與自學開�
         copyright: "Copyright © 2017 Yumi Chen",
         skills: {
           frontEnd:"React.js,\r\nRedux.js,\r\nSASS,\r\nUI/UX",
-          backEnd: "Spring,\r\nMyBatis,\r\nExpress,\r\n MYSQL,\r\nFirebase,\r\nSQL",
+          backEnd: "node.js, \r\nSpring,\r\nMyBatis,\r\nExpress,\r\n MYSQL,\r\nFirebase,\r\nSQL",
           devTool: "Webpack,\r\nBabel,\r\nyarn,\r\nGit,\r\nSVN"
         }
     };
