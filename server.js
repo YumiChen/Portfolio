@@ -1,7 +1,7 @@
 var express = require('express');
 var BodyParser = require( 'body-parser' );
 var router = require('./routes.js');
-var compression = require("./compression");
+var compression = require("compression");
 
 // App setup
 var app = express(),
