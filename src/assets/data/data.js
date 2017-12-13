@@ -1,15 +1,15 @@
 // about, demoUrls, githubUrls, content_EN, content_CH, links
 
 const data = {
-    title_main: "Yumi Chen", title_sub: "Front-End Developer",
+    title_main: "Yumi Chen", title_sub: "Web Developer",
     about: {
         EN:"My name's Yumi Chen. I'm a front-end developer and illustrator based in Taiwan. I love learning new things for it makes it possible to know more about the world and see the different side of it. The beauty and possibilities of programming  are also my favorites.",
-CH:"我是Yumi, 畢業於國立政治大學數位內容與日文系, 於在學期間透過學校課程與自學學習了React.js, SASS等當代前端技術, 並利用前端技術實作了網頁實時視覺化音樂遊戲及線上聊天室, 書籍查詢網站等作品。\r\n由於自身外語學院與數位內容的相關背景, 吸收一手資訊與查閱文件沒有障礙, \r\n對於吸收新知與自行解決問題有信心, 也對嘗試新的解決方案有興趣。\r\n畢業後於職訓局學習了後端程式(Java)與手機程式撰寫, 於結案專案時負責了後台網站, 近百後端API, API說明文件及資料庫設計。\r\n由於自身的興趣對於設計也有所涉略, 願意為改善使用者體驗與網站美感付出心力,\r\n期望未來能與公司的同僚一同開發出不僅友善好用且易於維護的產品。"
+CH:"我是Yumi, 於大學透過學校課程與自學學習了當代前端技術, 並利用前端技術實作了實時視覺化音樂遊戲等作品。\r\n由於自身的背景, 吸收一手資訊與技術沒有障礙,對於吸收新知與自行解決問題有信心, 也對嘗試新的解決方案有興趣。\r\n畢業後於職訓局學習後端(Java)與手機程式撰寫, 於結訓專案負責後台網站, 近百後端API, 說明文件及資料庫設計。\r\n由於對設計也有所涉略, 願意為改善使用者體驗與產品美感付出心力,\r\n期望未來能與同僚一同開發不僅友善好用且易於維護的產品。"
     },
     demoUrls: [
     "https://chatchatiscool.herokuapp.com/",
     "https://yumichen.github.io/Rhythm-Game/index.html",
-    "https://yumichen.github.io/CMS-UI-Generator/public/index.html" ,  
+    "http://35.189.183.246/POS/login.do" ,  
     "https://yumichen.github.io/BookShelf/public/index.html#/",
     "https://yumichen.github.io/Website/public/index.html"
   ],githubUrls:[
