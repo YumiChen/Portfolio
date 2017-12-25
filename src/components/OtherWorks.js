@@ -33,11 +33,13 @@ class OtherWorks extends Component{
 
      return (
         <div className="otherWorksContainer">
-            <p className="subTitle">Other Works</p>
-            <div id="otherWorks" className="otherWorks">
-            <Slider {...settings}>
-                {works}
-            </Slider>
+            <div className="otherWorksContent">
+                <p className="subTitle">Other Works</p>
+                <div id="otherWorks" className="otherWorks">
+                <Slider {...settings}>
+                    {works}
+                </Slider>
+                </div>
             </div>
        </div>    
     );

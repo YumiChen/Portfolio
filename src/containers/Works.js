@@ -26,7 +26,7 @@ class Works_ extends React.Component{
       );
     }
     next(){  
-      scroll('.otherWorks');
+      scroll('.otherWorksContainer');
     }
     render(){
       const content = (this.props.lang=="EN")? content_EN:content_CH,
