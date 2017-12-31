@@ -5320,9 +5320,9 @@ react-redux@^5.0.3:
     loose-envify "^1.1.0"
     prop-types "^15.5.10"
 
-react-slick@^0.14.7:
-  version "0.14.11"
-  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.14.11.tgz#c2cbdbe3728c66a2ff4929be96d457e3ea0d80f3"
+react-slick@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.16.0.tgz#27385fb88503d208be081d37267ddec961209a7b"
   dependencies:
     can-use-dom "^0.1.0"
     classnames "^2.2.5"

@@ -38,8 +38,8 @@ class Works_ extends React.Component{
       }
       const settings = {
         dots: false,
-        infinite: true,
         speed: 500,
+        infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1
       };
