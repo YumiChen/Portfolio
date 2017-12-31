@@ -82,7 +82,7 @@ CH:"我是Yumi, 於大學透過學校課程與自學學習了當代前端技術,
         copyright: "Copyright © 2017 Yumi Chen",
         skills: {
           frontEnd:"React.js,\r\nRedux.js,\r\nSASS,\r\nUI/UX",
-          backEnd: "node.js, \r\nSpring,\r\nMyBatis,\r\nExpress,\r\n MYSQL,\r\nFirebase,\r\nSQL",
+          backEnd: "Express,\r\nSpring,\r\nMyBatis,\r\n MYSQL,\r\nFirebase",
           devTool: "Webpack,\r\nBabel,\r\nyarn,\r\nGit,\r\nSVN"
         }
     };

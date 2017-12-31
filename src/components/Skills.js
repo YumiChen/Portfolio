@@ -12,14 +12,6 @@ class Skill extends Component{
       // tagCloud("#tagCloud");
     }
    next(event){
-     const el =document.querySelector('.works');
-     if(el.scrollIntoView){
-       el.scrollIntoView({ 
-         behavior: 'smooth' 
-         });
-        return;
-     }
-
      scroll('.works');
     }
     render(){

@@ -4,7 +4,6 @@
     @extend %center
     font-size: 1.35em
     width: 100%
-    animation: enter 1.5s 1 both
   & .main
     font-family: $mainFont
     font-size: 4em
@@ -28,9 +27,8 @@
   .top2
     height: 90vh
     & .title
+      top: 45%
       font-size: 1em
       & .sub
         +underline(70vw)
-    & .next
-      bottom: 2em
   +stretchAnimation(70vw)

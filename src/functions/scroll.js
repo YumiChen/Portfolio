@@ -5,7 +5,7 @@ require('jquery/src/css');
 require('jquery/src/offset');
 
 function scroll(dom){
-    $('body').animate({scrollTop: $('body').scrollTop() + $(dom).offset().top}, 500);
+    $('html').animate({scrollTop: $(dom).offset().top}, 1000);
 };
 
 module.exports = scroll;

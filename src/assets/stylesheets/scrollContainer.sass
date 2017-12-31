@@ -1,0 +1,14 @@
+.scollContainer
+  opacity: 0
+
+.scrollIn
+  transition: 2s
+  opacity: 1
+  & .container
+    animation: float 1.5s 1 both
+
+@keyframes float
+  0%
+    transform: translateY(10%)
+  100%
+    transform: translateY(0)

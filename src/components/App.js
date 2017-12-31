@@ -10,32 +10,31 @@ import Works from "../containers/Works";
 import OtherWorks from "../components/OtherWorks";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import ScrollContainer from "./ScrollContainer";
 
 const store = createStore(rootReducer);
 
 class App extends Component{
-constructor(props){
-super(props);
+  constructor(props){
+  super(props);
+  }
+  render(){
+  return (
+  <Provider store={store}>
+    <div>
+      <Trans/>
+      <ScrollContainer comp={<Top2/>}></ScrollContainer>
+      <ScrollContainer comp={<About/>}></ScrollContainer>
+      <ScrollContainer comp={<Skills/>}></ScrollContainer>
+      <ScrollContainer comp={<Works/>}></ScrollContainer>
+      <ScrollContainer comp={<OtherWorks/>}></ScrollContainer>
+      <ScrollContainer comp={<Contact/>}></ScrollContainer>
+      <ScrollContainer comp={<Footer/>}></ScrollContainer>
+      <div className="BG"></div>
+    </div>
+    </Provider>
+  );
+  }
 }
-render(){
-return (
-<Provider store={store}>
-<div>
-       <Trans/>
-       <Top2/>
-  <About/>
-  <Skills/>
-  <Works/>
-  <OtherWorks/>
-  <Contact/>
-       <Footer/>
-      <div className="BG"></div>
-       </div>
-  </Provider>
-);
-}
-}
-
-<About/>
 
 module.exports = App;

@@ -80,7 +80,7 @@ module.exports = [{
     extensions: ['.js','.sass', ".jsx"]
   },
   devServer: {
-    port: process.env.PORT || 5000,
+    port: process.env.PORT || 8000,
     host: "localhost",
     contentBase: "./public",
     historyApiFallback: true,
