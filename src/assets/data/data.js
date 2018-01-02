@@ -56,6 +56,7 @@ CH:"我是Yumi, 於大學透過學校課程與自學學習了當代前端技術,
                {title:"繽紛色彩",description:"運用Canvas及簡單的物理所產生的作品，試圖運用網頁及簡單的數學創造出特別的視覺效果",tags:["canvas"]}
       ],
       otherWorksDemoUrls: [
+        "https://yumichen.github.io/Bubbles/",
         "https://yumichen.github.io/React-calculator/",
         "https://yumichen.github.io/Shopping-Cart-UI/",
         "https://yumichen.github.io/Gallery-UI/",
@@ -65,6 +66,7 @@ CH:"我是Yumi, 於大學透過學校課程與自學學習了當代前端技術,
         "https://yumichen.github.io/Glowing-Colors/"
       ], 
       otherWorksGithubUrls: [
+        "https://github.com/YumiChen/Bubbles",
         "https://github.com/YumiChen/React-calculator",
         "https://github.com/YumiChen/Shopping-Cart-UI",
         "https://github.com/YumiChen/Gallery-UI",
