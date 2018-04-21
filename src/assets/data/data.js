@@ -10,7 +10,7 @@ CH:"我是Yumi, 於大學透過學校課程與自學學習了當代前端技術,
     "",
     "https://chatchatiscool.herokuapp.com/",
     "https://yumichen.github.io/Rhythm-Game/index.html",
-    "http://35.189.183.246/POS/login.do" ,  
+    "https://yumichen.github.io/CMS-UI-Generator/public/index.html#" ,  
     "https://yumichen.github.io/BookShelf/public/index.html#/",
     "https://yumichen.github.io/Website/public/index.html"
   ],githubUrls:[
@@ -22,10 +22,10 @@ CH:"我是Yumi, 於大學透過學校課程與自學學習了當代前端技術,
     "https://github.com/YumiChen/Website"
   ],
       content_EN:[
-        {title:"Wat Po Service Reservation System",description:"● Project codeveloped with friend. I'm responsible for front-end developing and site design.\r\n● Content including lanpage, reservation form, calender, multiple locales, option modification based on user input, and automatic room distribution\r\n● 3 layouts for RWD (desktop, pad, mobile)",tags:["react.js","redux.js","react-i18n","react-router","react-bootstrap"]},
-        {title:"ChatChat Online Chatroom",description:"Online chatroom system with membership management system, with which user can chat with others thru inviting others with invitaion code or by searching user ID. Data of Kaomoji was crawled with cheerio.js and request.js. JWT and password encryption are used in this project.",tags:["react.js","socket.io","Material UI","node.js","mongoDB","autoprefixer"]},
-        {title:"Rhythm Game",description:"Rhythm game with real-time music visualization, and customizable music selection. Including features like pause, set volume and calculating scores.Modern browsers and strong beat music are highly suggested for this game.",tags:["vanilla Javascript","web audio API","THREE.js"]},
-        {title:"CMS System",description:"CMS for POS system, features dynamically rendered UI according to ajax data. Saves the trouble of adjusting UI to database schema changes.",tags:["React.js","Redux.js","Spring","MyBatis","RWD"]},
+        {title:"Wat Po Service Reservation System",description:"● Project codeveloped with friend. I'm responsible for front-end developing and site design.\r\n● Content including lanpage, reservation form, calender, multiple locales, \r\noption modification based on user input, and automatic room distribution\r\n● 3 layouts for RWD (desktop, pad, mobile)",tags:["react.js","redux.js","react-i18n","react-router","react-bootstrap"]},
+        {title:"ChatChat Online Chatroom",description:"Online chatroom system with membership management system, \r\nwith which user can chat with others thru inviting others with invitaion code or by searching user ID. \r\nData of Kaomoji was crawled with cheerio.js and request.js. \r\nJWT and password encryption are used in this project.",tags:["react.js","socket.io","Material UI","node.js","mongoDB","autoprefixer"]},
+        {title:"Rhythm Game",description:"Rhythm game with real-time music visualization, and customizable music selection. \r\nIncluding features like pause, set volume and calculating scores.\r\nModern browsers and strong beat music are highly suggested for this game.",tags:["vanilla Javascript","web audio API","THREE.js"]},
+        {title:"CMS System",description:"CMS for POS system, features dynamically rendered UI according to ajax data. \r\nSaves the trouble of adjusting UI to database schema changes.",tags:["React.js","Redux.js","Spring","MyBatis","RWD"]},
         {title:"BookShelf",description:"Web application for recording read books and explore new favorites. Built with Google Books API.",tags:["React.js","Redux.js","Firebase","RWD"]},
         {title:"Art Portfolio Website",description:"Theme designed for illustration portfolios. Including features like sidebars and lightbox.",tags:["React.js","React-slick","node.js","express","SASS","RWD"]}
       ],  content_CH:[
