@@ -25,7 +25,7 @@ class About_ extends Component{
               <a 
                 className="resume"
                 target = "_blank"
-                href="https://yumichen.github.io/Resume/index.html">Resume / 履歷表</a>
+                href="https://yumichen.gitlab.io/Resume_R/">Resume / 履歷表</a>
               <Contacts/>
             </div>
           
