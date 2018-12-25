@@ -8,7 +8,8 @@ CH:"我是Yumi, 現為任職於科技公司的前端工程師，具開發大型�
     },
     demoUrls: [
     "https://play.google.com/store/apps/details?id=com.stevia_network.watpo",
-    "https://chatchatiscool.herokuapp.com/",
+    // "https://chatchatiscool.herokuapp.com/",
+    "",
     "https://yumichen.github.io/Rhythm-Game/index.html",
     "https://yumichen.github.io/CMS-UI-Generator/public/index.html#" ,  
     "https://yumichen.github.io/BookShelf/public/index.html#/",

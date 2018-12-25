@@ -22,10 +22,10 @@ class About_ extends Component{
           <p className="subTitle">Hello!</p>
             <div className="context">
               <p>{des}</p>
-              <a 
+              {/* <a 
                 className="resume"
                 target = "_blank"
-                href="https://yumichen.gitlab.io/Resume_R/">Resume / 履歷表</a>
+                href="https://yumichen.gitlab.io/Resume_R/">Resume / 履歷表</a> */}
               <Contacts/>
             </div>
           
