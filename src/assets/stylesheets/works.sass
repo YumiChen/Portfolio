@@ -88,7 +88,7 @@ $imgLen: length($imgs) * 2
   $ani: $l % $len
   @if $ani == 0
     $ani: $len
-  .slick-slide:nth-child(#{$l + 1})
+  .slick-slide:nth-child(#{$l})
     & .img
       animation: ani#{$ani} 8s infinite forwards
 

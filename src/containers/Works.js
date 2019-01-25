@@ -39,7 +39,7 @@ class Works_ extends React.Component{
       const settings = {
         dots: false,
         speed: 500,
-        infinite: true,
+        infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1
       };
