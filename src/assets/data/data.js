@@ -64,7 +64,7 @@ CH:"我是Yumi, 現為任職於科技公司的前端工程師，具開發大型�
       otherWorksDemoUrls: [
         "https://yumichen.github.io/Bubbles/",
         "https://yumichen.github.io/React-calculator/",
-        "https://yumichen.github.io/Shopping-Cart-UI/",
+        "https://codepen.io/Yumichen/pen/vxzbbG",
         "https://yumichen.github.io/Gallery-UI/",
         "https://yumichen.github.io/TicTacToe/",
         "https://yumichen.github.io/Sign-up-UI/",
