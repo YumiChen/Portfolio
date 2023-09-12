@@ -1,0 +1,42 @@
+{
+  "name": "portfolio_v2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm run tailwind:dev\" \"next dev\"",
+    "tailwind:dev": "pnpm run tailwind:build --watch",
+    "build": "pnpm run tailwind:build && next build",
+    "tailwind:build": "npx tailwindcss -i ./src/app/globals.css -o ./public/output.css",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "pnpm run build && git subtree push --prefix dist origin gh-pages"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@types/node": "20.4.6",
+    "@types/react": "18.2.18",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "next": "13.4.12",
+    "nvm": "^0.0.4",
+    "postcss": "8.4.27",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "swiper": "^10.2.0",
+    "three": "^0.155.0",
+    "typescript": "5.1.6"
+  },
+  "packageManager": "pnpm@7.11.0",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-preset-env": "^9.1.1",
+    "tailwindcss": "^3.3.3"
+  }
+}
