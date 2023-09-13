@@ -9,7 +9,8 @@
     "tailwind:build": "npx tailwindcss -i ./src/app/globals.css -o ./public/output.css",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "pnpm run build && git subtree push --prefix dist origin gh-pages"
+    "deploy": "pnpm run build && pnpm run deploy-to-git",
+    "deploy-to-git": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
