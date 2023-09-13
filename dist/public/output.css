@@ -907,9 +907,9 @@ video {
   padding-right: 0.5rem;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-7 {
@@ -1124,6 +1124,10 @@ video {
 @media (min-width: 768px) {
   .md\:right-8 {
     right: 2rem;
+  }
+
+  .md\:top-1\/2 {
+    top: 50%;
   }
 
   .md\:top-28 {
