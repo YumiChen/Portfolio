@@ -2,8 +2,11 @@
 import { useCallback, useRef, useState } from "react";
 import SocialMedias from '@/components/SocialMedias';
 import { FontAwesomeIcon } from "../../node_modules/@fortawesome/react-fontawesome/index";
-import { faBars, faCircleXmark, faRectangleXmark, faX } from "../../node_modules/@fortawesome/free-solid-svg-icons/index";
+import { faBars, faCircleXmark } from "../../node_modules/@fortawesome/free-solid-svg-icons/index";
 import { Comp } from "@/app/types";
+import Image from 'next/image';
+import backgroundImage from '../../public/Momo01.jpg';
+import NavButtonImage from '../../public/rainbow.svg';
 
 interface NavProps {
   comps: Comp[];
@@ -28,9 +31,9 @@ const Nav = ({comps, displayIndex, setDisplayIndex}: NavProps) =>{
       <div className={`${showNav? "pointer-events-auto nav-in" : "pointer-events-none"}
             ${isNavOut.current? "nav-out" : ""}
             fixed top-0 left-0 h-screen text-5xl text-serif z-40
-            overflow-hidden bg-amber-200 bg-center bg-cover bg-blend-overlay
+            overflow-hidden bg-amber-300 bg-center bg-cover bg-blend-overlay
           `} style={{
-            backgroundImage: "url(/Momo01.jpg)"
+            backgroundImage: `url(${backgroundImage.src}`
           }}
       >
           <ul className="absolute top-24 md:top-28 left-[15vw] flex flex-col space-x-1 space-y-3 whitespace-no wrap">
@@ -42,7 +45,7 @@ const Nav = ({comps, displayIndex, setDisplayIndex}: NavProps) =>{
           </button>
       </div>
       <button className="fixed top-0 left-0 w-16 z-[60]">
-        <img src="/rainbow.svg" className="absolute -top-10 -left-10 transform rotate-[125deg] scale-[4] -z-10 pointer-events-none"></img>
+        <Image src={NavButtonImage} alt="nav button image" className="absolute -top-10 -left-10 transform rotate-[125deg] scale-[4] -z-10 pointer-events-none"></Image>
         <a onClick={toggleNav}><FontAwesomeIcon icon={faBars} className="absolute top-0 left-0 p-3 text-4xl hover:text-yellow-200" /></a>
       </button>
       <div className={`fixed bottom-0 right-0 p-8 text-4xl hidden md:block md:transition-opacity md:ease-in-out md:delay-900 md:duration-1000 z-30

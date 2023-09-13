@@ -1,3 +1,11 @@
+import Image from 'next/image';
+import LINE001Image from '../../public/line001.jpg';
+import LINE002Image from '../../public/line002.jpg';
+import LINE003Image from '../../public/line003.jpg';
+import MB001Image from '../../public/mb001.jpg';
+import MB002Image from '../../public/mb002.jpg';
+import MB003Image from '../../public/mb003.jpg';
+
 const Experiences = () =>{
     return (<section>
       {/* <h2 className="w-[70vw] mx-auto  flag text-center my-5 text-3xl font-amaticSC">Experiences</h2> */}
@@ -14,13 +22,13 @@ const Experiences = () =>{
         <div className="flex flex-col lg:flex-row-reverse items-start">
           <swiper-container pagination={true} autoplay={true} class="w-full lg:w-1/2" loop={true} space-between="10">
             <swiper-slide>
-              <img src="/line001.jpg" alt="LINE Today" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+              <Image src={LINE001Image} alt="LINE Today" width={500} height={400} className="my-10 mx-auto lg:ml-auto lg:mr-0" />
             </swiper-slide>
             <swiper-slide>
-              <img src="/line002.jpg" alt="LINE article" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+              <Image src={LINE002Image} alt="LINE article" width={500} height={400} className="my-10 mx-auto lg:ml-auto lg:mr-0" />
             </swiper-slide>
             <swiper-slide>
-              <img src="/line003.jpg" alt="LINE event" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+              <Image src={LINE003Image} alt="LINE event" width={500} height={400} className="my-10 mx-auto lg:ml-auto lg:mr-0" />
             </swiper-slide>    
           </swiper-container>
           <ul className="text-2xl md:text-3xl lg:pr-1">
@@ -53,7 +61,6 @@ const Experiences = () =>{
           <h4 className="text-lg">2019 May - 2020 Sep.</h4>
         </div>
         <div className="flex flex-col items-start lg:flex-row-reverse">
-          {/* <img src="https://fakeimg.pl/500x400/" className="my-5" /> */}
           <ul className="text-2xl md:text-3xl">
             <li>
               <h5 className="text-yellow-200 font-bold mt-5">International Communication</h5>
@@ -77,13 +84,13 @@ const Experiences = () =>{
         <div className="flex flex-col lg:flex-row-reverse items-start">          
           <swiper-container pagination={true} autoplay={true} class="w-full lg:w-1/2" loop={true} space-between="10">
             <swiper-slide>
-              <img src="/mb001.jpg" alt="Music Bravo home page" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+              <Image src={MB001Image} width={500} height={400} alt="Music Bravo home page" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
             </swiper-slide>
             <swiper-slide>
-              <img src="/mb002.jpg" alt="Payment integration" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+              <Image src={MB002Image} width={500} height={400} alt="Payment integration" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
             </swiper-slide>
             <swiper-slide>
-              <img src="/mb003.jpg" alt="Campaign page" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+              <Image src={MB003Image} width={500} height={400} alt="Campaign page" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
             </swiper-slide>    
           </swiper-container>
           <ul className="text-2xl md:text-3xl lg:pr-1">

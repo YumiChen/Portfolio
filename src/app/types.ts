@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image';
 import { SwiperOptions } from 'swiper/types';
 
 declare global {
@@ -26,7 +27,7 @@ export interface Content {
     demoUrl: string;
     githubUrl: string;
     images: {
-      src: string;
+      src: StaticImageData;
       alt: string;
     }[];
     description: string;
