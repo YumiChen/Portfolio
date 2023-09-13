@@ -7,7 +7,6 @@ import { Comp } from "@/app/types";
 import Image from 'next/image';
 import backgroundImage from '../../public/Momo01.jpg';
 import NavButtonImage from '../../public/rainbow.svg';
-import imageLoader from '@/utils/imageLoader.js';
 interface NavProps {
   comps: Comp[];
   displayIndex: number;
@@ -30,11 +29,9 @@ const Nav = ({comps, displayIndex, setDisplayIndex}: NavProps) =>{
     return (<nav className="z-40 font-lobster text-white">
       <div className={`${showNav? "pointer-events-auto nav-in" : "pointer-events-none"}
             ${isNavOut.current? "nav-out" : ""}
-            fixed top-0 left-0 h-screen text-5xl text-serif z-40
-            overflow-hidden bg-amber-300 bg-center bg-cover bg-blend-overlay
-          `} style={{
-            backgroundImage: `url(${imageLoader(backgroundImage)}`
-          }}
+            fixed top-0 left-0 opacity-0 w-0 -ml-[100%] h-[100dvh] text-5xl text-serif z-40
+            overflow-hiddn bg-amber-300
+          `}
       >
           <ul className="absolute top-24 md:top-28 left-[15vw] flex flex-col space-x-1 space-y-3 whitespace-no wrap">
             {comps.map(({nav}, index: number)=>(<li key={nav} onClick={onNavItemClick.bind(null, index)}><a className="whitespace-nowrap hover:text-teal-400">{nav}</a></li>))}
@@ -43,6 +40,7 @@ const Nav = ({comps, displayIndex, setDisplayIndex}: NavProps) =>{
           <button onClick={toggleNav} className="absolute right-6 md:right-8 lg:right-10 top-8 z-50 text-white text-4xl font-roboto hover:text-teal-400">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
+          <Image src={backgroundImage} alt="nav menu background" className="absolute top-0 left-0 object-cover h-full mix-blend-overlay -z-10"></Image>
       </div>
       <button className="fixed top-0 left-0 w-16 z-[60]">
         <Image src={NavButtonImage} alt="nav button image" className="absolute -top-10 -left-10 transform rotate-[125deg] scale-[4] -z-10 pointer-events-none"></Image>

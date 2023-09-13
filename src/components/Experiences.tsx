@@ -7,9 +7,7 @@ import MB002Image from '../../public/mb002.jpg';
 import MB003Image from '../../public/mb003.jpg';
 
 const Experiences = () =>{
-    return (<section>
-      {/* <h2 className="w-[70vw] mx-auto  flag text-center my-5 text-3xl font-amaticSC">Experiences</h2> */}
-      <div className="pb-40 px-10 md:px-40">
+    return (<section className='md:min-h-[85vh] overflow-x-hidden overflow-y-auto px-10 md:px-40 pb-10'>
         <div className="border-l-[10px] pl-4 border-amber-300">
           <h3 className="font-serif font-bold mt-10 text-4xl md:text-5xl md:mb-3">LINE Corp.</h3>
           <h4 className="text-lg">2020 Oct. - 2023 Jul.</h4>
@@ -109,7 +107,6 @@ const Experiences = () =>{
             </li>
           </ul>
         </div>
-      </div>
     </section>);
 }
 

@@ -74,12 +74,12 @@ export default function Home() {
       <Nav comps={comps.current} displayIndex={displayIndex} setDisplayIndex={setDisplayIndex} />
       <main className='text-white font-roboto text-3xl leading-10'>
         <div 
-          className={`fixed top-0 left-0 w-0 h-screen pointer-events-none z-[70] bg-yellow-200 ${isTransition? 'page-transition' : ''}`} 
+          className={`fixed top-0 left-0 w-0 h-[100dvh] pointer-events-none z-[70] bg-yellow-200 ${isTransition? 'page-transition' : ''}`} 
           onAnimationEnd={()=>{
             setIsTransition(false);
           }} 
         ></div>
-        <div className="border-dotted fixed top-1/2 left-1/2 w-[calc(100vw-1rem)] md:w-[calc(100vw-2rem)] h-[calc(100vh-2rem)] -translate-x-1/2 -translate-y-1/2 border-white border-4 z-50 pointer-events-none"></div>
+        <div className="border-dotted fixed top-1/2 left-1/2 w-[calc(100vw-1rem)] md:w-[calc(100vw-2rem)] h-[calc(100dvh-2rem)] -translate-x-1/2 -translate-y-1/2 border-white border-4 z-50 pointer-events-none"></div>
         {comps.current.map(({ comp , name}, index: number)=>(
             <ScrollDetect 
               key={name} 
@@ -88,6 +88,7 @@ export default function Home() {
               showNext={showNext}
               name={name}
               displayIndex={displayIndex}
+              comps={comps.current}
             >
               {cloneElement(comp, {
                 isDisplayed: displayIndex === index,

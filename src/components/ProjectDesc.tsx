@@ -1,7 +1,7 @@
 import { Content } from "@/app/types";
 import React from "react";
 
-const tagStyle = "inline-block my-2 mr-1 py-1 px-2 bg-amber-300 rounded-md text-lg hover:bg-white hover:text-amber-300";
+const tagStyle = "inline-block my-2 mr-1 py-1 px-2 bg-amber-300 rounded-md text-lg hover:bg-white hover:text-amber-300 whitespace-nowrap";
 
 interface ProjectDescProps {
     content: Content;
@@ -18,11 +18,11 @@ const ProjectDesc = ({ content }: ProjectDescProps)=>{
                 {content.githubUrl && content.demoUrl ? " | " : null }        
                 {content.githubUrl === "" ? null : <a href={content.githubUrl} target="_blank" className="underline">Github Source</a>}
             </p>
-           <p className="font-serif font-bold">{content.title}</p>
+           <p className="font-serif font-bold text-yellow-200">{content.title}</p>
            <ul className="px-10 w-full text-2xl md:text-3xl">
                 {content.description}
             </ul>
-            <p className="px-10 w-full">{tags}</p>
+            <p className="px-10 w-full whitespace-wrap">{tags}</p>
        </div>);
 };
 

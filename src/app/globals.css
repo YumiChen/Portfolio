@@ -260,7 +260,7 @@ button:hover , a:hover {
 }
 
 .page-transition {
-  animation: page-transition 0.75s 0s 1 both;
+  animation: page-transition 1s 0s 1 both;
 }
 
 @keyframes page-transition{
@@ -298,14 +298,19 @@ button:hover , a:hover {
   animation: nav-out 0.75s 0.4s 1 both;
 }
 
-.float-down {
-  animation: float-down 1s 1s 1 both;
+.float {
+  animation: float 1.5s 1s infinite both;
 }
 
 @keyframes nav-in{
   0%{ 
     width: 0vw;
-    margin-left: 0vw;
+    margin-left: -100vw;
+    opacity: 0;
+   }
+   1%{ 
+    width: 0vw;
+    margin-left: -100vw;
     opacity: 1;
    }
   80% {
@@ -338,17 +343,19 @@ button:hover , a:hover {
   }
   100%{ 
     width:0vw; 
-    margin-left: 0vw;
+    margin-left: -100vw;
     opacity: 0;
   }
 }
 
-@keyframes float-down{
-  0%{ 
-    transform: translate(-10, -20);
-    margin-left: 0vw;
+@keyframes float{
+  0%{     
+    transform: translateY(-5px);
+  }
+  50%{
+    transform: translateY(5px);
   }
   100%{ 
-    transform: translate(-0, -0);
+    transform: translateY(-5px);
   }
 }

@@ -1,5 +1,10 @@
 
+import { Comp } from "@/app/types";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { ReactNode, TouchList, useEffect, useRef } from "react";
+import { UAParser } from 'ua-parser-js';
+import ScrollDownHint from "./ScrollDownHint";
 
 const throttle = (fn: Function, wait: number = 300) => {
     let inThrottle: boolean,
@@ -24,6 +29,7 @@ const throttle = (fn: Function, wait: number = 300) => {
     };
 };
 
+const parser = new UAParser("user-agent");
 interface ScrollDetectProps {
     children: ReactNode, 
     displayIndex: number;
@@ -31,16 +37,20 @@ interface ScrollDetectProps {
     showNext: ()=>void;
     showPrev: ()=>void;
     name: string;
+    comps: Comp[];
 }
-const ScrollDetect = ({ children, displayIndex, index, showNext, showPrev, name }: ScrollDetectProps) => {
+const ScrollDetect = ({ children, displayIndex, index, showNext, showPrev, name, comps}: ScrollDetectProps) => {
     const touchStartY = useRef(-1);
     const target = useRef<HTMLDivElement | null>(null);
     const onTouchMove = useRef<(touches: TouchList, showNext: () => void, showPrev: () => void)=>void>(
-        throttle((touches: TouchList, showNext: () => void, showPrev: () => void)=>{
-        if(touchStartY.current < 0 || !target.current?.offsetHeight || !target.current?.scrollTop){
+        (touches: TouchList, showNext: () => void, showPrev: () => void)=>{
+        if(touchStartY.current < 0 || 
+            (target.current?.offsetHeight !== 0 && !target.current?.offsetHeight) || 
+            (target.current?.scrollTop !== 0 && !target.current?.scrollTop)
+        ){
             return;
         }
-        if((touches?.[0]?.pageY - touchStartY.current) < 0 && (target.current.offsetHeight + target.current.scrollTop >= target.current.scrollHeight)){
+        if((touches?.[0]?.pageY - touchStartY.current) < 0 && (Math.ceil(target.current.offsetHeight + target.current.scrollTop) >= target.current.scrollHeight)){
             console.log("onTouchMove At the bottom!");
             showNext();
         }
@@ -48,7 +58,7 @@ const ScrollDetect = ({ children, displayIndex, index, showNext, showPrev, name 
             console.log('onTouchMove top');
             showPrev();
         }
-    }, 2000));
+    });
     const onWheel = useRef<(deltaY: number, eventCurrentTarget: HTMLDivElement, showNext: () => void, showPrev: () => void)=>void>(
         throttle((deltaY: number, eventCurrentTarget: HTMLDivElement, showNext: () => void, showPrev: () => void)=>{
         console.log(deltaY,
@@ -68,17 +78,19 @@ const ScrollDetect = ({ children, displayIndex, index, showNext, showPrev, name 
     }, 1500));
     
     useEffect(()=>{
+        console.log(displayIndex, index, target.current);
         if(displayIndex === index){
             setTimeout(()=>{
                 if(!target.current){
                     return;
                 }
-                target.current.scrollTop = 0;
+                target.current.scrollTop = 10;
             }, 300);
         }
     }, [displayIndex, index]);
+
     return (<div 
-        className={`absolute top-0 left-0 w-screen overflow-x-hidden h-screen transition-opacity ease-in-out delay-900 duration-1000
+        className={`absolute top-0 left-0 w-screen pt-[10px] overflow-x-hidden oveflow-y-auto h-[100dvh] transition-opacity ease-in-out delay-900 duration-1000
             ${displayIndex === index? 'opacity-100 pointer-events-auto ' : 'opacity-0 pointer-events-none '}
         `}
         onTouchStart={(event)=>{
@@ -90,6 +102,7 @@ const ScrollDetect = ({ children, displayIndex, index, showNext, showPrev, name 
         ref={target}
     >
         {children}
+        {index !== 0 && index !== comps.length - 1 && <ScrollDownHint/>}
         <h3 className="fixed bottom-0 left-0 p-4 md:p-8 font-serif text-7xl md:text-9xl opacity-30 -z-10">{name}</h3>
         <h3 className="fixed top-0 right-0 text-right p-4 md:p-8 font-serif text-7xl md:text-9xl opacity-30 -z-10">{name}</h3>
     </div>);
