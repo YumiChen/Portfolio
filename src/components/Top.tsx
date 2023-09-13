@@ -11,7 +11,7 @@ const Top = () =>{
                 <SocialMedias/>
             </div>
         </div>
-        <div className='w-full text-center absolute bottom-7 px-3 text-sm md:text-lg'>
+        <div className='w-full text-center absolute bottom-7 px-5 text-sm md:text-lg'>
             <ScrollDownHint hintClass='pb-1'/>
             <p>Latest versions of Chrome, Edge, Safari, Firefox, Opera are recommended</p>
         </div>

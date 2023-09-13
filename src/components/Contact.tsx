@@ -13,7 +13,7 @@ const Contact = () =>{
                 <SocialMedias/>
             </div>
         </div>
-        <footer className="px-3 text-sm md:text-lg text-center absolute bottom-7 w-full leading-6">
+        <footer className="px-5 text-sm md:text-lg text-center absolute bottom-7 w-full leading-6">
             <p>Latest versions of Chrome, Edge, Safari, Firefox, Opera are recommended</p>
             <p>© 2023 Yumi Chen | All Rights Reserved</p>
             <a href="https://lordicon.com/">Icons by Lordicon.com</a>
