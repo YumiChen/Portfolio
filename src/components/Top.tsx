@@ -3,7 +3,7 @@ import ScrollDownHint from './ScrollDownHint';
 
 const Top = () =>{
     return (<section className='w-screen overflow-x-hidden overflow-y-auto'>
-        <div className="absolute text-center top-28 left-1/2 -translate-x-1/2">
+        <div className="absolute text-center top-28 md:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <p className="text-2xl md:text-4xl">{"Hello! I'm"}</p>
             <h1 className="playful font-lobster text-8xl text-white md:text-9xl">Yumi Chen</h1>
             <h2 className="w-[70vw] mx-auto  flag text-center my-5 text-3xl whitespace-nowrap font-amaticSC md:text-4xl">Front-end Engineer</h2>
