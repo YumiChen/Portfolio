@@ -1532,7 +1532,7 @@ button:hover , a:hover {
 }
 
 .nav-in {
-  animation: nav-in 0.75s 0s 1 both;
+  animation: nav-in 0.75s 0s 1 both ease-out;
 }
 
 .nav-out {
@@ -1556,8 +1556,14 @@ button:hover , a:hover {
     opacity: 1;
   }
 
-  80% {
+  50% {
     width: 80vw;
+    margin-left: 0vw;
+    opacity: 1;
+  }
+
+  95% {
+    width: 98vw;
     margin-left: 0vw;
     opacity: 1;
   }
