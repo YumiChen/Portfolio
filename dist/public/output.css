@@ -606,6 +606,10 @@ video {
   top: 6rem;
 }
 
+.top-28 {
+  top: 7rem;
+}
+
 .top-8 {
   top: 2rem;
 }
@@ -654,6 +658,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.-ml-\[100\%\] {
+  margin-left: -100%;
+}
+
 .mr-1 {
   margin-right: 0.25rem;
 }
@@ -690,12 +698,16 @@ video {
   display: none;
 }
 
-.h-\[calc\(100vh-2rem\)\] {
-  height: calc(100vh - 2rem);
+.h-\[100dvh\] {
+  height: 100dvh;
 }
 
-.h-screen {
-  height: 100vh;
+.h-\[calc\(100dvh-2rem\)\] {
+  height: calc(100dvh - 2rem);
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-0 {
@@ -848,6 +860,11 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-yellow-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(254 240 138 / var(--tw-border-opacity));
+}
+
 .bg-amber-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(252 211 77 / var(--tw-bg-opacity));
@@ -863,12 +880,9 @@ video {
   background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
 
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-center {
-  background-position: center;
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-3 {
@@ -913,17 +927,17 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
-.pb-20 {
-  padding-bottom: 5rem;
+.pb-1 {
+  padding-bottom: 0.25rem;
 }
 
-.pb-40 {
-  padding-bottom: 10rem;
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .pb-7 {
@@ -952,6 +966,10 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.pt-\[10px\] {
+  padding-top: 10px;
 }
 
 .text-center {
@@ -1012,6 +1030,11 @@ video {
   line-height: 1;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1060,8 +1083,8 @@ video {
   opacity: 0.3;
 }
 
-.bg-blend-overlay {
-  background-blend-mode: overlay;
+.mix-blend-overlay {
+  mix-blend-mode: overlay;
 }
 
 .transition-opacity {
@@ -1113,6 +1136,10 @@ video {
 
   .md\:block {
     display: block;
+  }
+
+  .md\:min-h-\[85vh\] {
+    min-height: 85vh;
   }
 
   .md\:w-\[80\%\] {
@@ -1460,7 +1487,7 @@ button:hover , a:hover {
 }
 
 .page-transition {
-  animation: page-transition 0.75s 0s 1 both;
+  animation: page-transition 1s 0s 1 both;
 }
 
 @keyframes page-transition{
@@ -1503,14 +1530,20 @@ button:hover , a:hover {
   animation: nav-out 0.75s 0.4s 1 both;
 }
 
-.float-down {
-  animation: float-down 1s 1s 1 both;
+.float {
+  animation: float 1.5s 1s infinite both;
 }
 
 @keyframes nav-in{
   0%{
     width: 0vw;
-    margin-left: 0vw;
+    margin-left: -100vw;
+    opacity: 0;
+  }
+
+  1%{
+    width: 0vw;
+    margin-left: -100vw;
     opacity: 1;
   }
 
@@ -1548,18 +1581,21 @@ button:hover , a:hover {
 
   100%{
     width:0vw;
-    margin-left: 0vw;
+    margin-left: -100vw;
     opacity: 0;
   }
 }
 
-@keyframes float-down{
+@keyframes float{
   0%{
-    transform: translate(-10, -20);
-    margin-left: 0vw;
+    transform: translateY(-5px);
+  }
+
+  50%{
+    transform: translateY(5px);
   }
 
   100%{
-    transform: translate(-0, -0);
+    transform: translateY(-5px);
   }
 }
