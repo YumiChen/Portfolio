@@ -1,0 +1,25 @@
+name: GitHub Actions
+run-name: ${{ github.actor }} is deploying gh-pages 🚀
+on:
+  push:
+    branches: [ master ]
+jobs:
+  Deploy-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
+      - name: Git checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+      - name: git
+        run: |
+          git --version
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git status
+          git tag
+          git describe
+      - run: pnpm run deploy
