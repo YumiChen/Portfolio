@@ -7,7 +7,7 @@ import { Comp } from "@/app/types";
 import Image from 'next/image';
 import backgroundImage from '../../public/Momo01.jpg';
 import NavButtonImage from '../../public/rainbow.svg';
-
+import imageLoader from '@/utils/imageLoader.js';
 interface NavProps {
   comps: Comp[];
   displayIndex: number;
@@ -33,7 +33,7 @@ const Nav = ({comps, displayIndex, setDisplayIndex}: NavProps) =>{
             fixed top-0 left-0 h-screen text-5xl text-serif z-40
             overflow-hidden bg-amber-300 bg-center bg-cover bg-blend-overlay
           `} style={{
-            backgroundImage: `url(${backgroundImage.src}`
+            backgroundImage: `url(${imageLoader(backgroundImage)}`
           }}
       >
           <ul className="absolute top-24 md:top-28 left-[15vw] flex flex-col space-x-1 space-y-3 whitespace-no wrap">
