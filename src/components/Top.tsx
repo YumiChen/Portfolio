@@ -7,7 +7,7 @@ const Top = () =>{
             <p className="text-2xl md:text-4xl">{"Hello! I'm"}</p>
             <h1 className="playful font-lobster text-8xl text-white md:text-9xl">Yumi Chen</h1>
             <h2 className="w-[70vw] mx-auto  flag text-center my-5 text-3xl whitespace-nowrap font-amaticSC md:text-4xl">Front-end Engineer</h2>
-            <div className={`py-2 text-3xl table mx-auto md:text-5xl`}>
+            <div className={`py-2 text-3xl table mx-auto h-14 md:h-20 md:text-5xl`}>
                 <SocialMedias/>
             </div>
         </div>
