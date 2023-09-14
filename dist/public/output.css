@@ -698,6 +698,10 @@ video {
   display: none;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
 .h-\[100dvh\] {
   height: 100dvh;
 }
@@ -1101,6 +1105,11 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.hover\:border-amber-300:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 211 77 / var(--tw-border-opacity));
+}
+
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1140,6 +1149,10 @@ video {
 
   .md\:block {
     display: block;
+  }
+
+  .md\:h-20 {
+    height: 5rem;
   }
 
   .md\:min-h-\[85vh\] {
