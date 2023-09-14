@@ -1256,6 +1256,10 @@ video {
   box-sizing: border-box;
 }
 
+html, body {
+  overscroll-behavior: contain;
+}
+
 .playful {
   /* opacity: 0.7; */
   --text: rgb(243, 241, 218);
