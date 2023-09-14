@@ -1,7 +1,5 @@
 
 import { Comp } from "@/app/types";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { ReactNode, TouchList, useEffect, useRef } from "react";
 import { UAParser } from 'ua-parser-js';
 import ScrollDownHint from "./ScrollDownHint";
