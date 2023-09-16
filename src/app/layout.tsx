@@ -1,8 +1,11 @@
+"use client";
+
 import '/public/output.css'
 import 'swiper/element/css/effect-coverflow'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
+import { useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +19,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const [displayPage, setDisplayPage] = useState(false);
+
   return (
     <html lang="en">
       <Head>
@@ -26,7 +31,10 @@ export default function RootLayout({
         />
       </Head>
       <body 
-        className={`${inter.className} bg-teal-400 overflow-hidden w-screen h-[100dvh]`}
+        className={`${displayPage? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} transition-opacity duration-500 ${inter.className} bg-teal-400 overflow-hidden w-screen h-[100dvh]`}
+        onLoad={()=>{
+          setDisplayPage(true);
+        }}
       >{children}</body>
     </html>
   )
