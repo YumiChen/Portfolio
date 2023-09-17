@@ -6,12 +6,12 @@ import MB001Image from '../../public/mb001.jpg';
 import MB002Image from '../../public/mb002.jpg';
 import MB003Image from '../../public/mb003.jpg';
 import { useEffect } from 'react';
-import { SwiperElement } from '@/app/types';
+import { SwiperContainer } from "swiper/element";
 
 const Experiences = () =>{
   useEffect(()=>{
     setTimeout(()=>{
-        const lineSwiper: SwiperElement = document.querySelector('#line-swiper')
+        const lineSwiper: SwiperContainer | null = document.querySelector('#line-swiper')
         if(!lineSwiper){
           return;
         }
@@ -24,7 +24,7 @@ const Experiences = () =>{
         });
         lineSwiper.initialize();
 
-        const musicbravoSwiper: SwiperElement = document.querySelector('#musicbravo-swiper')
+        const musicbravoSwiper: SwiperContainer | null = document.querySelector('#musicbravo-swiper')
         if(!musicbravoSwiper){
           return;
         }

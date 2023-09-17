@@ -10,10 +10,6 @@ declare global {
   }
 }
 
-export type SwiperElement = Element & { 
-  initialize: () => void;
-} | null;
-
 export interface Comp {
     name: string;
     nav: string;

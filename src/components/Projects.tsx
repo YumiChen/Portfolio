@@ -3,12 +3,13 @@
 import { useEffect } from "react";
 import Project from "./Project";
 import ProjectDesc from "./ProjectDesc";
-import { Content, SwiperElement } from "@/app/types";
+import { Content } from "@/app/types";
 import Watpo01Image from '../../public/watpo01.jpg';
 import ZeroWaste01Image from '../../public/zeroWaste01.jpg';
 import Mg01Image from '../../public/mg01.jpg';
 import CMS03Image from '../../public/cms03.jpg';
 import Illus01Image from '../../public/illus01.jpg';
+import { SwiperContainer } from "swiper/element";
 
 const data: Content[] = [
     {title:"Wat Po Service Reservation System", demoUrl: '', githubUrl: 'https://github.com/YumiChen/watpo-book', images: [
@@ -46,7 +47,7 @@ const data: Content[] = [
 const Projects = () =>{
   useEffect(()=>{
       setTimeout(()=>{
-          const swiper: SwiperElement = document.querySelector('#projects-swiper')
+          const swiper: SwiperContainer | null = document.querySelector('#projects-swiper')
           if(!swiper){
             return;
           }
@@ -55,9 +56,6 @@ const Projects = () =>{
             slidesPerView: 1.5,
             effect: "coverflow",
             grabCursor: true,
-            thumbs: {
-              swiper: "#projects-desc-swiper"
-            },
             centeredSlides: true,
             coverflowEffect: {
               rotate: 50,
@@ -68,7 +66,8 @@ const Projects = () =>{
             },
             loop: true,
             autoplay: {
-              delay: 5000
+              delay: 5000,
+              disableOnInteraction: false
             },
             breakpoints: {
               768: {
@@ -78,22 +77,33 @@ const Projects = () =>{
           });
           swiper.initialize();
 
-          const descSwiper: SwiperElement = document.querySelector('#projects-desc-swiper')
+          const descSwiper: SwiperContainer | null = document.querySelector('#projects-desc-swiper')
           if(!descSwiper){
             return;
           }
           Object.assign(descSwiper, {
               loop: true,
-              allowTouchMove: false,
             });
           descSwiper.initialize();
+          descSwiper.addEventListener('activeindexchange', () => {
+            if(swiper.swiper.realIndex !== descSwiper.swiper.realIndex){
+              console.log('descSwiper.swiper.realIndex', descSwiper.swiper.realIndex)
+              swiper.swiper.slideToLoop(descSwiper.swiper.realIndex);
+            }
+          });
+          swiper.addEventListener('activeindexchange', () => {
+            if(swiper.swiper.realIndex !== descSwiper.swiper.realIndex){
+              console.log('swiper.swiper.realIndex', swiper.swiper.realIndex)
+              descSwiper.swiper.slideToLoop(swiper.swiper.realIndex);
+            }
+          });
       }, 0);
   }, []);
 
     return (<section className='md:min-h-[85vh] w-screen overflow-x-hidden overflow-y-auto pt-10 pb-10'>
             <swiper-container id="projects-swiper" class="w-screen" init={false}>
-                {data.map((data)=>(<swiper-slide key={data.title}>
-                    <Project content={data} />
+                {data.map((data, index)=>(<swiper-slide key={data.title}>
+                    <Project content={data} index={index}/>
                 </swiper-slide>))}
             </swiper-container>
             <swiper-container id="projects-desc-swiper" init={false}>
