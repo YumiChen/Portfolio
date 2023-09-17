@@ -558,6 +558,10 @@ video {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
 .-left-10 {
   left: -2.5rem;
 }
@@ -632,10 +636,6 @@ video {
 
 .z-\[60\] {
   z-index: 60;
-}
-
-.z-\[70\] {
-  z-index: 70;
 }
 
 .mx-auto {
@@ -810,16 +810,16 @@ video {
   overflow: auto;
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .overflow-y-auto {
   overflow-y: auto;
 }
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
 
 .whitespace-nowrap {
@@ -877,11 +877,6 @@ video {
 .bg-teal-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(45 212 191 / var(--tw-bg-opacity));
-}
-
-.bg-yellow-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -1275,6 +1270,24 @@ video {
 
 html, body {
   overscroll-behavior: contain;
+}
+
+section {
+  position: relative;
+  min-height: 100dvh;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: white;
+  outline: 1px solid rgba(252, 211, 77, 1);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(252, 211, 77, 1);
 }
 
 .playful {
