@@ -13,9 +13,7 @@ declare global {
 export interface Comp {
     name: string;
     nav: string;
-    comp: React.ReactElement<{
-      isDisplayed: boolean;
-    }>
+    comp: React.ReactElement
 }
 
 export interface Content {
