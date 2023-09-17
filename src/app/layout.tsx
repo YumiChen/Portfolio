@@ -4,8 +4,7 @@ import '/public/output.css'
 import 'swiper/element/css/effect-coverflow'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Head from 'next/head'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,17 +20,15 @@ export default function RootLayout({
 }) {
   const [displayPage, setDisplayPage] = useState(false);
 
+  useEffect(() => {
+    setTimeout(()=>{
+      setDisplayPage(true);
+    }, 1000);
+  }, []);
   return (
     <html lang="en">
-      <Head>
-        <link
-          rel="preload"
-          href="/output.css"
-          as="stylesheet"
-        />
-      </Head>
       <body 
-        className={`${displayPage? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} transition-opacity duration-500 ${inter.className} bg-teal-400 overflow-hidden w-screen h-[100dvh]`}
+        className={`${displayPage? 'opacity-100 pointer-events-auto overflow-auto' : 'opacity-0 pointer-events-none overflow-y-hidden'} transition-opacity duration-500 ${inter.className} bg-teal-400 overflow-x-hidden w-screen`}
         onLoad={()=>{
           setDisplayPage(true);
         }}
