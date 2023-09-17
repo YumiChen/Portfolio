@@ -65,7 +65,7 @@ const ScrollDetect = ({ children, displayIndex, index, showNext, showPrev, name,
             eventCurrentTarget.scrollTop,
             eventCurrentTarget.scrollHeight
         );
-        if(deltaY > 0 && Math.ceil(eventCurrentTarget.offsetHeight + eventCurrentTarget.scrollTop) >= eventCurrentTarget.scrollHeight){
+        if(deltaY > 0 && Math.ceil(eventCurrentTarget.offsetHeight + eventCurrentTarget.scrollTop) >= eventCurrentTarget.scrollHeight - 1){
             console.log("At the bottom!");
             showNext();
         }
