@@ -31,6 +31,24 @@ html, body {
   overscroll-behavior: contain;
 }
 
+section {
+  position: relative;
+  min-height: 100dvh;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: white;
+  outline: 1px solid rgba(252, 211, 77, 1);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(252, 211, 77, 1);
+}
+
 .playful {
   /* opacity: 0.7; */
   --text: rgb(243, 241, 218); /* Blue */
