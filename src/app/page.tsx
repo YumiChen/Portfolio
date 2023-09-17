@@ -5,10 +5,9 @@ import Contact from '@/components/Contact';
 import Experiences from '@/components/Experiences';
 import Nav from '@/components/Nav';
 import Projects from '@/components/Projects';
-import ScrollDetect from '@/components/ScrollDetect';
 import Skills from '@/components/Skills';
 import Top from '@/components/Top';
-import { cloneElement, useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -49,21 +48,6 @@ export default function Home() {
   }]);
 
   const [displayIndex, setDisplayIndex] = useState(0);
-  const [isTransition, setIsTransition] = useState(false);
-  const showPrev = useCallback(() => {
-    if(displayIndex === 0 || isTransition){
-      return;
-    }
-    setIsTransition(true);
-    setDisplayIndex(displayIndex - 1);
-  }, [displayIndex, isTransition]);
-  const showNext = useCallback(() => {
-    if(displayIndex === comps.current.length - 1 || isTransition){
-      return;
-    }
-    setIsTransition(true);
-    setDisplayIndex(displayIndex + 1);
-  }, [displayIndex, isTransition]);
 
   useEffect(()=>{
     register();
