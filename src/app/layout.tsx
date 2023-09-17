@@ -26,9 +26,9 @@ export default function RootLayout({
     }, 1000);
   }, []);
   return (
-    <html lang="en">
+    <html lang="en" className='overflow-x-hidden'>
       <body 
-        className={`${displayPage? 'opacity-100 pointer-events-auto overflow-auto' : 'opacity-0 pointer-events-none overflow-y-hidden'} transition-opacity duration-500 ${inter.className} bg-teal-400 overflow-x-hidden w-screen`}
+        className={`${displayPage? 'opacity-100 pointer-events-auto overflow-y-auto' : 'opacity-0 pointer-events-none overflow-y-hidden'} transition-opacity duration-500 ${inter.className} bg-teal-400 overflow-x-hidden w-screen`}
         onLoad={()=>{
           setDisplayPage(true);
         }}
