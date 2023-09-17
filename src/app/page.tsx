@@ -13,6 +13,7 @@ import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { register } from 'swiper/element/bundle';
 import { Comp } from './types';
+import SocialMedias from '@/components/SocialMedias';
 
 library.add(faEnvelope, faFile, faLinkedin, faGithub);
 
@@ -58,6 +59,9 @@ export default function Home() {
       <Nav comps={comps.current} displayIndex={displayIndex} setDisplayIndex={setDisplayIndex} />
       <main className='text-white font-roboto text-3xl leading-10'>
         <div className="border-dotted fixed top-1/2 left-1/2 w-[calc(100vw-1rem)] md:w-[calc(100vw-2rem)] h-[calc(100dvh-2rem)] -translate-x-1/2 -translate-y-1/2 border-white border-4 z-50 pointer-events-none"></div>
+        <div className='hidden md:block fixed right-7 bottom-6 z-50 text-4xl'>
+          <SocialMedias/>
+        </div>
         {comps.current.map(({ comp , name})=>(
             <div className='relative' id={name} key={name}>
               {comp}
