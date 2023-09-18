@@ -38,7 +38,7 @@ const Experiences = () =>{
     }, 0);
   }, []);
 
-    return (<section className='md:min-h-[85vh] overflow-x-hidden overflow-y-auto px-10 md:px-40 pt-20'>
+    return (<section className='md:min-h-[85vh] overflow-x-hidden overflow-y-auto px-10 md:px-40 pt-24'>
         <div className="border-l-[10px] pl-4 border-amber-300">
           <h3 className="font-serif font-bold mt-10 text-4xl md:text-5xl md:mb-3">LINE Corp.</h3>
           <h4 className="text-lg">2020 Oct. - 2023 Jul.</h4>

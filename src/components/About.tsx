@@ -1,5 +1,5 @@
 const About = () =>{      
-    return (<section className='md:min-h-[85vh] w-screen px-7 md:px-40 pt-20 pb-10 text-2xl overflow-auto md:text-3xl'>
+    return (<section className='w-screen px-7 md:px-40 pt-20 md:pt-36 pb-10 text-2xl md:text-3xl lg:leading-[3rem]'>
         <p>
             {"Good day! I'm a Front-End engineer with 5-year experiences."}
             {"With interests in technology and art, creating amazing and performant websites with delicate "}

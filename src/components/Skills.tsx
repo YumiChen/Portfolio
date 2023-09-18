@@ -1,7 +1,7 @@
 const tagStyle = "inline-block my-2 mr-1 pb-1 px-2 bg-amber-300 rounded-md text-lg hover:bg-white hover:text-amber-300 whitespace-nowrap";
 const Skills = () =>{
     return (<section className='md:min-h-[85vh] pt-20 w-screen overflow-x-hidden'>
-        <div className="px-7 md:px-40 mt-8">
+        <div className="px-7 md:px-40 pt-10">
         <ul>
           <li className="border-double border-b-4 py-2">
             <p className="flex justify-between items-end"><span className="font-bold font-serif">English</span> <span className="text-2xl align-bottom">Proficient</span></p>

@@ -81,13 +81,11 @@ export default function Home() {
           duration: 1.5
         }, 0)
         .fromTo(`#${name}`, {
-          x: "80px",
-          y: "80px",
+          x: "200px",
           opacity: 0.7,
           duration: 1
         }, {
           x: "0px",
-          y: "0px",
           opacity: 1
         }, 0);
       });
@@ -114,7 +112,7 @@ export default function Home() {
       <Nav comps={comps.current} displayIndex={displayIndex} setDisplayIndex={setDisplayIndex} />
       <main className='text-white font-roboto text-3xl leading-10'>
         <div className="border-dotted fixed top-1/2 left-1/2 w-[calc(100vw-1rem)] md:w-[calc(100vw-2rem)] h-[calc(100dvh-2rem)] -translate-x-1/2 -translate-y-1/2 border-white border-4 z-50 pointer-events-none"></div>
-        <div id="network-hint" className='md:block fixed right-0 transform(translateX(100%)) bottom-6 opacity-0 z-50 text-4xl'>
+        <div id="network-hint" className='hidden md:block fixed right-0 transform(translateX(100%)) bottom-6 opacity-0 z-30 text-4xl'>
           <SocialMedias/>
         </div>
         {comps.current.map(({ comp , name}, index)=>{
