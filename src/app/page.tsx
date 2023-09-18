@@ -69,7 +69,6 @@ export default function Home() {
         gsap.timeline({
           scrollTrigger: {
             trigger: `#${name}-container`,
-            // markers: true,
             start: "-50px bottom-=71",
             end: "bottom-=50 top",
             toggleActions: "play reset restart reset"
@@ -99,7 +98,6 @@ export default function Home() {
         duration: 1,
         scrollTrigger: {
           trigger: `#${comps.current[1].name}`,
-          markers: true,
           start: "top bottom",
           toggleActions: "play none none reverse"
         }
