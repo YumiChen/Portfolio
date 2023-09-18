@@ -23,7 +23,7 @@ export default function RootLayout({
   useEffect(() => {
     setTimeout(()=>{
       setDisplayPage(true);
-    }, 1000);
+    }, 600);
   }, []);
   return (
     <html lang="en" className='overflow-x-hidden'>
