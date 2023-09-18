@@ -87,20 +87,18 @@ const Projects = () =>{
           descSwiper.initialize();
           descSwiper.addEventListener('activeindexchange', () => {
             if(swiper.swiper.realIndex !== descSwiper.swiper.realIndex){
-              console.log('descSwiper.swiper.realIndex', descSwiper.swiper.realIndex)
               swiper.swiper.slideToLoop(descSwiper.swiper.realIndex);
             }
           });
           swiper.addEventListener('activeindexchange', () => {
             if(swiper.swiper.realIndex !== descSwiper.swiper.realIndex){
-              console.log('swiper.swiper.realIndex', swiper.swiper.realIndex)
               descSwiper.swiper.slideToLoop(swiper.swiper.realIndex);
             }
           });
       }, 0);
   }, []);
 
-    return (<section className='md:min-h-[85vh] w-screen overflow-x-hidden overflow-y-auto pt-10 pb-10'>
+    return (<section className='md:min-h-[85vh] w-screen overflow-x-hidden overflow-y-auto pt-20'>
             <swiper-container id="projects-swiper" class="w-screen" init={false}>
                 {data.map((data, index)=>(<swiper-slide key={data.title}>
                     <Project content={data} index={index}/>

@@ -13,7 +13,8 @@ declare global {
 export interface Comp {
     name: string;
     nav: string;
-    comp: React.ReactElement
+    comp: React.ReactElement;
+    animate: boolean;
 }
 
 export interface Content {

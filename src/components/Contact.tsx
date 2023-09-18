@@ -3,7 +3,7 @@ import Image from 'next/image';
 import sendMailImage from '../../public/send-email.png';
 
 const Contact = () =>{
-    return (<section className='md:min-h-[85vh] w-screen overflow-x-hidden overflow-y-auto'>
+    return (<section className='h-[75vh] w-screen overflow-x-hidden overflow-y-auto'>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
             <Image src={sendMailImage} alt="send email" className="mt-10 mx-auto w-[70%] md:w-[80%]" />
             <h3 className="text-center underline text-2xl md:text-3xl">
@@ -13,11 +13,6 @@ const Contact = () =>{
                 <SocialMedias/>
             </div>
         </div>
-        <footer className="px-5 text-sm md:text-lg text-center absolute bottom-7 w-full leading-6">
-            <p>Latest versions of Chrome, Edge, Safari, Firefox, Opera are recommended</p>
-            <p>© 2023 Yumi Chen | All Rights Reserved</p>
-            <a href="https://lordicon.com/">Icons by Lordicon.com</a>
-        </footer>
     </section>);
 }
 

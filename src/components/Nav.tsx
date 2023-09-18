@@ -21,7 +21,7 @@ const Nav = ({comps, displayIndex, setDisplayIndex}: NavProps) =>{
     }, [setShowNav, showNav]);
 
     const onNavItemClick = useCallback((name: string)=>{
-      const target = document.getElementById(name);
+      const target = document.getElementById(`${name}-container`);
       target?.scrollIntoView();
 
       setShowNav(false);

@@ -31,11 +31,6 @@ html, body {
   overscroll-behavior: contain;
 }
 
-section {
-  position: relative;
-  min-height: 100dvh;
-}
-
 body::-webkit-scrollbar {
   width: 5px;
 }
@@ -265,7 +260,7 @@ body::-webkit-scrollbar-thumb {
   border-color: #0099ff rgba(0, 153, 255, 0) #0099ff #006bb3;
 }
 
-#about p:first-of-type:first-letter {
+#ABOUT p:first-of-type:first-letter {
   -webkit-initial-letter: 2;
           initial-letter: 2;
   color: rgba(252, 211, 77, 1);
