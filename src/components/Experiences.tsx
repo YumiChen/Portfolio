@@ -67,12 +67,12 @@ const Experiences = () =>{
             </li>
             <li>
               <h5 className="text-yellow-200 font-bold mt-5 ">LINE Today</h5>
-              <p>Contributed to LINE&#39;s popular integrated news platform</p>
+              <p>Contributed to LINE&#39;s popular news aggregator platform</p>
             </li>
             <li>
             <h5 className="text-yellow-200 font-bold mt-5">High Traffic and large audience</h5>
             <p>
-              Projects are exposed to millions of users of LINE and promoted through LINE mobile push notifications on a daily basis</p>
+              Exposed to millions of users of LINE and promoted through LINE mobile push notifications on a daily basis</p>
             </li>
             <li>
               <h5 className="text-yellow-200 font-bold mt-5">Integration & Monetization</h5>
@@ -97,7 +97,7 @@ const Experiences = () =>{
             </li>
             <li>
               <h5 className="text-yellow-200 font-bold mt-5">Back-End Experiences</h5>
-              <p>Not only worked on Front-End but Back-End( Node.js) and databases( MSSQL & stored procedures)</p>
+              <p>Worked on Front-end, Back-end( Node.js) and databases( MSSQL & stored procedures)</p>
             </li>
           </ul>
         </div>
@@ -125,8 +125,8 @@ const Experiences = () =>{
           <ul className="text-2xl md:text-3xl lg:pr-1">
             <li>
               <h5 className="text-yellow-200 font-bold mt-5">Digital Music Platform</h5>
-              <p>Worked on online digital indie music serving and selling website.</p>
-              <p>Responsible for front-end development, code optimization, SEO, ensuring cross browser compatility, and developing process optimization</p>
+              <p>Worked on online indie music steaming and monetization website.</p>
+              <p>Responsible for front-end development, code optimization, SEO, cross-browser compatility, and development process optimization</p>
             </li>
             <li>
               <h5 className="text-yellow-200 font-bold mt-5">Campaign Cooperation & Website Exposure</h5>

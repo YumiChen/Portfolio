@@ -17,7 +17,7 @@ const data: Content[] = [
         src: Watpo01Image,
         alt: ""
       }
-    ], description:"Project collaborated with friend. I'm responsible for front-end developing and site design. Including lanpage, reservation form, calender, multiple locales, and automatic room distribution API integration. There're 3 layouts for RWD (desktop, pad, mobile)",tags:["react.js","redux.js","react-i18n","react-router","react-bootstrap"]},
+    ], description:"Responsible for front-end developing and responsive design. Including lanpage, reservation form, calender, multiple locales, and automatic room distribution API integration",tags:["react.js","redux.js","react-i18n","react-router","react-bootstrap"]},
     {title:"Zero Waste Taiwan", demoUrl: 'https://greenteamtaiwan.github.io/gt-home/index.html', githubUrl: 'https://github.com/greenteamtaiwan/green-map-taiwan-new', images: [
       {
         src: ZeroWaste01Image,
@@ -29,7 +29,7 @@ const data: Content[] = [
         src: Mg01Image,
         alt: ""
       }  
-    ], description:"Rhythm game with real-time music visualization, and customizable music selection. \r\nIncluding features like pause, set volume and calculating scores.\r\nModern browsers and strong beat music are highly suggested for this game.",tags:["vanilla Javascript","web audio API","THREE.js"]},
+    ], description:"Rhythm game with real-time music visualization, and customizable music selection. \r\nModern browsers and strong beat music are highly suggested for this game.",tags:["vanilla Javascript","web audio API","THREE.js"]},
     {title:"CMS System", demoUrl: '', githubUrl: 'https://github.com/YumiChen/CMS-UI-Generator', images: [
       {
         src: CMS03Image,
