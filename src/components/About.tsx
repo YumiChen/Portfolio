@@ -6,7 +6,7 @@ const About = () =>{
             {"visual effects is my passion."}
         </p>
         <p className="pt-5">
-            {"Worked in scrum teams with designer, business analyst, planner, back-end developer, DBA .etc, "}
+            {"Worked in scrum teams with designers, business analysts, planners, back-end developers, DBA .etc, "}
             {"Being a mild team player, I believe that collaboration brings success and take the team and products further to greater achievement."}
         </p>
         </section>);
