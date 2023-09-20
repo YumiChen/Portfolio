@@ -10,7 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "addNoJekyll": "echo Prevent not routing folders starting with _ > dist/.nojekyll",
-    "predeploy": "rmdir /s /q dist && git worktree add dist gh-pages -f",
+    "predeploy": "(if exist \"dist\" rmdir /s /q \"dist\";) && git worktree add dist gh-pages -f",
     "deploy": "pnpm run build && cd dist && git add --all && git commit -m \"Update gh-pages\" && git push origin gh-pages && cd .."
   },
   "dependencies": {
