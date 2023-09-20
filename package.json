@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "concurrently --kill-others \"npm run tailwind:dev\" \"next dev\"",
     "tailwind:dev": "pnpm run tailwind:build --watch",
-    "build": "pnpm run tailwind:build && next build",
+    "build": "pnpm run tailwind:build && next build && pnpm run addNoJekyll",
     "tailwind:build": "npx tailwindcss -i ./src/app/globals.css -o ./public/output.css",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "echo Prevent not routing folders starting with _ > dist/.nojekyll && git subtree push --prefix dist origin gh-pages"
+    "addNoJekyll": "echo Prevent not routing folders starting with _ > dist/.nojekyll",
+    "predeploy": "rmdir /s /q dist && git worktree add dist gh-pages -f",
+    "deploy": "pnpm run build && cd dist && git add --all && git commit -m \"Update gh-pages\" && git push origin gh-pages && cd .."
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
