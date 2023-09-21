@@ -51,7 +51,6 @@ const Experiences = () =>{
             trigger: company,
             start: "top-=50 bottom",
             end: "bottom+=50 top",
-            markers:true,
             toggleActions: "play reset restart reset"
           }
         });
@@ -66,7 +65,6 @@ const Experiences = () =>{
             trigger: highlight,
             start: "top-=50 bottom",
             end: "bottom+=50 top",
-            markers:true,
             toggleActions: "play reset restart reset"
           }
         });
@@ -80,7 +78,6 @@ const Experiences = () =>{
             trigger: experienceItem,
             start: "top-=50 bottom",
             end: "bottom+=50 top",
-            markers:true,
             toggleActions: "play reset restart reset"
           }
         });

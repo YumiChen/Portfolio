@@ -13,7 +13,6 @@ const About = () =>{
                   trigger: passage as HTMLElement,
                   start: "top-=100 bottom",
                   end: "bottom+=100 top",
-                  markers:true,
                   toggleActions: "play reset restart reset"
                 }
               });
