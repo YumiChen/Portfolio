@@ -40,15 +40,15 @@ const Experiences = () =>{
     }, 0);
 
     const context = gsap.context(()=>{
-      let companies = gsap.utils.toArray(".company"); 
-      let highlights = gsap.utils.toArray(".highlight"); 
-      let experienceItems = gsap.utils.toArray(".experience-item"); 
+      let companies = gsap.utils.toArray<HTMLElement>(".company"); 
+      let highlights = gsap.utils.toArray<HTMLElement>(".highlight"); 
+      let experienceItems = gsap.utils.toArray<HTMLElement>(".experience-item"); 
       companies.forEach((company)=>{
-        gsap.from((company as HTMLElement), {
+        gsap.from(company, {
           opacity: 0,
           duration: 1,
           scrollTrigger: {
-            trigger: (company as HTMLElement),
+            trigger: company,
             start: "top-=50 bottom",
             end: "bottom+=50 top",
             markers:true,
@@ -58,12 +58,12 @@ const Experiences = () =>{
       });
 
       highlights.forEach((highlight)=>{
-        gsap.from((highlight as HTMLElement), {
+        gsap.from(highlight, {
           transformOrigin: "50% 0",
           scaleY: 0,
           duration: 1,
           scrollTrigger: {
-            trigger: (highlight as HTMLElement),
+            trigger: highlight,
             start: "top-=50 bottom",
             end: "bottom+=50 top",
             markers:true,
@@ -73,11 +73,11 @@ const Experiences = () =>{
       });
 
       experienceItems.forEach((experienceItem) => {
-        gsap.from(experienceItem as HTMLElement, {
+        gsap.from(experienceItem, {
           x: 200,
           duration: 1,
           scrollTrigger: {
-            trigger: experienceItem as HTMLElement,
+            trigger: experienceItem,
             start: "top-=50 bottom",
             end: "bottom+=50 top",
             markers:true,
