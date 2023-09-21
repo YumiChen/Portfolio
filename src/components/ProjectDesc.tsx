@@ -19,9 +19,9 @@ const ProjectDesc = ({ content }: ProjectDescProps)=>{
                 {content.githubUrl === "" ? null : <a href={content.githubUrl} target="_blank" className="underline">Github Source</a>}
             </p>
            <p className="font-serif font-bold text-yellow-200">{content.title}</p>
-           <ul className="px-10 w-full text-2xl md:text-3xl">
+           <p className="px-10 w-full text-2xl md:text-3xl">
                 {content.description}
-            </ul>
+            </p>
             <p className="px-10 w-full whitespace-wrap">{tags}</p>
        </div>);
 };
