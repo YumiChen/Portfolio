@@ -36,7 +36,7 @@ const Nav = ({comps, displayIndex, setDisplayIndex}: NavProps) =>{
           `}
       >
           <ul className="absolute top-24 md:top-28 left-[15vw] flex flex-col space-x-1 space-y-3 whitespace-no wrap">
-            {comps.map(({nav, name})=>(<li key={nav} onClick={onNavItemClick.bind(null, name)}><a className="whitespace-nowrap hover:text-teal-400">{nav}</a></li>))}
+            {comps.map(({nav, name})=>(<li key={nav} onClick={onNavItemClick.bind(null, name)}><a className="whitespace-nowrap hover:text-teal-400 hover:underline">{nav}</a></li>))}
             <li className="text-4xl pt-3"><SocialMedias linkClass={"hover:text-teal-400"} /></li>
           </ul>
           <button onClick={toggleNav} className="absolute right-6 md:right-8 lg:right-10 top-8 z-50 text-white text-4xl font-roboto hover:text-teal-400">
