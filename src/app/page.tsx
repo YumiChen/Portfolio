@@ -25,48 +25,56 @@ export default function Home() {
     name: 'TOP',
     nav: 'Top',
     comp: <Top/>,
-    animate: false,
+    animateTitle: false,
+    animateContent: false,
   },
   {
     name: 'ABOUT',
     nav: 'About',
     comp: <About/>,
-    animate: true,
+    animateTitle: true,
+    animateContent: false,
   },
   {
     name: 'SKILLS',
     nav: 'Skills',
     comp: <Skills/>,
-    animate: true,
+    animateTitle: true,
+    animateContent: true,
   },{
     name: 'JOURNEY',
     nav: 'Journey',
     comp: <Experiences/>,
-    animate: true,
+    animateTitle: true,
+    animateContent: false,
   },
   {
     name: 'PROJECTS',
     nav: 'Projects',
     comp: <Projects/>,
-    animate: true,
+    animateTitle: true,
+    animateContent: true,
   },
   {
     name: 'CONTACT',
     nav: 'Contact',
     comp: <Contact/>,
-    animate: true,
+    animateTitle: true,
+    animateContent: true,
   }]);
 
   const [displayIndex, setDisplayIndex] = useState(0);
 
   useEffect(()=>{
     register();
+
+    let onMouseMove = (event: MouseEvent) => undefined;
     const context = gsap.context(()=>{
-      comps.current.forEach(({name, animate})=>{
-        if(!animate){
+      comps.current.forEach(({name, animateTitle, animateContent})=>{
+        if(!animateTitle && !animateContent){
           return;
         }
-        gsap.timeline({
+        const timeline = gsap.timeline({
           scrollTrigger: {
             trigger: `#${name}-container`,
             start: "-50px bottom-=71",
@@ -74,20 +82,26 @@ export default function Home() {
             toggleActions: "play reset restart reset"
           }
         })
-        .from(`#${name}-header-1`, {
-          x: "90vw",
-          xPercent: -100,
-          opacity: 0,
-          duration: 1.5
-        }, 0)
-        .fromTo(`#${name}`, {
-          x: "200px",
-          opacity: 0.7,
-          duration: 1
-        }, {
-          x: "0px",
-          opacity: 1
-        }, 0);
+
+        if(animateTitle){
+          timeline.from(`#${name}-header-1`, {
+            x: "90vw",
+            xPercent: -100,
+            opacity: 0,
+            duration: 1.5
+          }, 0)
+        }
+
+        if(animateContent){
+          timeline.fromTo(`#${name}`, {
+            x: "200px",
+            opacity: 0.7,
+            duration: 1
+          }, {
+            x: "0px",
+            opacity: 1
+          }, 0);
+        }
       });
 
       gsap.to('#network-hint', {
@@ -100,10 +114,32 @@ export default function Home() {
           toggleActions: "play none none reverse"
         }
       });
+
+      onMouseMove = (event: MouseEvent) => {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        
+        gsap.set(".cursor-1", {
+          x: mouseX,
+          y: mouseY,
+          xPercent: '-50',
+          yPercent: '-50'
+        })
+        
+        gsap.to(".cursor-2", {
+          x: mouseX,
+          y: mouseY,
+          xPercent: '-50',
+          yPercent: '-50',
+          stagger: 1
+        })
+      };
+      document.body.addEventListener("mousemove", onMouseMove);
     });
 
     return () => {
       context.clear();
+      document.body.removeEventListener("mousemove", onMouseMove);
     };
   }, []);
 
@@ -115,6 +151,8 @@ export default function Home() {
         <div id="network-hint" className='hidden md:block fixed right-0 transform(translateX(100%)) bottom-6 opacity-0 z-30 text-4xl'>
           <SocialMedias/>
         </div>
+        <div className='cursor-1 fixed w-32 h-32 bg-yellow-200 opacity-50 rounded-full z-[60] mix-blend-overlay pointer-events-none'></div>
+        <div className='cursor-2 fixed w-48 h-48 bg-amber-300 opacity-50 rounded-full z-[60] mix-blend-overlay pointer-events-none'></div>
         {comps.current.map(({ comp , name}, index)=>{
             return (<div className={`relative min-h-[100dvh] py-[50px] md:py-[70px]`} id={`${name}-container`} key={name}>
               <div id={name}>{comp}</div>
@@ -124,7 +162,7 @@ export default function Home() {
         <footer className="absolute bottom-5 text-sm md:text-lg text-center pb-7 w-full leading-6">
           <p>Latest versions of Chrome, Edge, Safari, Firefox, Opera are recommended</p>
           <p>© 2023 Yumi Chen | All Rights Reserved</p>
-          <a href="https://lordicon.com/">Icons by Lordicon.com</a>
+          <a href="https://lordicon.com/"><p>Icons by Lordicon.com</p></a>
         </footer>
       </main>
     </>

@@ -14,7 +14,8 @@ export interface Comp {
     name: string;
     nav: string;
     comp: React.ReactElement;
-    animate: boolean;
+    animateTitle: boolean;
+    animateContent: boolean,
 }
 
 export interface Content {
