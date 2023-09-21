@@ -248,6 +248,21 @@ body::-webkit-scrollbar-thumb {
   /* transform: translateZ(-0.5em); */
 }
 
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, span:hover {
+	background: rgba(252, 211, 77, 0.7);
+	color: black;
+}
+
+::selection {
+	background: rgb(255, 138, 80);
+	color: white;
+}
+
+::-moz-selection {
+	background: rgb(255, 138, 80);
+	color: white;
+}
+
 .flag::before {
   left: -0.5em;
   top: 1em;
@@ -273,7 +288,7 @@ button, a {
 }
 
 button:hover , a:hover {
-  color: rgba(252, 211, 77, 1);
+  color: rgb(255, 138, 80);
 }
 
 .page-transition {
