@@ -60,7 +60,7 @@ const Experiences = () =>{
         gsap.from(highlight, {
           transformOrigin: "50% 0",
           scaleY: 0,
-          duration: 1,
+          duration: 1.5,
           scrollTrigger: {
             trigger: highlight,
             start: "top-=50 bottom",
