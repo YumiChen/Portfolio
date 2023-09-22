@@ -151,8 +151,8 @@ export default function Home() {
         <div id="network-hint" className='hidden md:block fixed right-0 transform(translateX(100%)) bottom-6 opacity-0 z-30 text-4xl'>
           <SocialMedias/>
         </div>
-        <div className='cursor-1 fixed w-32 h-32 bg-yellow-200 opacity-50 rounded-full z-[60] mix-blend-overlay pointer-events-none'></div>
-        <div className='cursor-2 fixed w-48 h-48 bg-amber-300 opacity-50 rounded-full z-[60] mix-blend-overlay pointer-events-none'></div>
+        <div className='cursor-1 hidden lg:block fixed w-32 h-32 bg-yellow-200 opacity-50 rounded-full z-[60] mix-blend-overlay pointer-events-none'></div>
+        <div className='cursor-2 hidden lg:block fixed w-48 h-48 bg-amber-300 opacity-50 rounded-full z-[60] mix-blend-overlay pointer-events-none'></div>
         {comps.current.map(({ comp , name}, index)=>{
             return (<div className={`relative min-h-[100dvh] py-[50px] md:py-[70px]`} id={`${name}-container`} key={name}>
               <div id={name}>{comp}</div>
