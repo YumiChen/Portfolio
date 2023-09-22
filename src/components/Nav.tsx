@@ -26,7 +26,7 @@ const Nav = ({comps, displayIndex, setDisplayIndex}: NavProps) =>{
 
       setShowNav(false);
       isNavOut.current = true;
-    }, [setDisplayIndex]);
+    }, []);
 
     return (<nav className="z-40 font-lobster text-white">
       <div className={`${showNav? "pointer-events-auto nav-in" : "pointer-events-none"}
