@@ -816,6 +816,10 @@ video {
   width: 12rem;
 }
 
+.w-\[100\%\] {
+  width: 100%;
+}
+
 .w-\[10px\] {
   width: 10px;
 }
@@ -1423,6 +1427,11 @@ video {
     right: 2.5rem;
   }
 
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .lg\:ml-auto {
     margin-left: auto;
   }
@@ -1453,6 +1462,10 @@ video {
 
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:w-\[1280px\] {
+    width: 1280px;
   }
 
   .lg\:w-\[70vw\] {
