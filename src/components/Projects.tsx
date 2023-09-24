@@ -98,8 +98,8 @@ const Projects = () =>{
       }, 0);
   }, []);
 
-    return (<section className='md:min-h-[85vh] w-screen overflow-x-hidden overflow-y-auto pt-20'>
-            <swiper-container id="projects-swiper" class="w-screen" init={false}>
+    return (<section className='md:min-h-[85vh] w-[100%] overflow-x-hidden overflow-y-auto pt-20'>
+            <swiper-container id="projects-swiper" class="w-[100%]" init={false}>
                 {data.map((data, index)=>(<swiper-slide key={data.title}>
                     <Project content={data} index={index}/>
                 </swiper-slide>))}

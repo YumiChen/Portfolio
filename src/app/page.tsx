@@ -146,7 +146,7 @@ export default function Home() {
   return (
     <>
       <Nav comps={comps.current} displayIndex={displayIndex} setDisplayIndex={setDisplayIndex} />
-      <main className='text-white font-roboto text-3xl leading-10'>
+      <main className='text-white font-roboto text-3xl leading-10 w-screen lg:w-[1280px] lg:mx-auto'>
         <div className="border-dotted fixed top-1/2 left-1/2 w-[calc(100vw-1rem)] md:w-[calc(100vw-2rem)] h-[calc(100dvh-2rem)] -translate-x-1/2 -translate-y-1/2 border-white border-4 z-50 pointer-events-none"></div>
         <div id="network-hint" className='hidden md:block fixed right-0 transform(translateX(100%)) bottom-6 opacity-0 z-30 text-4xl'>
           <SocialMedias/>
