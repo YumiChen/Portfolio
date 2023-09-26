@@ -122,14 +122,14 @@ export default function Home() {
         gsap.set(".cursor-1", {
           x: mouseX,
           y: mouseY,
-          xPercent: '-50',
+          xPercent: '-110',
           yPercent: '-50'
         })
         
         gsap.to(".cursor-2", {
           x: mouseX,
           y: mouseY,
-          xPercent: '-50',
+          xPercent: '-90',
           yPercent: '-50',
           stagger: 1
         })
