@@ -2,9 +2,9 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ScrollDownHint = ({ hintClass = ''})=>{
-    return (<div className={`flex flex-col py-5 pb-7 w-full text-center ${hintClass}`}>
+    return (<div className={`inline-flex flex-col py-5 pb-7 ${hintClass}`}>
     <span className="text-base md:text-lg">SCROLL DOWN</span>
-    <FontAwesomeIcon icon={faChevronDown} className="text-3xl nd:text-5xl float"/>
+    <span className="inline-block w-[30px] h-[30px] mx-auto text-3xl nd:text-5xl float"><FontAwesomeIcon icon={faChevronDown}/></span>
 </div>);
 }
 
