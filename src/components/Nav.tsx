@@ -42,7 +42,7 @@ const Nav = ({comps, displayIndex, setDisplayIndex}: NavProps) =>{
           <button onClick={toggleNav} className="absolute right-6 md:right-8 lg:right-10 top-8 z-50 text-white text-4xl font-roboto hover:text-teal-400">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
-          <Image src={backgroundImage} alt="nav menu background" className="absolute top-0 left-0 object-cover h-full mix-blend-overlay -z-10"></Image>
+          <Image src={backgroundImage} alt="nav menu background" className="absolute top-0 left-0 object-cover h-full w-screen mix-blend-overlay -z-10"></Image>
       </div>
       <button className="fixed top-0 left-0 w-16 z-[60]">
         <Image src={NavButtonImage} alt="nav button image" className="absolute -top-10 -left-10 transform rotate-[125deg] scale-[4] -z-10 pointer-events-none"></Image>
