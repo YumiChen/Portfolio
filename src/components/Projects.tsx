@@ -10,6 +10,7 @@ import Mg01Image from '../../public/mg01.jpg';
 import CMS03Image from '../../public/cms03.jpg';
 import Illus01Image from '../../public/illus01.jpg';
 import { SwiperContainer } from "swiper/element";
+import SwiperLoader from "./SwiperLoader";
 
 const data: Content[] = [
     {title:"Wat Po Service Reservation System", demoUrl: '', githubUrl: 'https://github.com/YumiChen/watpo-book', images: [
@@ -44,71 +45,63 @@ const data: Content[] = [
     ], description:"Theme designed for illustration portfolios. Including features like sidebars and lightbox.",tags:["React.js","React-slick","node.js","express","SASS","RWD"]},
 ];
 
+const projectsSwiperOptions = {
+  slidesPerView: 1.5,
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  },
+  breakpoints: {
+    768: {
+        slidesPerView: 3
+    },
+  },
+};
+const projectsDescSwiperOptions = {
+  loop: true,
+};
+
 const Projects = () =>{
   useEffect(()=>{
       setTimeout(()=>{
           const swiper: SwiperContainer | null = document.querySelector('#projects-swiper')
-          if(!swiper){
-            return;
-          }
-
-          Object.assign(swiper, {
-            slidesPerView: 1.5,
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            coverflowEffect: {
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: false,
-            },
-            loop: true,
-            autoplay: {
-              delay: 5000,
-              disableOnInteraction: false
-            },
-            breakpoints: {
-              768: {
-                  slidesPerView: 3
-              },
-            },
-          });
-          swiper.initialize();
-
           const descSwiper: SwiperContainer | null = document.querySelector('#projects-desc-swiper')
-          if(!descSwiper){
-            return;
-          }
-          Object.assign(descSwiper, {
-              loop: true,
-            });
-          descSwiper.initialize();
-          descSwiper.addEventListener('activeindexchange', () => {
-            if(swiper.swiper.realIndex !== descSwiper.swiper.realIndex){
-              swiper.swiper.slideToLoop(descSwiper.swiper.realIndex);
+          
+          descSwiper?.addEventListener('activeindexchange', () => {
+            if(swiper?.swiper.realIndex !== descSwiper.swiper.realIndex){
+              swiper?.swiper.slideToLoop(descSwiper.swiper.realIndex);
             }
           });
-          swiper.addEventListener('activeindexchange', () => {
-            if(swiper.swiper.realIndex !== descSwiper.swiper.realIndex){
-              descSwiper.swiper.slideToLoop(swiper.swiper.realIndex);
+          swiper?.addEventListener('activeindexchange', () => {
+            if(swiper.swiper.realIndex !== descSwiper?.swiper.realIndex){
+              descSwiper?.swiper.slideToLoop(swiper.swiper.realIndex);
             }
           });
       }, 0);
   }, []);
 
-    return (<section className='md:min-h-[85vh] w-[100%] overflow-x-hidden overflow-y-auto pt-20'>
-            <swiper-container id="projects-swiper" class="w-[100%]" init={false}>
-                {data.map((data, index)=>(<swiper-slide key={data.title}>
-                    <Project content={data} index={index}/>
-                </swiper-slide>))}
-            </swiper-container>
-            <swiper-container id="projects-desc-swiper" init={false}>
-                {data.map((data)=>(<swiper-slide key={data.title}>
-                    <ProjectDesc content={data} />
-                </swiper-slide>))}
-            </swiper-container>
+    return (<section className='relative md:min-h-[85vh] w-[100%] overflow-x-hidden overflow-y-auto pt-20'>
+            <SwiperLoader id={"projects-swiper"} className="w-full" keys={data.map(data=>(data.title))} swiperOptions={projectsSwiperOptions}>
+              {data.map((data, index)=>(
+                    <Project content={data} index={index} key={data.title}/>
+              ))}
+            </SwiperLoader>
+            <SwiperLoader id={"projects-desc-swiper"} className="w-full" keys={data.map(data=>(data.title))} swiperOptions={projectsDescSwiperOptions}>
+              {data.map((data)=>(
+                    <ProjectDesc content={data} key={data.title}/>
+              ))}
+            </SwiperLoader>
         </section>
         );
 }

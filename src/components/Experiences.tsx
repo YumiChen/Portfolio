@@ -6,39 +6,26 @@ import MB001Image from '../../public/mb001.jpg';
 import MB002Image from '../../public/mb002.jpg';
 import MB003Image from '../../public/mb003.jpg';
 import { useEffect } from 'react';
-import { SwiperContainer } from "swiper/element";
 import gsap from "gsap";
+import SwiperLoader from './SwiperLoader';
+
+const musicBravoSwiperOptions = {
+  pagination: true,
+  autoplay: true,
+  loop: true,
+  spaceBetween: 10
+};
+const lineSwiperOptions = {
+  pagination: true,
+  autoplay: true,
+  loop: true,
+  spaceBetween: 10
+};
 
 const highlightStyle = "absolute -left-2 h-[100%] w-[10px] bg-amber-300 top-0";
+
 const Experiences = () =>{
   useEffect(()=>{
-    setTimeout(()=>{
-        const lineSwiper: SwiperContainer | null = document.querySelector('#line-swiper')
-        if(!lineSwiper){
-          return;
-        }
-
-        Object.assign(lineSwiper, {
-          pagination: true,
-          autoplay: true,
-          loop: true,
-          spaceBetween: 10
-        });
-        lineSwiper.initialize();
-
-        const musicbravoSwiper: SwiperContainer | null = document.querySelector('#musicbravo-swiper')
-        if(!musicbravoSwiper){
-          return;
-        }
-        Object.assign(musicbravoSwiper, {
-          pagination: true,
-          autoplay: true,
-          loop: true,
-          spaceBetween: 10
-        });
-        musicbravoSwiper.initialize();
-    }, 0);
-
     const context = gsap.context(()=>{
       let companies = gsap.utils.toArray<HTMLElement>(".company"); 
       let highlights = gsap.utils.toArray<HTMLElement>(".highlight"); 
@@ -51,7 +38,7 @@ const Experiences = () =>{
             trigger: company,
             start: "top-=50 bottom",
             end: "bottom+=50 top",
-            toggleActions: "play reset restart reset"
+            toggleActions: "play reverse restart reverse"
           }
         });
       });
@@ -65,7 +52,7 @@ const Experiences = () =>{
             trigger: highlight,
             start: "top-=50 bottom",
             end: "bottom+=50 top",
-            toggleActions: "play reset restart reset"
+            toggleActions: "play reverse restart reverse"
           }
         });
       });
@@ -78,7 +65,7 @@ const Experiences = () =>{
             trigger: experienceItem,
             start: "top-=50 bottom",
             end: "bottom+=50 top",
-            toggleActions: "play reset restart reset"
+            toggleActions: "play reverse restart reverse"
           }
         });
       });
@@ -101,18 +88,12 @@ const Experiences = () =>{
           <div className={`highlight ${highlightStyle}`}></div>
         </div>
         <div className="flex flex-col lg:flex-row-reverse items-start">
-          <swiper-container id="line-swiper" class="experience-item w-full lg:w-1/2" init={false}>
-            <swiper-slide>
-              <Image src={LINE001Image} alt="LINE Today" width={500} height={378} className="my-10 mx-auto lg:ml-auto lg:mr-0" />
-            </swiper-slide>
-            <swiper-slide>
-              <Image src={LINE002Image} alt="LINE article" width={500} height={378} className="my-10 mx-auto lg:ml-auto lg:mr-0" />
-            </swiper-slide>
-            <swiper-slide>
-              <Image src={LINE003Image} alt="LINE event" width={500} height={378} className="my-10 mx-auto lg:ml-auto lg:mr-0" />
-            </swiper-slide>    
-          </swiper-container>
-          <ul className="text-2xl md:text-3xl lg:pr-1">
+          <SwiperLoader id={"line-swiper"} ratio={93} className="experience-item" conatinerClassName="lg:w-1/2 lg:space-x-2.5" keys={['news', 'article', 'event']} swiperOptions={lineSwiperOptions}>
+            <Image src={LINE001Image} alt="LINE Today" width={500} height={378} className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+            <Image src={LINE002Image} alt="LINE article" width={500} height={378} className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+            <Image src={LINE003Image} alt="LINE event" width={500} height={378} className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+          </SwiperLoader>
+          <ul className="text-2xl md:text-3xl lg:pr-1 lg:w-1/2">
             <li className='experience-item'>
               <h5 className="text-yellow-200 font-bold mt-5">Campaign & Article Generation tools</h5>
               <p>With which thousands of campaign pages and millions of article pages are created by editors in the company</p>
@@ -165,18 +146,12 @@ const Experiences = () =>{
           <div className={`highlight ${highlightStyle}`}></div>
         </div>
         <div className="flex flex-col lg:flex-row-reverse items-start">          
-          <swiper-container id="musicbravo-swiper" class="experience-item w-full lg:w-1/2" init={false}>
-            <swiper-slide>
-              <Image src={MB001Image} width={500} height={293} alt="Music Bravo home page" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
-            </swiper-slide>
-            <swiper-slide>
-              <Image src={MB002Image} width={500} height={293} alt="Payment integration" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
-            </swiper-slide>
-            <swiper-slide>
-              <Image src={MB003Image} width={500} height={293} alt="Campaign page" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
-            </swiper-slide>    
-          </swiper-container>
-          <ul className="text-2xl md:text-3xl lg:pr-1">
+          <SwiperLoader id={"musicbravo-swiper"} ratio={62} className="experience-item" conatinerClassName="lg:w-1/2 lg:space-x-2.5" keys={['homePage', 'payment', 'campaign']} swiperOptions={musicBravoSwiperOptions}>
+            <Image src={MB001Image} width={500} height={293} alt="Music Bravo home page" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+            <Image src={MB002Image} width={500} height={293} alt="Payment integration" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+            <Image src={MB003Image} width={500} height={293} alt="Campaign page" className="my-10 mx-auto lg:ml-auto lg:mr-0" />
+          </SwiperLoader>
+          <ul className="text-2xl md:text-3xl lg:pr-1 lg:w-1/2">
             <li className='experience-item'>
               <h5 className="text-yellow-200 font-bold mt-5">Digital Music Platform</h5>
               <p>Worked on online indie music steaming and monetization website. Responsible for front-end development, code optimization, SEO, cross-browser compatility, and development process optimization</p>
