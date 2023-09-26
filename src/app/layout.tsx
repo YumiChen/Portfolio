@@ -1,9 +1,6 @@
 import '/public/output.css'
 import 'swiper/element/css/effect-coverflow'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Yumi Chen Portfolio',
@@ -38,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" className='overflow-x-hidden'>
       <body 
-        className={`relative transition-opacity duration-500 ${inter.className} bg-teal-400 overflow-x-hidden w-screen`}
+        className="relative transition-opacity duration-500 bg-teal-400 overflow-x-hidden w-screen"
       >
         {children}
       </body>
