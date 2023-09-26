@@ -744,6 +744,10 @@ html {
   display: flex;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .table {
   display: table;
 }
@@ -774,6 +778,10 @@ html {
 
 .h-\[190px\] {
   height: 190px;
+}
+
+.h-\[30px\] {
+  height: 30px;
 }
 
 .h-\[330px\] {
@@ -826,6 +834,10 @@ html {
 
 .w-\[10px\] {
   width: 10px;
+}
+
+.w-\[30px\] {
+  width: 30px;
 }
 
 .w-\[330px\] {
@@ -944,10 +956,6 @@ html {
 
 .overflow-x-hidden {
   overflow-x: hidden;
-}
-
-.overflow-y-hidden {
-  overflow-y: hidden;
 }
 
 .whitespace-nowrap {
