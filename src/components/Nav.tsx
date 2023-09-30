@@ -28,6 +28,14 @@ const Nav = ({comps, displayIndex, setDisplayIndex}: NavProps) =>{
       isNavOut.current = true;
     }, []);
 
+    useEffect(()=>{
+      if(showNav){
+        document.querySelector('html')?.setAttribute('style', 'overflow-y: hidden;');
+      }else{
+        document.querySelector('html')?.setAttribute("style", "overflow-y: auto;");
+      }
+    }, [showNav]);
+
     return (<nav className="z-40 font-lobster text-white">
       <div className={`${showNav? "pointer-events-auto nav-in" : "pointer-events-none"}
             ${isNavOut.current? "nav-out" : ""}
