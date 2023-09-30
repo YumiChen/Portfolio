@@ -616,16 +616,16 @@ html {
   bottom: 0px;
 }
 
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .bottom-5 {
   bottom: 1.25rem;
 }
 
 .bottom-6 {
   bottom: 1.5rem;
-}
-
-.bottom-7 {
-  bottom: 1.75rem;
 }
 
 .left-0 {
@@ -672,8 +672,8 @@ html {
   top: 15%;
 }
 
-.top-\[20dvh\] {
-  top: 20dvh;
+.top-\[20vh\] {
+  top: 20vh;
 }
 
 .top-\[50px\] {
@@ -1027,10 +1027,6 @@ html {
   padding: 1rem;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1214,10 +1210,6 @@ html {
   opacity: 0;
 }
 
-.opacity-100 {
-  opacity: 1;
-}
-
 .opacity-30 {
   opacity: 0.3;
 }
@@ -1290,6 +1282,10 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:bottom-7 {
+    bottom: 1.75rem;
+  }
+
   .md\:right-8 {
     right: 2rem;
   }
@@ -1404,20 +1400,6 @@ html {
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .md\:transition-opacity {
-    transition-property: opacity;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
-
-  .md\:duration-1000 {
-    transition-duration: 1000ms;
-  }
-
-  .md\:ease-in-out {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
