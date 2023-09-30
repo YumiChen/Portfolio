@@ -63,8 +63,6 @@ export default function Home() {
     animateContent: true,
   }]);
 
-  const [displayIndex, setDisplayIndex] = useState(0);
-
   useEffect(()=>{
     register();
 
@@ -145,16 +143,15 @@ export default function Home() {
 
   return (
     <>
-      <Nav comps={comps.current} displayIndex={displayIndex} setDisplayIndex={setDisplayIndex} />
+      <Nav comps={comps.current} />
       <main className='text-white font-roboto text-3xl leading-10 w-screen lg:w-[1280px] lg:mx-auto'>
-        <div className="border-dotted fixed top-1/2 left-1/2 w-[calc(100vw-1rem)] md:w-[calc(100vw-2rem)] h-[calc(100dvh-2rem)] -translate-x-1/2 -translate-y-1/2 border-white border-4 z-50 pointer-events-none"></div>
         <div id="network-hint" className='hidden md:block fixed right-0 transform(translateX(100%)) bottom-6 opacity-0 z-30 text-4xl'>
           <SocialMedias/>
         </div>
         <div className='cursor-1 hidden lg:block fixed w-32 h-32 bg-yellow-200 opacity-50 rounded-full z-[60] mix-blend-overlay pointer-events-none'></div>
         <div className='cursor-2 hidden lg:block fixed w-48 h-48 bg-amber-300 opacity-50 rounded-full z-[60] mix-blend-overlay pointer-events-none'></div>
         {comps.current.map(({ comp , name}, index)=>{
-            return (<div className={`relative min-h-[100dvh] py-[50px] md:py-[70px]`} id={`${name}-container`} key={name}>
+            return (<div className={`relative min-h-[100vh] py-[50px] md:py-[70px]`} id={`${name}-container`} key={name}>
               <div id={name}>{comp}</div>
               {index !== 0 && <h3 id={`${name}-header-1`} className="absolute top-[50px] left-0 text-right p-4 md:p-8 font-serif text-7xl md:text-9xl opacity-30 -z-10">{name}</h3>}
             </div>);

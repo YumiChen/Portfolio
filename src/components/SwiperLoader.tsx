@@ -19,7 +19,6 @@ const SwiperLoader = ({ ratio, children, keys, id, className, swiperOptions, con
     useEffect(()=>{
         setTimeout(()=>{
             const swiper: SwiperContainer | null = document.querySelector(`#${id}`);
-            console.log(swiper);
             if(!swiper){
               return;
             }
