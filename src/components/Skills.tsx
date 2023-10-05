@@ -5,10 +5,6 @@ const Skills = () =>{
         <ul>
           <li className="border-double border-b-4 py-2">
             <p className="flex justify-between items-end"><span className="font-bold font-serif">English</span> <span className="text-2xl align-bottom">Proficient</span></p>
-            <p className="whitespace-wrap">
-              <span className={tagStyle}>IELTS Band 7/ CLB 8</span> 
-              <span className={tagStyle}>TOEIC Gold</span>
-            </p>
           </li>
           <li className="border-double border-b-4 py-2 flex justify-between items-end"><span className="font-bold font-serif">Mandarin</span> <span className="text-2xl">Native</span></li>
           <li className="border-double border-b-4 py-2 flex justify-between items-end"><span className="font-bold font-serif">Japanese</span> <span className="text-2xl">Intermediate</span></li>
