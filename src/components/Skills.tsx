@@ -13,7 +13,9 @@ const Skills = () =>{
         <ul className="border-double border-b-4 pt-2 pb-7 whitespace-wrap">
           <li className={tagStyle}>React.js</li>
           <li className={tagStyle}>Next.js</li>
-          <li className={tagStyle}>Redux.js</li>
+          <li className={tagStyle}>Node.js</li>
+          <li className={tagStyle}>Express.js</li>
+          <li className={tagStyle}>Redux</li>
           <li className={tagStyle}>SWR</li>
           <li className={tagStyle}>Vue.js</li>
           <li className={tagStyle}>LitElement</li>

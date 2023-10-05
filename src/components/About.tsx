@@ -26,7 +26,7 @@ const About = () =>{
 
     return (<section className='w-[100%] flex-col space-y-5 px-7 md:px-40 pt-20 md:pt-36 pb-10 text-2xl md:text-3xl lg:leading-[3rem]'>
         <p className="about-item">
-            {"Good day! I'm a Front-End engineer with 5-year experiences."}
+            {"Good day! I'm a Software Engineer with 5-year experiences."}
             {" Creating amazing and performant websites with delicate "}
             {"visual effects is my passion."}
         </p>
