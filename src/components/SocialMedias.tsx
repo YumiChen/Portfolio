@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "../../node_modules/@fortawesome/react-fontawesome/index";
 import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faCodepen } from '@fortawesome/free-brands-svg-icons';
 
 interface SocialMediasProps {
   linkClass?: string;
@@ -13,7 +13,12 @@ const SocialMedias = ({ linkClass = '' }: SocialMediasProps) => {
           </a>
         </li>
         <li>
-        <a href="mailto:yumichenf2e@gmail.com" className={linkClass}>
+          <a href="https://codepen.io/Yumichen" target="_blank" className={linkClass}>
+            <FontAwesomeIcon icon={faCodepen} />
+          </a>
+        </li>
+        <li>
+          <a href="mailto:yumichenf2e@gmail.com" className={linkClass}>
             <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
           </a>
         </li>
