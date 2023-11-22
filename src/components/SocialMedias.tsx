@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "../../node_modules/@fortawesome/react-fontawesome/index";
 import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin, faGithub, faCodepen } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faCodepen, faDribbble } from '@fortawesome/free-brands-svg-icons';
 
 interface SocialMediasProps {
   linkClass?: string;
@@ -30,6 +30,11 @@ const SocialMedias = ({ linkClass = '' }: SocialMediasProps) => {
         <li>
           <a href="https://drive.google.com/file/d/1MsHpWpz1D6EMlt47rW84Fh7DxNgatB5q/view?usp=sharing" target="_blank" className={linkClass}>
             <FontAwesomeIcon icon={faFile}></FontAwesomeIcon>
+          </a>
+        </li>
+        <li>
+          <a href="https://dribbble.com/yumiart523" target="_blank" className={linkClass}>
+          <FontAwesomeIcon icon={faDribbble} />
           </a>
         </li>
       </ul>);
