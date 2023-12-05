@@ -39,16 +39,12 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(252, 211, 77, 1);
 }
 
-.playful {
-  /* opacity: 0.7; */
-  --text: rgb(243, 241, 218); /* Blue */
-  --shadow: rgb(228, 133, 248); /* Pink */
+.subtitle {
   text-shadow: 
     var(--shadow) 1px 1px,
     var(--shadow) 2px 2px;
-  text-shadow: 
-    0 -2px 1px #fff,
-    4px 4px var(--shadow),
+  text-shadow:
+    4px 4px rgb(228, 133, 248),
     6px 6px rgb(242, 160, 99);
 }
 
@@ -56,8 +52,8 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   background-color: #1aa3ff;
   color: #f4f4f4;
-  padding: 0.2em;
-  letter-spacing: 0.1em;
+  padding: 8px;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -66,12 +62,39 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   content: "";
   width: 0;
-  height: 1.2em;
+  height: 40px;
   border-style: solid;
-  border-width: 0.5em;
-  /* background-color: #0099ff; */
+  border-width: 16px;
   z-index: -1;
-  /* transform: translateZ(-0.5em); */
+}
+
+.flag::before {
+  left: -16px;
+  top: 24px;
+  border-color: #0099ff #006bb3 #0099ff rgba(0, 153, 255, 0);
+}
+
+.flag::after {
+  right: -16px;
+  top: 24px;
+  border-color: #0099ff rgba(0, 153, 255, 0) #0099ff #006bb3;
+}
+
+@media (min-width: 768px) {
+  .flag::before,
+  .flag::after {
+    height: 56px;
+    border-width: 24px;
+  }
+  .flag::before {
+    left: -24px;
+    top: 32px;
+  }
+
+  .flag::after {
+    right: -24px;
+    top: 32px;
+  }
 }
 
 h1:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, span:hover {
@@ -89,24 +112,12 @@ h1:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, span:hover {
 	color: white;
 }
 
-.flag::before {
-  left: -0.5em;
-  top: 1em;
-  border-color: #0099ff #006bb3 #0099ff rgba(0, 153, 255, 0);
-}
-
-.flag::after {
-  right: -0.5em;
-  top: 1em;
-  border-color: #0099ff rgba(0, 153, 255, 0) #0099ff #006bb3;
-}
-
 #ABOUT p:first-of-type:first-letter {
   -webkit-initial-letter: 2;
           initial-letter: 2;
   color: rgba(252, 211, 77, 1);
   font-weight: bold;
-  margin-right: .5em;
+  margin-right: 8px;
  }
 
 button, a {
