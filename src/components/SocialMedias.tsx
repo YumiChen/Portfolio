@@ -23,7 +23,7 @@ const SocialMedias = ({ linkClass = '' }: SocialMediasProps) => {
           </a>
         </li>
         <li>
-          <a href="https://github.com/YumiChen?tab=repositories" target="_blank" className={linkClass}>
+          <a href="https://github.com/YumiChen" target="_blank" className={linkClass}>
             <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
           </a>
         </li>
