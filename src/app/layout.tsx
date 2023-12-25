@@ -1,5 +1,7 @@
 import '/public/output.css'
 import 'swiper/element/css/effect-coverflow'
+
+import { GoogleTagManager } from '@next/third-parties/google'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -39,6 +41,7 @@ export default function RootLayout({
       >
         {children}
       </body>
+      <GoogleTagManager gtmId="GTM-PQW5CZCD" />
     </html>
   )
 }
