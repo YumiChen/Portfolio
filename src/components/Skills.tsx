@@ -9,7 +9,7 @@ const Skills = () =>{
           <li className="border-double border-b-4 py-2 flex justify-between items-end"><span className="font-bold font-serif">Mandarin</span> <span className="text-2xl">Native</span></li>
           <li className="border-double border-b-4 py-2 flex justify-between items-end"><span className="font-bold font-serif">Japanese</span> <span className="text-2xl">Intermediate</span></li>
         </ul>
-        <h3 className="font-bold font-serif mt-7">Front-End</h3>
+        <h3 className="font-bold font-serif mt-7">Front-End & Back-end</h3>
         <ul className="border-double border-b-4 pt-2 pb-7 whitespace-wrap">
           <li className={tagStyle}>React.js</li>
           <li className={tagStyle}>Next.js</li>
@@ -20,16 +20,21 @@ const Skills = () =>{
           <li className={tagStyle}>Vue.js</li>
           <li className={tagStyle}>LitElement</li>
           <li className={tagStyle}>Web Component</li>
+          <li className={tagStyle}>Jest</li>
           <li className={tagStyle}>SASS</li>
           <li className={tagStyle}>Emotion CSS</li>
+          <li className={tagStyle}>Tailwind CSS</li>
           <li className={tagStyle}>HTML5</li>
           <li className={tagStyle}>Pug</li>
           <li className={tagStyle}>Sentry.io</li>
           <li className={tagStyle}>Varnish</li>
           <li className={tagStyle}>IMA SDK</li>
+          <li className={tagStyle}>Google Analytics SDK</li>
+          <li className={tagStyle}>SQL</li>
         </ul>
         <h3 className="font-bold font-serif mt-7">Project Management/ Devops</h3>
         <ul className="pt-2 pb-7 whitespace-wrap">
+          <li className={tagStyle}>Figma</li>
           <li className={tagStyle}>yarn</li>
           <li className={tagStyle}>pnpm</li>
           <li className={tagStyle}>Git</li>
