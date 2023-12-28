@@ -1,21 +1,22 @@
 "use client";
 
+import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { useEffect, useRef, useState } from 'react';
+
 import About from '@/components/About';
+import { Comp } from './types';
 import Contact from '@/components/Contact';
-import Experiences from '@/components/Experiences';
+import Experiences from '@/components/Journey';
 import Nav from '@/components/Nav';
 import Projects from '@/components/Projects';
-import Skills from '@/components/Skills';
-import Top from '@/components/Top';
-import { useEffect, useRef, useState } from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { register } from 'swiper/element/bundle';
-import { Comp } from './types';
-import SocialMedias from '@/components/SocialMedias';
-import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Skills from '@/components/Skills';
+import SocialMedias from '@/components/SocialMedias';
+import Top from '@/components/Top';
+import gsap from "gsap";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { register } from 'swiper/element/bundle';
 
 library.add(faEnvelope, faFile, faLinkedin, faGithub);
 gsap.registerPlugin(ScrollTrigger);

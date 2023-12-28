@@ -5,9 +5,9 @@ import LINE003Image from '../../public/line003.jpg';
 import MB001Image from '../../public/mb001.jpg';
 import MB002Image from '../../public/mb002.jpg';
 import MB003Image from '../../public/mb003.jpg';
-import { useEffect } from 'react';
-import gsap from "gsap";
 import SwiperLoader from './SwiperLoader';
+import gsap from "gsap";
+import { useEffect } from 'react';
 
 const musicBravoSwiperOptions = {
   pagination: true,
@@ -113,7 +113,7 @@ const Experiences = () =>{
             </li>
             <li className='experience-item'>
               <h5 className="text-yellow-200 font-bold mt-5">Browser and Device Compatibility Optimization</h5>
-              <p>Enhanced compatibility across browsers, devices, and in-app browsers through rigorous testing and analysis.</p>
+              <p>Enhanced compatibility across browsers, devices, LIFF and in-app browsers through rigorous testing and analysis.</p>
             </li>
           </ul>
         </div>
@@ -154,7 +154,7 @@ const Experiences = () =>{
           <ul className="text-2xl md:text-3xl lg:pr-1 lg:w-1/2">
             <li className='experience-item'>
               <h5 className="text-yellow-200 font-bold mt-5">Digital Music Platform</h5>
-              <p>Worked on online indie music steaming and monetization website. Responsible for front-end development, code optimization, SEO, cross-browser compatility, and development process optimization</p>
+              <p>Worked on online indie music steaming and monetization website. Responsible for front-end development, code optimization, SEO, cross-browser compatibility, and development process optimization</p>
             </li>
             <li className='experience-item'>
               <h5 className="text-yellow-200 font-bold mt-5">Campaign Cooperation & Website Exposure</h5>
