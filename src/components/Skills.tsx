@@ -26,11 +26,12 @@ const Skills = () =>{
           <li className={tagStyle}>Tailwind CSS</li>
           <li className={tagStyle}>HTML5</li>
           <li className={tagStyle}>Pug</li>
+          <li className={tagStyle}>SQL</li>
           <li className={tagStyle}>Sentry.io</li>
           <li className={tagStyle}>Varnish</li>
           <li className={tagStyle}>IMA SDK</li>
           <li className={tagStyle}>Google Analytics SDK</li>
-          <li className={tagStyle}>SQL</li>
+          <li className={tagStyle}>Browser Compatibility</li>
         </ul>
         <h3 className="font-bold font-serif mt-7">Project Management/ Devops</h3>
         <ul className="pt-2 pb-7 whitespace-wrap">
