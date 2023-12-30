@@ -6,8 +6,12 @@ const Skills = () =>{
           <li className="border-double border-b-4 py-2">
             <p className="flex justify-between items-end"><span className="font-bold font-serif">English</span> <span className="text-2xl align-bottom">Proficient</span></p>
           </li>
-          <li className="border-double border-b-4 py-2 flex justify-between items-end"><span className="font-bold font-serif">Mandarin</span> <span className="text-2xl">Native</span></li>
-          <li className="border-double border-b-4 py-2 flex justify-between items-end"><span className="font-bold font-serif">Japanese</span> <span className="text-2xl">Intermediate</span></li>
+          <li className="border-double border-b-4 py-2">
+            <p className="flex justify-between items-end"><span className="font-bold font-serif">Mandarin</span> <span className="text-2xl align-bottom">Native</span></p>
+          </li>
+          <li className="border-double border-b-4 py-2">
+            <p className="flex justify-between items-end"><span className="font-bold font-serif">Japanese</span> <span className="text-2xl align-bottom">Intermediate</span></p>
+          </li>
         </ul>
         <h3 className="font-bold font-serif mt-7">Front-End & Back-end</h3>
         <ul className="border-double border-b-4 pt-2 pb-7 whitespace-wrap">
