@@ -24,6 +24,7 @@ export interface Content {
     githubUrl: string;
     images: {
       src: StaticImageData;
+      blurDataURL: string;
       alt: string;
     }[];
     description: string;
